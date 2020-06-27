@@ -1,0 +1,170 @@
+site_name: Freight Trust Network Omnibus
+repo_url: 'https://github.com/freight-trust/omnibus'
+copyright: |
+  Copyright &copy; 2020 <a href="https://freighttrust"  target="_blank" rel="noopener">FreightTrust & Clearing Corporation - All Rights Reserved</a>
+
+extra:
+  latest_version_warning:
+    url_contains: /latest/
+    text: 'You are reading the latest documentation for the Freight Trust Network'
+  support:
+    chat: https://join.slack.com/share/zt-flnfv57l-uzh1Q46nWIeTHM7rMxzE~w
+    email: support@freight.zendesk.com
+    website: https://www.freighttrust.com
+    issues: https://github.com/freight-chain/network#issues
+  google_analytics:
+  - ''
+  - ''
+
+nav:
+  - Home: index.md
+  - Concepts: concepts/README.md
+  - Rulebook:
+    - General: rulebook/general.md
+    - Governance: rulebook/governance.md
+    - Governing Laws: rulebook/governing-laws.md
+    - Delivery & Settlement: rulebook/delivery-and-settlement.md
+    - Behavior: rulebook/behavior.md
+    - Index: rulebook/index.md
+    - Legal Parity: rulebook/legal-parity.md
+    - Network Participants: rulebook/network-clearing-participants.md
+    - Obligations: rulebook/obligations.md
+    - Suspension: rulebook/suspension.md
+  - Blockchain:
+    - Blockchain: blockchain/pricing.md
+    - VBSM: blockchain/vbsm.md.md
+    - Network Upgrades: blockchain/network-upgrade.md
+    - Smart Contract Practices: blockchain/smart-contract-practices.md
+    - Topology: blockchain/topology.md
+    - Network: blockchain/network.md
+    - Smart Contract Development: blockchain/smart-contract-dev.md
+    - Contracts v1: blockchain/contracts-v1.md
+    - EVM: blockchain/evm.md
+    - Token Overview: blockchain/token-overview.md
+    - List: blockchain/list.md.md
+    - Wallets: blockchain/wallets.md
+    - Staking: blockchain/staking.md
+    - Intro to EDI: blockchain/intro-edi.md
+  - Corpoorate:
+    - EULA: corporate/eula.md.md
+    - Pricing: corporate/transaction-pricing.md
+    - Privacy Policy: corporate/privacy-policy.md
+    - Code of Conduct: corporate/code-of-conduct.md
+    - PKI: corporate/pki.md
+    - Pricing Precedence: corporate/pricing-spec-precedence.md
+    - IRP Plan: corporate/irp.md
+    - Index: corporate/index.md
+    - Bylaws: corporate/bylaws.md
+    - Document Retention Policy: corporate/document-retention-policy.md
+    - Pricing Benchmark: corporate/pricing-benchmark.md
+    - CCPA: corporate/ccpa.md
+    - GPL Cooperation: corporate/GPL-cooperation-commitment.md
+    - Software Defects: corporate/defects.md
+  - Supply Chain:
+    - Overview: supply-chain/README.md
+    - Bill of Lading: supply-chain/bol-rules.md
+    - Warehousing: supply-chain/non-negotiable-warehouse-receipt.md
+    - Non-Negotiable: supply-chain/non-negotiable-bol.md
+    - Customs Brokers: supply-chain/customs-broker-power-of-attorney.md
+    - INCO Terms: supply-chain/incoterms.md
+    - Bill of Lading Rules: supply-chain/bill-of-lading-rules.md
+    - EDI Transactions: supply-chain/856.md
+  - Event Streams:
+    - Message Structures: service-bus/message-structure.md
+    - X12 Data Transformation: service-bus/x12-parser.md
+    - X12 Data Interchange: service-bus/edi-x12.md
+    - Safety and Continiuty: service-bus/safety-and-continiuty.md
+    - Trading Partner: service-bus/trading_partner.md
+    - Data Interchange Formats: service-bus/what-is-edi.md
+    - EDI Grammer: service-bus/jedi-grammer.md
+    - Record Layouts: service-bus/record_layout_codes.md
+docs_dir: docs
+theme:
+  name: material
+  features:
+    - tabs
+  palette:
+    primary: blue
+    accent: pink
+  font:
+    text: 'Roboto Slab'
+    code: 'Roboto Mono'
+extra_css: ["extra.css"]
+
+
+markdown_extensions:
+  - codehilite
+  - markdown.extensions.toc:
+      slugify: !!python/name:pymdownx.slugs.uslugify
+      permalink: ""
+  - markdown.extensions.admonition:
+  - markdown.extensions.smarty:
+      smart_quotes: false
+  - pymdownx.betterem:
+  - markdown.extensions.attr_list:
+  - markdown.extensions.def_list:
+  - markdown.extensions.tables:
+  - markdown.extensions.abbr:
+  - markdown.extensions.footnotes:
+  - markdown.extensions.md_in_html:
+  - pymdownx.superfences:
+      preserve_tabs: true
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
+  - pymdownx.highlight:
+      extend_pygments_lang:
+        - name: php-inline
+          lang: php
+          options:
+            startinline: true
+        - name: pycon3
+          lang: pycon
+          options:
+            python3: true
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite:
+      custom_inline:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.inline_mathjax_format
+  - pymdownx.tilde:
+  - pymdownx.caret:
+  - pymdownx.smartsymbols:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.escapeall:
+      hardbreak: True
+      nbsp: True
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.progressbar:
+  - pymdownx.arithmatex:
+  - pymdownx.mark:
+  - pymdownx.striphtml:
+  - pymdownx.keys:
+      separator: "\uff0b"
+  - pymdownx.details:
+  - pymdownx.tabbed:
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/freight-trust
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/freightclear
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/fr8
+    - icon: fontawesome/brands/intercom
+      link: https://intercom.help/freight/en
+
+plugins:
+  - search
+  - git-revision-date-localized
+  - minify:
+      minify_html: true
