@@ -18,7 +18,7 @@ extra:
 
 nav:
   - Home: index.md
-  - Concepts: README.md
+  - Concepts:
     - Introduction: concepts/util.md
     - Axioms: concepts/axioms.md
     - Network Design: concepts/network-design.md
@@ -92,10 +92,10 @@ theme:
   features:
     - tabs
   palette:
-    primary: blue-grey
-    accent: teal
+    primary: blue-black
+    accent: black
   font:
-    text: 'Roboto Slab'
+    text: 'Roboto'
     code: 'Roboto Mono'
 extra_css: ["extra.css"]
 
