@@ -84,8 +84,8 @@ theme:
   features:
     - tabs
   palette:
-    primary: blue
-    accent: pink
+    primary: blue-grey
+    accent: teal
   font:
     text: 'Roboto Slab'
     code: 'Roboto Mono'
@@ -157,7 +157,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/freight-trust
     - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/freightclear
+      link: https://hub.docker.com/orgs/freightcorp/repositories
     - icon: fontawesome/brands/gitlab
       link: https://gitlab.com/fr8
     - icon: fontawesome/brands/intercom
