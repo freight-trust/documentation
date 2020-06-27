@@ -18,7 +18,14 @@ extra:
 
 nav:
   - Home: index.md
-  - Concepts: concepts/README.md
+  - Concepts: README.md
+    - Introduction: concepts/util.md
+    - Axioms: concepts/axioms.md
+    - Network Design: concepts/network-design.md
+    - Ecosystem: concepts/ecosystem.md
+    - Protocol: concepts/as2protocol.md
+    - Message Design: concepts/message-design.md
+    - Concepts: concepts/output.md
   - Rulebook:
     - General: rulebook/general.md
     - Governance: rulebook/governance.md
@@ -69,6 +76,7 @@ nav:
     - INCO Terms: supply-chain/incoterms.md
     - Bill of Lading Rules: supply-chain/bill-of-lading-rules.md
     - EDI Transactions: supply-chain/856.md
+    - Maritime: supply-chain/containers.md
   - Event Streams:
     - Message Structures: service-bus/message-structure.md
     - X12 Data Transformation: service-bus/x12-parser.md
