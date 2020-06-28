@@ -87,16 +87,23 @@ nav:
     - EDI Grammer: service-bus/jedi-grammer.md
     - Record Layouts: service-bus/record_layout_codes.md
 docs_dir: docs
+
 theme:
   name: material
+  custom_dir: docs/overrides
   features:
     - tabs
+  icon:
+    logo: 'material/earth'
+ # favicon: 'img/logo-notext.svg'
   palette:
-    primary: blue-black
-    accent: black
+    primary: 'blue-grey'
+    accent: 'green'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+plugins:
+  - search
 extra_css: ["extra.css"]
 
 
