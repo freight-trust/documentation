@@ -24,17 +24,7 @@ writing to us using the contact information provided below.
     email: admin@freighttrust.com
     subject: CCPA Request
     body: first, last name, user name or public account number, registered e-mail address, and any other related information.
-    
-    *or*
-    
-    - postal:
-    `Freight Trust Corporation`
-    `ATTN: Operations Group`
-    `1675 7th `
-    `St Rm 236-110`
-    `Oakland, CA 94615`
 
-  
 
 If you are under 18 years of age, reside in California, and have a
 registered account with the Services or Apps, you have the right to
@@ -46,7 +36,7 @@ or Apps.
 us as soon as possible.
 
 To request removal of such data, please contact us using the contact
-information provided below, and include the email address associated
+information provided above, and include the email address associated
 with your account and a statement that you reside in California. We will
 make sure the data is not publicly displayed on the Services or Apps,
 but please be aware that the data may not be completely or

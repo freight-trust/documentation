@@ -1,7 +1,6 @@
-# 
+# GPL Cooperation
 
     Freight Trust and Clearing Corporation
-    246 Brannan Street, San Francisco CA
     <admin@freighttrust.com>
 
 Our Commitment
@@ -48,6 +47,3 @@ by you or your affiliate.
 
 Freight Trust means FreightTrust and Clearing Corporation and its
 subsidiaries.
-
-This work is available under a Creative Commons Attribution-ShareAlike
-4.0 International license.

@@ -158,9 +158,9 @@ In the case of an execution, the further transformation of each split execution 
 ##### Primitive Example
 
 example workflow of a contractual product condition 
-```
+
 ContractType: if AllocationPrimitive exists and before \-> execution exists then after \-> originalTrade \-> execution exists and after \-> allocatedTrade \-> execution exists and after \-> allocatedTrade \-> contract is absent condition ContractType: if AllocationPrimitive exists and before \-> contract exists then after \-> originalTrade \-> contract exists and after \-> allocatedTrade \-> contract exists and after \-> allocatedTrade \-> execution is absent
-````
+
 
 
 `ExerciseTimingPrimitive` which is deemed as associated to a request for exercise that is meant to take place, as opposed to the actual exercise event. Similar to how in FpML an OptionExercise is constructed.
@@ -230,190 +230,15 @@ DayType: The enumerated values to specify the day type classification used in co
  PeriodTime: The enumeration values to specify a time period containing additional values such as Term.
 
 ##### Business Center Values
- BusinessCenter: The enumerated values to specify the business centers.
-	AEAD Abu Dhabi, United Arab Emirates
-	AEDU Dubai, United Arab Emirates
-	AMYE Yerevan, Armenia
-	AOLU Luanda, Angola
-	ARBA Buenos Aires, Argentina
-	ATVI Vienna, Austria
-	AUAD Adelaide, Australia
-	AUBR Brisbane, Australia
-	AUCA Canberra, Australia
-	AUDA Darwin, Australia
-	AUME Melbourne, Australia
-	AUPE Perth, Australia
-	AUSY Sydney, Australia
-	BBBR Bridgetown, Barbados
-	BDDH Dhaka, Bangladesh
-	BEBR Brussels, Belgium
-	BGSO Sofia, Bulgaria
-	BHMA Manama, Bahrain
-	BMHA Hamilton, Bermuda
-	BNBS Bandar Seri Begawan, Brunei
-	BOLP La Paz, Bolivia
-	BRBD Brazil Business Day. This means a business day in any of Sao Paulo, Rio de Janeiro or Brasilia not otherwise declared as a financial market holiday by the Bolsa de Mercadorias & Futuros (BM&F)
-	BRBR Brasilia, Brazil
-	BRRJ Rio de Janeiro, Brazil
-	BRSP Sao Paulo, Brazil
-	BSNA Nassau, Bahamas
-	BWGA Gaborone, Botswana
-	BYMI Minsk, Belarus
-	CACL Calgary, Canada
-	CAMO Montreal, Canada
-	CAOT Ottawa, Canada
-	CATO Toronto, Canada
-	CAVA Vancouver, Canada
-	CAWI Winnipeg, Canada
-	CHBA Basel, Switzerland
-	CHGE Geneva, Switzerland
-	CHZU Zurich, Switzerland
-	CIAB Abidjan, Cote d\'Ivoire
-	CLSA Santiago, Chile
-	CNBE Beijing, China
-	CNSH Shanghai, China
-	COBO Bogota, Colombia
-	CRSJ San Jose, Costa Rica
-	CYNI Nicosia, Cyprus
-	CZPR Prague, Czech Republic
-	DECO Cologne, Germany
-	DEDU Dusseldorf, Germany
-	DEFR Frankfurt, Germany
-	DEHH Hamburg, Germany
-	DELE Leipzig, Germany
-	DEMA Mainz, Germany
-	DEMU Munich, Germany
-	DEST Stuttgart, Germany
-	DKCO Copenhagen, Denmark
-	DOSD Santo Domingo, Dominican Republic
-	DZAL Algiers, Algeria
-	EETA Tallinn, Estonia
-	EGCA Cairo, Egypt
-	ESAS ESAS Settlement Day (as defined in 2006 ISDA Definitions Section 7.1 and Supplement Number 15 to the 2000 ISDA Definitions)
-	ESBA Barcelona, Spain
-	ESMA Madrid, Spain
-	ETAA Addis Ababa, Ethiopia
-	EUTA TARGET (euro 'Business Center')
-	FIHE Helsinki, Finland
-	FRPA Paris, France
-	GBED Edinburgh, Scotland
-	GBLO London, United Kingdom
-	GETB Tbilisi, Georgia
-	GGSP Saint Peter Port, Guernsey
-	GHAC Accra, Ghana
-	GRAT Athens, Greece
-	HKHK Hong Kong, Hong Kong
-	HNTE Tegucigalpa, Honduras
-	HRZA Zagreb, Republic of Croatia
-	HUBU Budapest, Hungary
-	IDJA Jakarta, Indonesia
-	IEDU Dublin, Ireland
-	ILJE Jerusalem, Israel
-	ILTA Tel Aviv, Israel
-	INBA Bangalore, India
-	INCH Chennai, India
-	INHY Hyderabad, India
-	INKO Kolkata, India
-	INMU Mumbai, India
-	INND New Delhi, India
-	IRTE Tehran, Iran
-	ISRE Reykjavik, Iceland
-	ITMI Milan, Italy
-	ITRO Rome, Italy
-	ITTU Turin, Italy
-	JESH St. Helier, Channel Islands, Jersey
-	JMKI Kingston, Jamaica
-	JOAM Amman, Jordan
-	JPTO Tokyo, Japan
-	KENA Nairobi, Kenya
-	KRSE Seoul, Republic of Korea
-	KWKC Kuwait City, Kuwait
-	KYGE George Town, Cayman Islands
-	KZAL Almaty, Kazakhstan
-	LBBE Beirut, Lebanon
-	LKCO Colombo, Sri Lanka
-	LULU Luxembourg, Luxembourg
-	LVRI Riga, Latvia
-	MACA Casablanca, Morocco
-	MARA Rabat, Morocco
-	MCMO Monaco, Monaco
-	MOMA Macau, Macao
-	MTVA Valletta, Malta
-	MUPL Port Louis, Mauritius
-	MVMA Male, Maldives
-	MWLI Lilongwe, Malawi
-	MXMC Mexico City, Mexico
-	MYKL Kuala Lumpur, Malaysia
-	MYLA Labuan, Malaysia
-	NAWI Windhoek, Namibia
-	NGAB Abuja, Nigeria
-	NGLA Lagos, Nigeria
-	NLAM Amsterdam, Netherlands
-	NLRO Rotterdam, Netherlands
-	NOOS Oslo, Norway
-	NPKA Kathmandu, Nepal
-	NYFD New York Fed Business Day (as defined in 2006 ISDA Definitions Section 1.9 and 2000 ISDA Definitions Section 1.9)
-	NYSE New York Stock Exchange Business Day (as defined in 2006 ISDA Definitions Section 1.10 and 2000 ISDA Definitions Section 1.10)
-	NZAU Auckland, New Zealand
-	NZWE Wellington, New Zealand
-	OMMU Muscat, Oman
-	PAPC Panama City, Panama
-	PELI Lima, Peru
-	PHMA Manila, Philippines
-	PHMK Makati, Philippines
-	PKKA Karachi, Pakistan
-	PLWA Warsaw, Poland
-	PRSJ San Juan, Puerto Rico
-	PTLI Lisbon, Portugal
-	QADO Doha, Qatar
-	ROBU Bucarest, Romania
-	RSBE Belgrade, Serbia
-	RUMO Moscow, Russian Federation
-	SAAB Abha, Saudi Arabia
-	SAJE Jeddah, Saudi Arabia
-	SARI Riyadh, Saudi Arabia
-	SEST Stockholm, Sweden
-	SGSI Singapore, Singapore
-	SILJ Ljubljana, Slovenia
-	SKBR Bratislava, Slovakia
-	SNDA Dakar, Senegal
-	SVSS San Salvador, El Salvador
-	THBA Bangkok, Thailand
-	TNTU Tunis, Tunisia
-	TRAN Ankara, Turkey
-	TRIS Istanbul, Turkey
-	TTPS Port of Spain, Trinidad and Tobago
-	TWTA Taipei, Taiwan
-	TZDA Dar es Salaam, Tanzania
-	TZDO Dodoma, Tanzania
-    UAKI Kiev, Ukraine
-	UGKA Kampala, Uganda
-	USBO Boston, Massachusetts, United States
-	USCH Chicago, United States
-	USCR Charlotte, North Carolina, United States
-	USDC Washington, District of Columbia, United States
-	USDN Denver, United States
-	USDT Detroit, Michigan, United States
-	USGS U.S. Government Securities Business Day (as defined in 2006 ISDA Definitions Section 1.11 and 2000 ISDA Definitions Section 1.11)
-	USHL Honolulu, Hawaii, United States
-	USHO Houston, United States
-	USLA Los Angeles, United States
-	USMB Mobile, Alabama, United States
-	USMN Minneapolis, United States
-	USNY New York, United States
-	USPO Portland, Oregon, United States
-	USSA Sacramento, California, United States
-	USSE Seattle, United States
-	USWT Wichita, United States
-	UYMO Montevideo, Uruguay
-	VECA Caracas, Venezuela
-	VGRT Road Town, Virgin Islands (British)
-	VNHA Hanoi, Vietnam
-	VNHC Ho Chi Minh (formerly Saigon), Vietnam
-	YEAD Aden, Yemen
-	ZAJO Johannesburg, South Africa
-	ZMLU Lusaka, Zambia
-	ZWHA Harare, Zimbabwe
+ BusinessCenter: The enumerated values to specify the business centers. A full list can be found in the [tradedocs/schemasrepo](https://github.com/freight-trust/tradedocs/schemas/businessCenters)
+
+!!! important
+	Primary Dates for usage are:   
+	EUTA TARGET (euro 'Business Center').   
+	USGS U.S. Government Securities Business Day (as defined in 2006 ISDA Definitions Section 1.11 and 2000 ISDA Definitions Section 1.11).   
+	ESAS ESAS Settlement Day (as defined in 2006 ISDA Definitions Section 7.1 and Supplement Number 15 to the 2000 ISDA Definitions).   
+	NYFD New York Fed Business Day (as defined in 2006 ISDA Definitions Section 1.9 and 2000 ISDA Definitions Section 1.9).   
+	NYSE New York Stock Exchange Business Day (as defined in 2006 ISDA Definitions Section 1.10 and 2000 ISDA Definitions Section 1.10).  
 
 
 ### Example

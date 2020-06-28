@@ -18,6 +18,15 @@ extra:
 
 nav:
   - Home: index.md
+  - Operations:
+    - Incident Recovery Plan: corporate/irp.md
+    - Software Defects: corporate/defects.md 
+    - Pricing: corporate/transaction-pricing.md
+    - Pricing Precedence: corporate/pricing-spec-precedence.md
+    - Pricing Benchmark: corporate/pricing-benchmark.md
+    - Document Retention Policy: corporate/document-retention-policy.md
+    - PKI: corporate/pki.md
+    - Safety and Continiuty: service-bus/safety-and-continiuty.md
   - Concepts:
     - Introduction: concepts/util.md
     - Mechanics and Dogma: concepts/central-dogma.md
@@ -39,25 +48,22 @@ nav:
     - Suspension: rulebook/suspension.md
   - Blockchain:
     - Blockchain: blockchain/pricing.md
-    - VBSM: blockchain/vbsm.md.md
-    - Network Upgrades: blockchain/network-upgrade.md
-    - Smart Contract Practices: blockchain/smart-contract-practices.md
-    - Topology: blockchain/topology.md
-    - Network: blockchain/network.md
-    - Smart Contract Development: blockchain/smart-contract-dev.md
-    - Contracts v1: blockchain/contracts-v1.md
-    - EVM: blockchain/evm.md
-    - Token Overview: blockchain/token-overview.md
-    - List: blockchain/list.md.md
-    - Wallets: blockchain/wallets.md
-    - Staking: blockchain/staking.md
     - Intro to EDI: blockchain/intro-edi.md
+    - Token Overview: blockchain/token-overview.md
+    - Contracts v1: blockchain/contracts-v1.md
+    - Staking: blockchain/staking.md
+    - Wallets: blockchain/wallets.md
+    - Network: blockchain/network.md
+    - Network Upgrades: blockchain/network-upgrade.md
+    - EVM Reference: blockchain/evm.md
+    - Topology: blockchain/topology.md
+    - Smart Contract Development: blockchain/smart-contract-dev.md
+    - Smart Contract Practices: blockchain/smart-contract-practices.md
+    - VBSM: blockchain/vbsm.md.md
   - Corpoorate:
     - EULA: corporate/eula.md.md
     - Pricing: corporate/transaction-pricing.md
     - Privacy Policy: corporate/privacy-policy.md
-    - Code of Conduct: corporate/code-of-conduct.md
-    - PKI: corporate/pki.md
     - Pricing Precedence: corporate/pricing-spec-precedence.md
     - IRP Plan: corporate/irp.md
     - Index: corporate/index.md
@@ -67,6 +73,8 @@ nav:
     - CCPA: corporate/ccpa.md
     - GPL Cooperation: corporate/GPL-cooperation-commitment.md
     - Software Defects: corporate/defects.md
+    - Code of Conduct: corporate/code-of-conduct.md
+    - PKI: corporate/pki.md
   - Supply Chain:
     - Overview: supply-chain/README.md
     - Bill of Lading: supply-chain/bol-rules.md
@@ -82,9 +90,7 @@ nav:
     - X12 Data Transformation: service-bus/x12-parser.md
     - X12 Data Interchange: service-bus/edi-x12.md
     - Safety and Continiuty: service-bus/safety-and-continiuty.md
-    - Trading Partner: service-bus/trading_partner.md
     - Data Interchange Formats: service-bus/what-is-edi.md
-    - EDI Grammer: service-bus/jedi-grammer.md
     - Record Layouts: service-bus/record_layout_codes.md
 docs_dir: docs
 

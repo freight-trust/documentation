@@ -8,22 +8,59 @@ description: Freight Trust Network Rulebook, Engineering, Technical, and more.
 !!! abstract
     The Omnibus format of documentation includes a **Rulebook**, **Engineering Specifications**, **Technical Documentation**, **Research Papers**, and more. [Freight Trust & Clearing](https://freighttrust.com).
 
+## Overview
+
+Guide to the documentation is as follows:
+    Category *an informal name given to a section or collection of sections*. 
+        Section *a formal name given to a specific part of the* `omnibus`. 
+            Sub-Section *a formal name given to a specific part of a* `section`. 
+
+* Operations 
+- Corporate
+    - Pricing Benchmark
+    - Pricing Precedence
+    - Transaction Pricing
+    - Incident Response Plan
+    - Software Defects 
+    - Business Continuity 
+
+
+* Explainations
+- Concepts
+    - [Mechanics & Dogma](concepts/central-dogma.html): This can be thought of as an abbreviated "informal academic paper"
+
+* Legal
+- Rulebook
+    - [General](#): Information on the legal paramters that constitute how behavior is regulated on-chain.  
+
+* Technical
+- Blockchain
+    - Token Overview: Information on the $EDI Token and its utility 
+    - Staking: Information on how Staking Pools
+    - Network: Information on "master nodes" and the "pools" for nodes
+- Event Streams
+    - Messague Queues
+    - Schema Registry (not in the "kafka" sense)
+
+
+
 ## Rulebook Notice
 
 !!! note
 	In these Rules, unless the context clearly requires otherwise,
 
-    (a) words in the singular include the plural and words in the plural include the singular,
-    (b) any gender includes each other gender,
-    (c) references to statutory provisions include those provisions, and any rules or regulations promulgated thereunder, as amended, and
-    (d) all uses of the word “including” should be construed to mean “including, but not limited to.
+    (a) words in the singular include the plural and words in the plural include the singular,  
+    (b) any gender includes each other gender,  
+    (c) references to statutory provisions include those provisions, and any rules or regulations promulgated thereunder, as amended, and. 
+    (d) all uses of the word “including” should be construed to mean “including, but not limited to.  
     
+
     Headings included herein are for convenience purposes only and do not form a part of these Rules.
 
 !!! important 
-    **Date and Time References** Unless otherwise specified, all references
-	to dates, times or time periods shall refer to, or be measured in
-	accordance with the time in New York City, New York.
+    **Date and Time References** Unless otherwise specified, all references. 
+	to dates, times or time periods shall refer to, or be measured in. 
+	accordance with the time in New York City, New York.  
 
 
 
