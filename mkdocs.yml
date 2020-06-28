@@ -20,12 +20,12 @@ nav:
   - Home: index.md
   - Concepts:
     - Introduction: concepts/util.md
+    - Mechanics and Dogma: concepts/central-dogma.md
     - Axioms: concepts/axioms.md
     - Network Design: concepts/network-design.md
     - Ecosystem: concepts/ecosystem.md
     - Protocol: concepts/as2protocol.md
     - Message Design: concepts/message-design.md
-    - Concepts: concepts/output.md
   - Rulebook:
     - General: rulebook/general.md
     - Governance: rulebook/governance.md

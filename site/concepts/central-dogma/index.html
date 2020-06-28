@@ -1,0 +1,545 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=../../assets/images/favicon.png><meta name=generator content="mkdocs-1.1.2, mkdocs-material-5.3.3"><title>Mechanics and Dogma - Freight Trust Network Omnibus</title><link rel=stylesheet href=../../assets/stylesheets/main.fe0cca5b.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.a46bcfb3.min.css><meta name=theme-color content=#546e7a><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback"><style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style><link rel=stylesheet href=../../extra.css></head> <body dir=ltr data-md-color-scheme data-md-color-primary=blue-grey data-md-color-accent=green> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#central-dogma class=md-skip> Skip to content </a> </div> <div data-md-component=announce> <aside class=md-announce> <div class="md-announce__inner md-grid md-typeset"> <style>
+
+    /* Preserve link color */
+    .md-announce a,
+    .md-announce a:focus,
+    .md-announce a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .md-announce h2 {
+      display: block;
+      font-size: 1.5em;
+      margin-block-start: 0.83em;
+      margin-block-end: 0.83em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: 800;
+    }
+
+
+    /* Don't wrap name of blog article */
+    .announce strong {
+      white-space: nowrap;
+    }
+  </style> <div><h2>See an issue?</h2></div> Open an issue on our GitHub<br> Join our GitHub Community at<a href=https://github.com/freight-chain/network>and find out more</a>about our community! <p></p> </div> </aside> </div> <header class=md-header data-md-component=header> <nav class="md-header-nav md-grid" aria-label=Header> <a href=../.. title="Freight Trust Network Omnibus" class="md-header-nav__button md-logo" aria-label="Freight Trust Network Omnibus"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17.9 17.39c-.26-.8-1.01-1.39-1.9-1.39h-1v-3a1 1 0 00-1-1H8v-2h2a1 1 0 001-1V7h2a2 2 0 002-2v-.41a7.984 7.984 0 012.9 12.8M11 19.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.22.21-1.79L9 15v1a2 2 0 002 2m1-16A10 10 0 002 12a10 10 0 0010 10 10 10 0 0010-10A10 10 0 0012 2z"/></svg> </a> <label class="md-header-nav__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg> </label> <div class=md-header-nav__title data-md-component=header-title> <div class=md-header-nav__ellipsis> <span class="md-header-nav__topic md-ellipsis"> Freight Trust Network Omnibus </span> <span class="md-header-nav__topic md-ellipsis"> Mechanics and Dogma </span> </div> </div> <label class="md-header-nav__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query data-md-state=active> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </label> <button type=reset class="md-search__icon md-icon" aria-label=Clear data-md-component=search-reset tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg> </button> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> <div class=md-header-nav__source> <a href=https://github.com/freight-trust/omnibus/ title="Go to repository" class=md-source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg> </div> <div class=md-source__repository> GitHub </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <nav class="md-tabs md-tabs--active" aria-label=Tabs data-md-component=tabs> <div class="md-tabs__inner md-grid"> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../.. class=md-tabs__link> Home </a> </li> <li class=md-tabs__item> <a href=../util/ class="md-tabs__link md-tabs__link--active"> Concepts </a> </li> <li class=md-tabs__item> <a href=../../rulebook/general/ class=md-tabs__link> Rulebook </a> </li> <li class=md-tabs__item> <a href=../../blockchain/pricing/ class=md-tabs__link> Blockchain </a> </li> <li class=md-tabs__item> <a href=../../corporate/eula.md/ class=md-tabs__link> Corpoorate </a> </li> <li class=md-tabs__item> <a href=../../supply-chain/ class=md-tabs__link> Supply Chain </a> </li> <li class=md-tabs__item> <a href=../../service-bus/message-structure/ class=md-tabs__link> Event Streams </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="Freight Trust Network Omnibus" class="md-nav__button md-logo" aria-label="Freight Trust Network Omnibus"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17.9 17.39c-.26-.8-1.01-1.39-1.9-1.39h-1v-3a1 1 0 00-1-1H8v-2h2a1 1 0 001-1V7h2a2 2 0 002-2v-.41a7.984 7.984 0 012.9 12.8M11 19.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.22.21-1.79L9 15v1a2 2 0 002 2m1-16A10 10 0 002 12a10 10 0 0010 10 10 10 0 0010-10A10 10 0 0012 2z"/></svg> </a> Freight Trust Network Omnibus </label> <div class=md-nav__source> <a href=https://github.com/freight-trust/omnibus/ title="Go to repository" class=md-source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg> </div> <div class=md-source__repository> GitHub </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. title=Home class=md-nav__link> Home </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-2 type=checkbox id=nav-2 checked> <label class=md-nav__link for=nav-2> Concepts <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=Concepts data-md-level=1> <label class=md-nav__title for=nav-2> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Concepts </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../util/ title=Introduction class=md-nav__link> Introduction </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Mechanics and Dogma <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg> </span> </label> <a href=./ title="Mechanics and Dogma" class="md-nav__link md-nav__link--active"> Mechanics and Dogma </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Table of contents </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#functional class=md-nav__link> Functional </a> </li> <li class=md-nav__item> <a href=#equivalent class=md-nav__link> Equivalent </a> </li> <li class=md-nav__item> <a href=#parity class=md-nav__link> Parity </a> </li> <li class=md-nav__item> <a href=#objectives class=md-nav__link> Objectives </a> </li> <li class=md-nav__item> <a href=#equivalence-vs-partial-equivalence class=md-nav__link> Equivalence vs. Partial Equivalence </a> <nav class=md-nav aria-label="Equivalence vs. Partial Equivalence"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#equivalance-relation class=md-nav__link> Equivalance Relation </a> </li> <li class=md-nav__item> <a href=#classifying-legal-mechanisms-in-terms-of-mathematical-properties class=md-nav__link> Classifying legal mechanisms in terms of mathematical properties </a> </li> <li class=md-nav__item> <a href=#additional-assessment-techniques-of-realizing-legal-parity class=md-nav__link> Additional Assessment Techniques of Realizing Legal Parity </a> <nav class=md-nav aria-label="Additional Assessment Techniques of Realizing Legal Parity"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#leximetric-analysis class=md-nav__link> Leximetric Analysis </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#legal-patterns class=md-nav__link> Legal Patterns </a> <nav class=md-nav aria-label="Legal Patterns"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#patterns class=md-nav__link> Patterns </a> </li> <li class=md-nav__item> <a href=#anti-patterns class=md-nav__link> Anti-Patterns </a> <nav class=md-nav aria-label=Anti-Patterns> <ul class=md-nav__list> <li class=md-nav__item> <a href=#requires-review class=md-nav__link> Requires Review </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#primitives class=md-nav__link> Primitives </a> <nav class=md-nav aria-label=Primitives> <ul class=md-nav__list> <li class=md-nav__item> <a href=#contractformationprimitive class=md-nav__link> ContractFormationPrimitive </a> </li> <li class=md-nav__item> <a href=#allocationprimitive class=md-nav__link> AllocationPrimitive </a> <nav class=md-nav aria-label=AllocationPrimitive> <ul class=md-nav__list> <li class=md-nav__item> <a href=#primitive-example class=md-nav__link> Primitive Example </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../axioms/ title=Axioms class=md-nav__link> Axioms </a> </li> <li class=md-nav__item> <a href=../network-design/ title="Network Design" class=md-nav__link> Network Design </a> </li> <li class=md-nav__item> <a href=../ecosystem/ title=Ecosystem class=md-nav__link> Ecosystem </a> </li> <li class=md-nav__item> <a href=../as2protocol/ title=Protocol class=md-nav__link> Protocol </a> </li> <li class=md-nav__item> <a href=../message-design/ title="Message Design" class=md-nav__link> Message Design </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3 type=checkbox id=nav-3> <label class=md-nav__link for=nav-3> Rulebook <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=Rulebook data-md-level=1> <label class=md-nav__title for=nav-3> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Rulebook </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../rulebook/general/ title=General class=md-nav__link> General </a> </li> <li class=md-nav__item> <a href=../../rulebook/governance/ title=Governance class=md-nav__link> Governance </a> </li> <li class=md-nav__item> <a href=../../rulebook/governing-laws/ title="Governing Laws" class=md-nav__link> Governing Laws </a> </li> <li class=md-nav__item> <a href=../../rulebook/delivery-and-settlement/ title="Delivery & Settlement" class=md-nav__link> Delivery & Settlement </a> </li> <li class=md-nav__item> <a href=../../rulebook/behavior/ title=Behavior class=md-nav__link> Behavior </a> </li> <li class=md-nav__item> <a href=../../rulebook/ title=Index class=md-nav__link> Index </a> </li> <li class=md-nav__item> <a href=../../rulebook/legal-parity/ title="Legal Parity" class=md-nav__link> Legal Parity </a> </li> <li class=md-nav__item> <a href=../../rulebook/network-clearing-participants/ title="Network Participants" class=md-nav__link> Network Participants </a> </li> <li class=md-nav__item> <a href=../../rulebook/obligations/ title=Obligations class=md-nav__link> Obligations </a> </li> <li class=md-nav__item> <a href=../../rulebook/suspension/ title=Suspension class=md-nav__link> Suspension </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4 type=checkbox id=nav-4> <label class=md-nav__link for=nav-4> Blockchain <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=Blockchain data-md-level=1> <label class=md-nav__title for=nav-4> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Blockchain </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blockchain/pricing/ title=Blockchain class=md-nav__link> Blockchain </a> </li> <li class=md-nav__item> <a href=../../blockchain/vbsm.md/ title=VBSM class=md-nav__link> VBSM </a> </li> <li class=md-nav__item> <a href=../../blockchain/network-upgrade/ title="Network Upgrades" class=md-nav__link> Network Upgrades </a> </li> <li class=md-nav__item> <a href=../../blockchain/smart-contract-practices/ title="Smart Contract Practices" class=md-nav__link> Smart Contract Practices </a> </li> <li class=md-nav__item> <a href=../../blockchain/topology/ title=Topology class=md-nav__link> Topology </a> </li> <li class=md-nav__item> <a href=../../blockchain/network/ title=Network class=md-nav__link> Network </a> </li> <li class=md-nav__item> <a href=../../blockchain/smart-contract-dev/ title="Smart Contract Development" class=md-nav__link> Smart Contract Development </a> </li> <li class=md-nav__item> <a href=../../blockchain/contracts-v1/ title="Contracts v1" class=md-nav__link> Contracts v1 </a> </li> <li class=md-nav__item> <a href=../../blockchain/evm/ title=EVM class=md-nav__link> EVM </a> </li> <li class=md-nav__item> <a href=../../blockchain/token-overview/ title="Token Overview" class=md-nav__link> Token Overview </a> </li> <li class=md-nav__item> <a href=../../blockchain/list.md.md title=List class=md-nav__link> List </a> </li> <li class=md-nav__item> <a href=../../blockchain/wallets/ title=Wallets class=md-nav__link> Wallets </a> </li> <li class=md-nav__item> <a href=../../blockchain/staking/ title=Staking class=md-nav__link> Staking </a> </li> <li class=md-nav__item> <a href=../../blockchain/intro-edi/ title="Intro to EDI" class=md-nav__link> Intro to EDI </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-5 type=checkbox id=nav-5> <label class=md-nav__link for=nav-5> Corpoorate <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=Corpoorate data-md-level=1> <label class=md-nav__title for=nav-5> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Corpoorate </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../corporate/eula.md/ title=EULA class=md-nav__link> EULA </a> </li> <li class=md-nav__item> <a href=../../corporate/transaction-pricing/ title=Pricing class=md-nav__link> Pricing </a> </li> <li class=md-nav__item> <a href=../../corporate/privacy-policy/ title="Privacy Policy" class=md-nav__link> Privacy Policy </a> </li> <li class=md-nav__item> <a href=../../corporate/code-of-conduct/ title="Code of Conduct" class=md-nav__link> Code of Conduct </a> </li> <li class=md-nav__item> <a href=../../corporate/pki/ title=PKI class=md-nav__link> PKI </a> </li> <li class=md-nav__item> <a href=../../corporate/pricing-spec-precedence/ title="Pricing Precedence" class=md-nav__link> Pricing Precedence </a> </li> <li class=md-nav__item> <a href=../../corporate/irp/ title="IRP Plan" class=md-nav__link> IRP Plan </a> </li> <li class=md-nav__item> <a href=../../corporate/ title=Index class=md-nav__link> Index </a> </li> <li class=md-nav__item> <a href=../../corporate/bylaws/ title=Bylaws class=md-nav__link> Bylaws </a> </li> <li class=md-nav__item> <a href=../../corporate/document-retention-policy/ title="Document Retention Policy" class=md-nav__link> Document Retention Policy </a> </li> <li class=md-nav__item> <a href=../../corporate/pricing-benchmark/ title="Pricing Benchmark" class=md-nav__link> Pricing Benchmark </a> </li> <li class=md-nav__item> <a href=../../corporate/ccpa/ title=CCPA class=md-nav__link> CCPA </a> </li> <li class=md-nav__item> <a href=../../corporate/GPL-cooperation-commitment/ title="GPL Cooperation" class=md-nav__link> GPL Cooperation </a> </li> <li class=md-nav__item> <a href=../../corporate/defects/ title="Software Defects" class=md-nav__link> Software Defects </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-6 type=checkbox id=nav-6> <label class=md-nav__link for=nav-6> Supply Chain <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label="Supply Chain" data-md-level=1> <label class=md-nav__title for=nav-6> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Supply Chain </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../supply-chain/ title=Overview class=md-nav__link> Overview </a> </li> <li class=md-nav__item> <a href=../../supply-chain/bol-rules/ title="Bill of Lading" class=md-nav__link> Bill of Lading </a> </li> <li class=md-nav__item> <a href=../../supply-chain/non-negotiable-warehouse-receipt/ title=Warehousing class=md-nav__link> Warehousing </a> </li> <li class=md-nav__item> <a href=../../supply-chain/non-negotiable-bol/ title=Non-Negotiable class=md-nav__link> Non-Negotiable </a> </li> <li class=md-nav__item> <a href=../../supply-chain/customs-broker-power-of-attorney/ title="Customs Brokers" class=md-nav__link> Customs Brokers </a> </li> <li class=md-nav__item> <a href=../../supply-chain/incoterms/ title="INCO Terms" class=md-nav__link> INCO Terms </a> </li> <li class=md-nav__item> <a href=../../supply-chain/bill-of-lading-rules/ title="Bill of Lading Rules" class=md-nav__link> Bill of Lading Rules </a> </li> <li class=md-nav__item> <a href=../../supply-chain/856/ title="EDI Transactions" class=md-nav__link> EDI Transactions </a> </li> <li class=md-nav__item> <a href=../../supply-chain/containers/ title=Maritime class=md-nav__link> Maritime </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-7 type=checkbox id=nav-7> <label class=md-nav__link for=nav-7> Event Streams <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label="Event Streams" data-md-level=1> <label class=md-nav__title for=nav-7> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Event Streams </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../service-bus/message-structure/ title="Message Structures" class=md-nav__link> Message Structures </a> </li> <li class=md-nav__item> <a href=../../service-bus/x12-parser/ title="X12 Data Transformation" class=md-nav__link> X12 Data Transformation </a> </li> <li class=md-nav__item> <a href=../../service-bus/edi-x12/ title="X12 Data Interchange" class=md-nav__link> X12 Data Interchange </a> </li> <li class=md-nav__item> <a href=../../service-bus/safety-and-continiuty/ title="Safety and Continiuty" class=md-nav__link> Safety and Continiuty </a> </li> <li class=md-nav__item> <a href=../../service-bus/trading_partner/ title="Trading Partner" class=md-nav__link> Trading Partner </a> </li> <li class=md-nav__item> <a href=../../service-bus/what-is-edi/ title="Data Interchange Formats" class=md-nav__link> Data Interchange Formats </a> </li> <li class=md-nav__item> <a href=../../service-bus/jedi-grammer/ title="EDI Grammer" class=md-nav__link> EDI Grammer </a> </li> <li class=md-nav__item> <a href=../../service-bus/record_layout_codes/ title="Record Layouts" class=md-nav__link> Record Layouts </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Table of contents </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#functional class=md-nav__link> Functional </a> </li> <li class=md-nav__item> <a href=#equivalent class=md-nav__link> Equivalent </a> </li> <li class=md-nav__item> <a href=#parity class=md-nav__link> Parity </a> </li> <li class=md-nav__item> <a href=#objectives class=md-nav__link> Objectives </a> </li> <li class=md-nav__item> <a href=#equivalence-vs-partial-equivalence class=md-nav__link> Equivalence vs. Partial Equivalence </a> <nav class=md-nav aria-label="Equivalence vs. Partial Equivalence"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#equivalance-relation class=md-nav__link> Equivalance Relation </a> </li> <li class=md-nav__item> <a href=#classifying-legal-mechanisms-in-terms-of-mathematical-properties class=md-nav__link> Classifying legal mechanisms in terms of mathematical properties </a> </li> <li class=md-nav__item> <a href=#additional-assessment-techniques-of-realizing-legal-parity class=md-nav__link> Additional Assessment Techniques of Realizing Legal Parity </a> <nav class=md-nav aria-label="Additional Assessment Techniques of Realizing Legal Parity"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#leximetric-analysis class=md-nav__link> Leximetric Analysis </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#legal-patterns class=md-nav__link> Legal Patterns </a> <nav class=md-nav aria-label="Legal Patterns"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#patterns class=md-nav__link> Patterns </a> </li> <li class=md-nav__item> <a href=#anti-patterns class=md-nav__link> Anti-Patterns </a> <nav class=md-nav aria-label=Anti-Patterns> <ul class=md-nav__list> <li class=md-nav__item> <a href=#requires-review class=md-nav__link> Requires Review </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#primitives class=md-nav__link> Primitives </a> <nav class=md-nav aria-label=Primitives> <ul class=md-nav__list> <li class=md-nav__item> <a href=#contractformationprimitive class=md-nav__link> ContractFormationPrimitive </a> </li> <li class=md-nav__item> <a href=#allocationprimitive class=md-nav__link> AllocationPrimitive </a> <nav class=md-nav aria-label=AllocationPrimitive> <ul class=md-nav__list> <li class=md-nav__item> <a href=#primitive-example class=md-nav__link> Primitive Example </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content> <article class="md-content__inner md-typeset"> <a href=https://github.com/freight-trust/omnibus/edit/master/docs/concepts/central-dogma.md title="Edit this page" class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg> </a> <h1 id=central-dogma>Central Dogma<a class=headerlink href=#central-dogma title="Permanent link"></a></h1> <p>There are three sorts of smart contracts:</p> <div class="admonition important"> <p class=admonition-title>Important</p> <p>** functional ** equivalent ** parity</p> </div> <h4 id=functional>Functional<a class=headerlink href=#functional title="Permanent link"></a></h4> <p>Functional being that it posses an enforcement mechanism to induce behavior in a programmed mechanism, e.g. an escrow contract.</p> <h4 id=equivalent>Equivalent<a class=headerlink href=#equivalent title="Permanent link"></a></h4> <p>Equivalent would be where your contractual rights are enforceable, such as a loan that defaults asserting your rights.</p> <h4 id=parity>Parity<a class=headerlink href=#parity title="Permanent link"></a></h4> <p>Parity would mean that it does the exact behavior of actual legal contracts, in that it also involves 3<sup>rd</sup> parties into the process, e.g. insurance companies.</p> <p>Now that we have the terminology to be able to express the legaliness, we can move onto the network itself. First, let's define what an effective network is, as that is our ultimate goal: none of this will be useful if the network itself is not an effective regime.</p> <p>The effectiveness of any network or regime (Barrett 2003) is a function of three factors:</p> <ul> <li>The ambition of its provisions</li> <li>The level of participation between actors</li> <li>The degree to which actors comply with this framework</li> </ul> <p>In designing version 2 of the protocol we had to set forth some design criteria to be able to model not only user behavior but also to help in planning long term priorities in terms of what we should focus on so that we may realize this. Taking a mathematical approach to smart contract design is useful in this attempt as it provides us with criteria that we can and can not do.</p> <div class="admonition quote"> <p class=admonition-title>Quote</p> <p>"&hellip;that a rule constitutes a legal obligation and that compliance is therefore required rather &gt; than merely optional .<code>" (Hart 1994)</code></p> </div> <p>"<code>equivalence</code>" as it relates to the digitization of shipping documents concerns itself with the term '<code>functionally equivalent</code>'. It is used in the literature (Goldby 2012) to imply a sort of symmetry to these issues of physicality and possession.</p> <p>Our approach is radically different: we do not set out to provide for a symmetrical basis for all legal contracts, in fact, our system uses a devolved, that is to say, "<code>federated</code>", a model of interlocking networks, and consortiums and composability.</p> <h3 id=objectives>Objectives<a class=headerlink href=#objectives title="Permanent link"></a></h3> <p>(i) the promotion of certainty and predictability; (ii) the promotion of uniformity of application; (iii) the protection of democratic ideals and ensuring of jurisprudential deliberation, and; (iv) the retention of efficiency.</p> <h2 id=equivalence-vs-partial-equivalence>Equivalence vs. Partial Equivalence<a class=headerlink href=#equivalence-vs-partial-equivalence title="Permanent link"></a></h2> <p>We can determine that there lie two base units for the legal system through leximetric analysis, that is to say, there are units of obligatory execution and units of voluntary execution. This means that there are things you do on your own, and this that you do because you were coerced into doing or your agency has been impaired (e.g. imprisonment.</p> <p>We take these units (e.g. mechanisms for enforcement) and quantify them so that we may determine the necessary capabilities of specific EDI transaction Statement of Definitions transitive (the start of a chain of precedence relations must precede the end of the chain antisymmetric (no two different elements precede each other), reflexive (each element is comparable to itself)</p> <h4 id=equivalance-relation>Equivalance Relation<a class=headerlink href=#equivalance-relation title="Permanent link"></a></h4> <p>equivalence relation as defined mathematically;</p> <p>a = a (reflexive property) a = b then b = a a = b and b = c then a = c (transitive property)</p> <p>partial equivalence as defined mathematically aRb then bRa (symmetry)</p> <p>if aRb and bRc then aRc (transitivity)</p> <h3 id=classifying-legal-mechanisms-in-terms-of-mathematical-properties>Classifying legal mechanisms in terms of mathematical properties<a class=headerlink href=#classifying-legal-mechanisms-in-terms-of-mathematical-properties title="Permanent link"></a></h3> <p>A similar approach applied for automating security audits So these Properties listed above are the "<code>relations</code>" of classification upon which we then determine how the legal obligations are arranged, which will then determine what it can do and can not do in the protocol. This portion of the protocol is called the "<code>mapping engine</code>", and is one of the solutions that will enable global adoption, as it represents a legal parity, not a functionally equivalent contract. The Main Classifiers used in determining protocol capabilities are: Symmetry Transitivity Reflexive</p> <h3 id=additional-assessment-techniques-of-realizing-legal-parity>Additional Assessment Techniques of Realizing Legal Parity<a class=headerlink href=#additional-assessment-techniques-of-realizing-legal-parity title="Permanent link"></a></h3> <h4 id=leximetric-analysis>Leximetric Analysis<a class=headerlink href=#leximetric-analysis title="Permanent link"></a></h4> <p>When do drafters of legal instruments specify details and when do they not?</p> <div class=codehilite><pre><span></span><code><span class=err>(i) That statute length varies systematically across countries, partially controlling for substance;</span>
+<span class=err>(ii) that other legal instruments, such as judicial opinions and contracts, are longer in countries with long statutes;</span>
+<span class=err>(iii) that both of the above are correlated with a large lawyer population.</span>
+</code></pre></div> <p>System based design methodology in designing and understanding the legal implications of actions and which to give weight to. This list is basically a filter for determining which primitive is applicable to which law, i.e. this is part of the mapping engine we have developed. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=456520">source</a></p> <h3 id=legal-patterns>Legal Patterns<a class=headerlink href=#legal-patterns title="Permanent link"></a></h3> <p>We use the term "<code>pattern</code>" meaning relevant to our protocol, and "<code>anti-pattern</code>" to represent a more subjective interpretation or one that is hard to automate to determine should it be included or not.</p> <h4 id=patterns>Patterns<a class=headerlink href=#patterns title="Permanent link"></a></h4> <p>Law that addresses a problem that has not been defined Law that addresses a problem that no longer exists Law that addresses more than one problem Law that has no stated purpose The language of the law is vague or complex Law is unable to achieve its stated goal</p> <h4 id=anti-patterns>Anti-Patterns<a class=headerlink href=#anti-patterns title="Permanent link"></a></h4> <p>Laws that address problems that have not been defined Laws that address problems that no longer exist Laws that address more than one problem in different domains Laws that lack a stated, measurable problem solving the goal, or purpose Laws that fail to achieve their goal or lack stated goals Laws that lack a citation of references Laws whose burdens are greater than their problem-solving benefit Laws whose problem-solving benefit and burdens are equal Laws whose results cannot be measured Laws that interfere with other laws Laws that duplicate other laws </p> <h5 id=requires-review>Requires Review<a class=headerlink href=#requires-review title="Permanent link"></a></h5> <p>Laws that are not enforced Laws that violate "human rights" Laws that are overly vague or complex Laws that have not undergone QA analysis within a specified time frame </p> <p>Now that we have established legal patterns and a legal classified, we can begin to map out how these relationships present themselves, either by acting upon, being acted upon, events, etc.</p> <h2 id=primitives>Primitives<a class=headerlink href=#primitives title="Permanent link"></a></h2> <p><em>Primitives Layer</em> Primitives List of Legal Primitive Mechanisms:</p> <p><code>PrimitiveEvent</code> <code>ExercisePrimitive</code> <code>AllocationPrimitive</code> <code>ContractFormationPrimitive</code> <code>ExecutionPrimitive</code> <code>InceptionPrimitive</code> <code>ObservationPrimitive</code> <code>QuantityChangePrimitive</code> <code>ResetPrimitive</code> <code>TermsChangePrimitive</code> <code>TransferPrimitive</code> <code>ExecutionPrimitive</code></p> <p>Specification of the primitive event for execution, with '<code>after</code>' state being an ExecutionState and the '<code>before</code>' state being Null. The '<code>before</code>' ExecutionState (0&hellip;0) The 0 cardinality reflects the fact that there is no execution in the before the state of an execution primitive. Think of this as the "<code>genesis</code>" point. after ExecutionState The after state corresponds to the execution between the parties. In the case of execution on a contractual product, some additional characteristics may need to be specified to get a fully-formed contract, for instance when the executing party acts as an agent, as is the case in an allocation scenario. This is the purpose of the ContractFormation primitive event.</p> <h4 id=contractformationprimitive>ContractFormationPrimitive<a class=headerlink href=#contractformationprimitive title="Permanent link"></a></h4> <div class="admonition note"> <p class=admonition-title>Note</p> <p>This design pattern is different in that it does not bundle together execution of the contract and formation of the contract, similar to the way a proxy contract works.</p> </div> <p>The design pattern for this is to better provide for atomic primitives. Our purposes does not need such atomicity, as they are contractual products.</p> <p>ExecutionPrimitive + ContractFormationPrimitive = atomic financial primitive InceptionPrimitive = contractual product primitive</p> <p>Specification of the primitive event for the formation of a contract, with '<code>before</code>' state being an '<code>ExecutionState</code>' and '<code>after</code>' state being a '<code>PostInceptionState</code>'.</p> <h4 id=allocationprimitive>AllocationPrimitive<a class=headerlink href=#allocationprimitive title="Permanent link"></a></h4> <p>The primitive event to represent a split/allocation of a trade. As part of this primitive event the type of trade, either execution or a contract, does not get altered. In the case of an execution, the further transformation of each split execution into a contract will be the purpose of the ContractFormation primitive.</p> <h5 id=primitive-example>Primitive Example<a class=headerlink href=#primitive-example title="Permanent link"></a></h5> <p>example workflow of a contractual product condition <div class=highlight><pre><span></span><code>ContractType: if AllocationPrimitive exists and before \-&gt; execution exists then after \-&gt; originalTrade \-&gt; execution exists and after \-&gt; allocatedTrade \-&gt; execution exists and after \-&gt; allocatedTrade \-&gt; contract is absent condition ContractType: if AllocationPrimitive exists and before \-&gt; contract exists then after \-&gt; originalTrade \-&gt; contract exists and after \-&gt; allocatedTrade \-&gt; contract exists and after \-&gt; allocatedTrade \-&gt; execution is absent
+````
+
+
+`ExerciseTimingPrimitive` which is deemed as associated to a request for exercise that is meant to take place, as opposed to the actual exercise event. Similar to how in FpML an OptionExercise is constructed.
+`InceptionPrimitive` The primitive event for the inception of a new contract between parties.
+`ObservationPrimitive` A class to specify the primitive object to specify market observation events, which is applicable across all asset classes.
+`QuantityChangePrimitive` The primitive event represents a change in quantity or notional.
+`ResetPrimitive` The primitive event represents a reset.
+`TermsChangePrimitive` The primitive event represents change(s) to the contractual terms and the clearing submission and acceptance process.
+
+`TransferPrimitive` A class to specify the transfer of assets between parties, those assets being either cash, securities, or physical assets (such as freight or an asset held by a bailee relationship such as warehouse receipts).
+This class combines components that are cross-assets (settlement date, settlement type, status, ...) and some other which are specialized by asset class (e.g. the payer/receiver amount and cashflow type for a cash transfer, the transferor/transferee, security indication, quantity, and asset transfer type qualification for the case of security).
+Workflow for Contractual Product (e.g. Forward Contracts)
+
+###### Example Workflow 
+
+if WorkflowStep \-&gt; businessEvent \-&gt; primitives \-&gt; inception \-&gt; after \-&gt; contract only exists &amp;nbsp;then WorkflowStep \-&gt; businessEvent \-&gt; primitives \-&gt; inception \-&gt; after \-&gt; contract else if WorkflowStep \-&gt; businessEvent \-&gt; primitives \-&gt; quantityChange \-&gt; after \-&gt; contract exists &amp;nbsp;
+&amp;nbsp;then WorkflowStep \-&gt; businessEvent \-&gt; primitives \-&gt; quantityChange \-&gt; after \-&gt; contract &amp;nbsp;else WorkflowStep \-&gt; businessEvent \-&gt; primitives \-&gt; inception \-&gt; after \-&gt; contract &amp;nbsp;as &quot;Contract&quot;
+
+
+## Basic Contract Values
+
+### Legal Agreements
+
+!!! note
+	Where applicable, a reference to existing systems, such as the **Financial Product Markup Langauge** is made referenced by the following example: *synonym* `FpML_5_10` value `legalDocumentPublisherScheme_1_0`
+
+
+[LegalAgreementName](#LegalAgreement): The enumerated values to specify the legal agreement name.
+[LegalAgreementPublisher](#LegalAgreementPublisher): The enumerated values to specify the legal agreement publisher.
+
+[RegulatoryRegime](#RegulatoryRegime): The enumerated values to specify the regulatory regimes. The display name corresponds to the regulatory regime name or acronym specified. For example as part of the Regime table in the ISDA CSA for Initial Margin, paragraph 13, General Principles and or the General Principles: Regime located in the &quot;Rulebook&quot; Jurisdictional General Principles chapter.
+
+[OriginatingEvent](#OriginatingEvent): The enumeration values to specify the originating event that gave way to the trade.
+
+ Intent: The enumeration values to qualify the intent associated with a transaction event.
+		Correction The intent is to correct the event or associated execution/contract.
+		Increase The intent is to increase the notional or quantity associated with the contract or execution.
+		PartialTermination The intent is to reduce the notional or quantity associated with the contract (a.k.a. partially terminate it).
+		Renegotiation The intent is to re-negotiate some of the terms of the contract.
+		Termination The intent is to terminate the contract.
+
+#### Transaction Envelope 
+
+Data = Managed File Transfer Object
+Annotation = String (optional)
+Data Validation (or condition) = Schema
+Function = Transaction Type 
+Mapping (or synonym) == TransactionMap
+
+### Time Periods
+
+!!! note
+	Usage of Gregorian Calander Only, this topic is a bit more complicated and out of scope for this document. For our purposes, we consider October 10th, 1582 the day of adoption, not 1792.
+
+#### Business Day Conventions
+BusinessDayConvention: The enumerated values to specify the convention for adjusting any relevant date if it would otherwise fall on a day that is not a valid business day.
+
+DayType: The enumerated values to specify the day type classification used in counting the number of days between two dates.
+		Business When calculating the number of days between two dates the count includes only business days.
+		Calendar When calculating the number of days between two dates the count includes all calendar days.
+    	CommodityBusiness When calculating the number of days between two dates the count includes only commodity business days.
+		CurrencyBusiness When calculating the number of days between two dates the count includes only currency business days.
+		ExchangeBusiness When calculating the number of days between two dates the count includes only stock exchange business days.
+
+ TimeUnit: The eration values to qualify the allowed units of time.
+ Period: The enumerated values to specify the period, e.g. day, week.
+ PeriodTime: The enumeration values to specify a time period containing additional values such as Term.
+
+##### Business Center Values
+ BusinessCenter: The enumerated values to specify the business centers.
+	AEAD Abu Dhabi, United Arab Emirates
+	AEDU Dubai, United Arab Emirates
+	AMYE Yerevan, Armenia
+	AOLU Luanda, Angola
+	ARBA Buenos Aires, Argentina
+	ATVI Vienna, Austria
+	AUAD Adelaide, Australia
+	AUBR Brisbane, Australia
+	AUCA Canberra, Australia
+	AUDA Darwin, Australia
+	AUME Melbourne, Australia
+	AUPE Perth, Australia
+	AUSY Sydney, Australia
+	BBBR Bridgetown, Barbados
+	BDDH Dhaka, Bangladesh
+	BEBR Brussels, Belgium
+	BGSO Sofia, Bulgaria
+	BHMA Manama, Bahrain
+	BMHA Hamilton, Bermuda
+	BNBS Bandar Seri Begawan, Brunei
+	BOLP La Paz, Bolivia
+	BRBD Brazil Business Day. This means a business day in any of Sao Paulo, Rio de Janeiro or Brasilia not otherwise declared as a financial market holiday by the Bolsa de Mercadorias &amp; Futuros (BM&amp;F)
+	BRBR Brasilia, Brazil
+	BRRJ Rio de Janeiro, Brazil
+	BRSP Sao Paulo, Brazil
+	BSNA Nassau, Bahamas
+	BWGA Gaborone, Botswana
+	BYMI Minsk, Belarus
+	CACL Calgary, Canada
+	CAMO Montreal, Canada
+	CAOT Ottawa, Canada
+	CATO Toronto, Canada
+	CAVA Vancouver, Canada
+	CAWI Winnipeg, Canada
+	CHBA Basel, Switzerland
+	CHGE Geneva, Switzerland
+	CHZU Zurich, Switzerland
+	CIAB Abidjan, Cote d\&#39;Ivoire
+	CLSA Santiago, Chile
+	CNBE Beijing, China
+	CNSH Shanghai, China
+	COBO Bogota, Colombia
+	CRSJ San Jose, Costa Rica
+	CYNI Nicosia, Cyprus
+	CZPR Prague, Czech Republic
+	DECO Cologne, Germany
+	DEDU Dusseldorf, Germany
+	DEFR Frankfurt, Germany
+	DEHH Hamburg, Germany
+	DELE Leipzig, Germany
+	DEMA Mainz, Germany
+	DEMU Munich, Germany
+	DEST Stuttgart, Germany
+	DKCO Copenhagen, Denmark
+	DOSD Santo Domingo, Dominican Republic
+	DZAL Algiers, Algeria
+	EETA Tallinn, Estonia
+	EGCA Cairo, Egypt
+	ESAS ESAS Settlement Day (as defined in 2006 ISDA Definitions Section 7.1 and Supplement Number 15 to the 2000 ISDA Definitions)
+	ESBA Barcelona, Spain
+	ESMA Madrid, Spain
+	ETAA Addis Ababa, Ethiopia
+	EUTA TARGET (euro &#39;Business Center&#39;)
+	FIHE Helsinki, Finland
+	FRPA Paris, France
+	GBED Edinburgh, Scotland
+	GBLO London, United Kingdom
+	GETB Tbilisi, Georgia
+	GGSP Saint Peter Port, Guernsey
+	GHAC Accra, Ghana
+	GRAT Athens, Greece
+	HKHK Hong Kong, Hong Kong
+	HNTE Tegucigalpa, Honduras
+	HRZA Zagreb, Republic of Croatia
+	HUBU Budapest, Hungary
+	IDJA Jakarta, Indonesia
+	IEDU Dublin, Ireland
+	ILJE Jerusalem, Israel
+	ILTA Tel Aviv, Israel
+	INBA Bangalore, India
+	INCH Chennai, India
+	INHY Hyderabad, India
+	INKO Kolkata, India
+	INMU Mumbai, India
+	INND New Delhi, India
+	IRTE Tehran, Iran
+	ISRE Reykjavik, Iceland
+	ITMI Milan, Italy
+	ITRO Rome, Italy
+	ITTU Turin, Italy
+	JESH St. Helier, Channel Islands, Jersey
+	JMKI Kingston, Jamaica
+	JOAM Amman, Jordan
+	JPTO Tokyo, Japan
+	KENA Nairobi, Kenya
+	KRSE Seoul, Republic of Korea
+	KWKC Kuwait City, Kuwait
+	KYGE George Town, Cayman Islands
+	KZAL Almaty, Kazakhstan
+	LBBE Beirut, Lebanon
+	LKCO Colombo, Sri Lanka
+	LULU Luxembourg, Luxembourg
+	LVRI Riga, Latvia
+	MACA Casablanca, Morocco
+	MARA Rabat, Morocco
+	MCMO Monaco, Monaco
+	MOMA Macau, Macao
+	MTVA Valletta, Malta
+	MUPL Port Louis, Mauritius
+	MVMA Male, Maldives
+	MWLI Lilongwe, Malawi
+	MXMC Mexico City, Mexico
+	MYKL Kuala Lumpur, Malaysia
+	MYLA Labuan, Malaysia
+	NAWI Windhoek, Namibia
+	NGAB Abuja, Nigeria
+	NGLA Lagos, Nigeria
+	NLAM Amsterdam, Netherlands
+	NLRO Rotterdam, Netherlands
+	NOOS Oslo, Norway
+	NPKA Kathmandu, Nepal
+	NYFD New York Fed Business Day (as defined in 2006 ISDA Definitions Section 1.9 and 2000 ISDA Definitions Section 1.9)
+	NYSE New York Stock Exchange Business Day (as defined in 2006 ISDA Definitions Section 1.10 and 2000 ISDA Definitions Section 1.10)
+	NZAU Auckland, New Zealand
+	NZWE Wellington, New Zealand
+	OMMU Muscat, Oman
+	PAPC Panama City, Panama
+	PELI Lima, Peru
+	PHMA Manila, Philippines
+	PHMK Makati, Philippines
+	PKKA Karachi, Pakistan
+	PLWA Warsaw, Poland
+	PRSJ San Juan, Puerto Rico
+	PTLI Lisbon, Portugal
+	QADO Doha, Qatar
+	ROBU Bucarest, Romania
+	RSBE Belgrade, Serbia
+	RUMO Moscow, Russian Federation
+	SAAB Abha, Saudi Arabia
+	SAJE Jeddah, Saudi Arabia
+	SARI Riyadh, Saudi Arabia
+	SEST Stockholm, Sweden
+	SGSI Singapore, Singapore
+	SILJ Ljubljana, Slovenia
+	SKBR Bratislava, Slovakia
+	SNDA Dakar, Senegal
+	SVSS San Salvador, El Salvador
+	THBA Bangkok, Thailand
+	TNTU Tunis, Tunisia
+	TRAN Ankara, Turkey
+	TRIS Istanbul, Turkey
+	TTPS Port of Spain, Trinidad and Tobago
+	TWTA Taipei, Taiwan
+	TZDA Dar es Salaam, Tanzania
+	TZDO Dodoma, Tanzania
+    UAKI Kiev, Ukraine
+	UGKA Kampala, Uganda
+	USBO Boston, Massachusetts, United States
+	USCH Chicago, United States
+	USCR Charlotte, North Carolina, United States
+	USDC Washington, District of Columbia, United States
+	USDN Denver, United States
+	USDT Detroit, Michigan, United States
+	USGS U.S. Government Securities Business Day (as defined in 2006 ISDA Definitions Section 1.11 and 2000 ISDA Definitions Section 1.11)
+	USHL Honolulu, Hawaii, United States
+	USHO Houston, United States
+	USLA Los Angeles, United States
+	USMB Mobile, Alabama, United States
+	USMN Minneapolis, United States
+	USNY New York, United States
+	USPO Portland, Oregon, United States
+	USSA Sacramento, California, United States
+	USSE Seattle, United States
+	USWT Wichita, United States
+	UYMO Montevideo, Uruguay
+	VECA Caracas, Venezuela
+	VGRT Road Town, Virgin Islands (British)
+	VNHA Hanoi, Vietnam
+	VNHC Ho Chi Minh (formerly Saigon), Vietnam
+	YEAD Aden, Yemen
+	ZAJO Johannesburg, South Africa
+	ZMLU Lusaka, Zambia
+	ZWHA Harare, Zimbabwe
+
+
+### Example
+
+!!! note
+	This is provided for reference only
+
+```json
+ContractFormationPrimitive:
+		+ after
+			[value &quot;OTC_Matching&quot; path &quot;Body&quot; set when &quot;Header-&gt;OTC_RM-&gt;Manifest-&gt;TradeMsg-&gt;TransType&quot; = &quot;Trade&quot;]
+}
+
+synonym source DTCC_11_0 extends DTCC_BASE {
+	ContractFormationPrimitive:
+		+ after
+			[value &quot;OTC_RM&quot; path &quot;Header&quot;, &quot;OTC_Matching&quot; path &quot;Body&quot; set when &quot;Header-&gt;OTC_RM-&gt;Manifest-&gt;TradeMsg-&gt;TransType&quot; = &quot;Trade&quot;]	
+}
+
+synonym source DTCC_BASE extends FpML_5_10
+{
+	CalculationAgentModel:
+		+ calculationAgentBusinessCenter
+			[value &quot;calculationAgentBusinessCenter&quot; path &quot;Body-&gt;OTC_Matching-&gt;Trade-&gt;FpML-&gt;trade&quot;]
+
+	Contract:
+		- contractIdentifier
+		+ contractIdentifier
+			[value &quot;Submitter&quot;]
+			[value &quot;ContraTradeId&quot;]
+			[value &quot;YourTradeId&quot;]
+			[value &quot;tradeIdentifyingItems&quot;]
+			[value &quot;USI&quot;]
+			[value &quot;OriginatingUSI&quot;]
+			[value &quot;UTI&quot;]
+		+ tradableProduct
+			[hint &quot;ProductType&quot;]
+
+	Execution:
+		+ identifier
+			[value &quot;partyTradeIdentifier&quot; path &quot;Submitter&quot;]
+
+	Payout:
+		+ equityPayout
+			[value &quot;ignore&quot;]
+		+ forwardPayout
+			[value &quot;ignore&quot;]
+		+ securityPayout
+			[value &quot;ignore&quot;]
+
+	Product:
+		+ contractualProduct
+			[hint &quot;ProductType&quot;]
+
+	ProductIdentification:
+		- productType
+		+ productType
+			[value &quot;ProductType&quot;]
+		+ productId
+			[value &quot;instrumentId&quot; path &quot;payment-&gt;calculationDetails-&gt;calculationElements-&gt;underlier-&gt;index&quot; meta &quot;instrumentIdScheme&quot;]
+
+	PrimitiveEvent:
+		+ split
+			[value &quot;ignore&quot;]
+		+ exercise
+			[value &quot;ignore&quot;]
+		+ quantityChange
+			[value &quot;ignore&quot;]
+		+ reset
+			[value &quot;ignore&quot;]
+		+ termsChange
+			[value &quot;ignore&quot;]
+		+ transfer
+			[value &quot;Payment&quot; path &quot;Body-&gt;OTC_Matching&quot;]
+
+	ObservationPrimitive:
+		+ date
+			[value &quot;observationDate&quot;]
+
+	TransferPrimitive:
+		+ identifier
+			[value &quot;tradeCashflowsId&quot; path &quot;FpML&quot; meta &quot;tradeCashflowsIdScheme&quot;]
+		+ settlementType
+			[value &quot;SettlementType&quot; path &quot;PaymentDetails&quot;]
+		+ cashTransfer
+			[value &quot;payment&quot; path &quot;FpML&quot;]
+
+	AssetIdentifier:
+		+ productIdentifier
+			// For PriceNotation always set productIdentifier
+			// TODO: NAMESPACE changes. Removed the rosettaPath and moved the check one level up
+			// [synonym FpML_5_10 value &quot;equity&quot; set when rosettaPath = PriceNotation -&gt; assetIdentifier]
+			[value &quot;ignore&quot;]
+
+	Party:
+		+ partyId
+			[value &quot;partyId&quot; maps 2 meta &quot;partyIdScheme&quot;]
+
+	AssignedIdentifier:
+		+ identifier
+			 [value &quot;tradeId&quot; path &quot;partyTradeIdentifier&quot; maps 2
+			 set when &quot;partyTradeIdentifier-&gt;tradeId-&gt;tradeIdScheme&quot; = &quot;EventProcessingId&quot; and rosettaPath = WorkflowStep -&gt; eventIdentifier -&gt; assignedIdentifier -&gt; identifier,
+			 set when &quot;partyTradeIdentifier-&gt;tradeId-&gt;tradeIdScheme&quot; = &quot;TradeRefNbr&quot; and rosettaPath = Contract -&gt; contractIdentifier -&gt; assignedIdentifier -&gt; identifier meta &quot;tradeIdScheme&quot;]
+			[value &quot;USITradeId&quot; meta &quot;tradeIdScheme&quot;]
+			[value &quot;UTITradeId&quot; meta &quot;tradeIdScheme&quot;]
+			[value &quot;identifier&quot; path &quot;payment&quot; meta &quot;paymentIdScheme&quot;]
+
+	Identifier:
+		+ issuerReference
+			[value &quot;partyReference&quot; path &quot;partyTradeIdentifier&quot; maps 2 meta &quot;href&quot;]
+		+ issuer
+			[value &quot;USIIssuer&quot; meta &quot;issuerIdScheme&quot;]
+			[value &quot;UTIIssuer&quot; meta &quot;issuerIdScheme&quot;]
+
+	InterestShortFall:
+		+ rateSource
+			[value &quot;rateSource&quot; meta &quot;floatingRateIndexScheme&quot;]
+
+	CashTransferComponent:
+		+ amount
+			[value &quot;paymentAmount&quot;]
+		+ cashflowType
+			[value &quot;cashflowType&quot; path &quot;calculationDetails-&gt;grossCashflow&quot; meta &quot;cashflowTypeScheme&quot;]
+		+ breakdown
+			[value &quot;breakdown&quot;]
+
+	ContractState:
+		+ contract
+			[value &quot;FpML&quot; path &quot;Trade&quot;]
+			[value &quot;TradeMsg&quot; path &quot;Manifest&quot;]
+			[value &quot;ReportingJurisdiction&quot; path &quot;ReportingData-&gt;ReportingHeader&quot;]
+
+	CustomisedWorkflow:
+		+ itemName
+			[set to &quot;comment&quot; when path = &quot;PartyWorkflowFields-&gt;comment&quot;]
+			[set to &quot;superId&quot; when path = &quot;PartyWorkflowFields-&gt;superId&quot;]
+			[set to &quot;deskId&quot; when path = &quot;PartyWorkflowFields-&gt;deskId&quot;]
+			[set to &quot;eTradeId&quot; when path = &quot;PartyWorkflowFields-&gt;eTradeId&quot;]
+			[set to &quot;designatedParty&quot; when path = &quot;PartyWorkflowFields-&gt;designatedParty&quot;]
+			[set to &quot;brokerName&quot; when path = &quot;PartyWorkflowFields-&gt;brokerName&quot;]
+			[set to &quot;branchLocation&quot; when path = &quot;PartyWorkflowFields-&gt;branchLocation&quot;]
+			[set to &quot;midMarketPriceType&quot; when path = &quot;PartyWorkflowFields-&gt;midMarketPrice-&gt;midMarketPriceType&quot;]
+			[set to &quot;amount&quot; when path = &quot;PartyWorkflowFields-&gt;midMarketPrice-&gt;amount&quot;]
+		+ itemValue
+			[value &quot;comment&quot; path &quot;PartyWorkflowFields&quot;]
+			[value &quot;superId&quot; path &quot;PartyWorkflowFields&quot;]
+			[value &quot;deskId&quot; path &quot;PartyWorkflowFields&quot;]
+			[value &quot;eTradeId&quot; path &quot;PartyWorkflowFields&quot;]
+			[value &quot;designatedParty&quot; path &quot;PartyWorkflowFields&quot;]
+			[value &quot;brokerName&quot; path &quot;PartyWorkflowFields&quot;]
+			[value &quot;branchLocation&quot; path &quot;PartyWorkflowFields&quot;]
+			[value &quot;midMarketPriceType&quot; path &quot;PartyWorkflowFields-&gt;midMarketPrice&quot;]
+			[value &quot;amount&quot; path &quot;PartyWorkflowFields-&gt;midMarketPrice&quot;]
+
+	WorkflowStep:
+		+ messageInformation
+			[value &quot;FpML&quot; path &quot;Body-&gt;OTC_Matching-&gt;Trade&quot;]
+			[value &quot;FpML&quot; path &quot;Body-&gt;OTC_Matching-&gt;Payment&quot;]
+			[value &quot;RouteInfo&quot; path &quot;Header-&gt;OTC_RM-&gt;Delivery&quot;]
+			[value &quot;Manifest&quot; path &quot;Header-&gt;OTC_RM&quot;]
+		+ timestamp
+			[value &quot;header&quot; path &quot;Body-&gt;OTC_Matching-&gt;Trade-&gt;FpML&quot;]
+			[value &quot;Route&quot; path &quot;Header-&gt;OTC_RM-&gt;Delivery-&gt;RouteHist&quot;]
+			[value &quot;header&quot; path &quot;Body-&gt;OTC_Matching-&gt;Payment-&gt;FpML&quot;]
+		+ eventIdentifier
+			[value &quot;Submitter&quot; path &quot;Header-&gt;OTC_RM-&gt;Manifest-&gt;TradeMsg&quot;]
+			[value &quot;ContraTradeId&quot; path &quot;Header-&gt;OTC_RM-&gt;Manifest-&gt;TradeMsg&quot;]
+			[value &quot;YourTradeId&quot; path &quot;Header-&gt;OTC_RM-&gt;Manifest-&gt;TradeMsg&quot;]
+			[value &quot;tradeIdentifyingItems&quot; path &quot;Header-&gt;OTC_RM-&gt;Manifest-&gt;TradeMsg&quot;]
+		+ action
+			[value &quot;Activity&quot; path &quot;Header-&gt;OTC_RM-&gt;Manifest-&gt;TradeMsg&quot;]
+		+ party
+			[value &quot;party&quot; path &quot;Body-&gt;OTC_Matching-&gt;Trade-&gt;FpML&quot; ]
+			[value &quot;party&quot; path &quot;Body-&gt;OTC_Matching-&gt;Payment-&gt;FpML&quot; ]
+
+	EventTimestamp:
+		+ dateTime
+			[value &quot;creationTimestamp&quot;]
+			[value &quot;expiryTimestamp&quot;]
+			[value &quot;ReceiveTime&quot;]
+		+ qualification
+			[set to EventTimestampQualificationEnum -&gt; eventCreationDateTime when &quot;creationTimestamp&quot; exists]
+			[set to EventTimestampQualificationEnum -&gt; eventExpirationDateTime when &quot;expiryTimestamp&quot; exists]
+			[set to EventTimestampQualificationEnum -&gt; eventSubmittedDateTime when &quot;ReceiveTime&quot; exists]
+
+	MessageInformation:
+		+ messageId
+			[value &quot;messageId&quot; path &quot;header&quot; meta &quot;messageIdScheme&quot;]
+		+ sentBy
+			[value &quot;From&quot;]
+		+ sentTo
+			[value &quot;To&quot;]
+
+	PartyCustomisedWorkflow:
+		+ partyReference
+			[value &quot;partyReference&quot; meta &quot;href&quot;]
+
+	Trade:
+		+ contract
+			[value &quot;FpML&quot; path &quot;Trade&quot;]
+			[value &quot;TradeMsg&quot; path &quot;Manifest&quot;]
+			[value &quot;ReportingJurisdiction&quot; path &quot;ReportingData-&gt;ReportingHeader&quot;]
+
+	TradeWarehouseWorkflow:
+		+ warehouseIdentity
+			[value &quot;WarehousePositionType&quot; path &quot;WarehouseState&quot;]
+		+ warehouseStatus
+			[value &quot;WarehouseStatus&quot; path &quot;WarehouseState&quot;]
+		+ partyCustomisedWorkflow
+			[value &quot;WorkflowData&quot;]
+
+	TransferBase:
+		+ identifier
+			[value &quot;identifier&quot; meta &quot;paymentIdScheme&quot;]
+		+ transferCalculation
+			[value &quot;calculationDetails&quot;]
+
+	TransferCalculation:
+		+ period
+			[value &quot;calculationPeriod&quot; path &quot;calculationElements&quot;]
+		
+	enums
+
+	ActionEnum:
+		+ New
+			[value &quot;New&quot;]
+		+ Correct
+			[value &quot;Modify&quot;]
+		+ Cancel
+			[value &quot;Disable&quot;]
+
+	TransferSettlementEnum:
+		+ PaymentVersusPayment
+			[value &quot;CentralSettlement&quot;]
+		+ NotCentralSettlement
+			[value &quot;NotCentralSettlement&quot;]
+
+	WarehouseIdentityEnum:
+		+ DTCC_TIW_Gold
+			[value &quot;Gold&quot;]
+
+	WorkflowStatusEnum:
+		+ Alleged
+			[value &quot;Alleged&quot;]
+		+ Certain
+			[value &quot;Certain&quot;]
+		+ Submitted
+			[value &quot;Submit&quot;]
+		+ Uncertain
+			[value &quot;Uncertain&quot;]
+		+ Unconfirmed
+			[value &quot;Unconfirmed&quot;]
+}
+</code></pre></div></p> <hr> <div class=md-source-date> <small> Last update: June 28, 2020 </small> </div> </article> </div> </div> </main> <footer class=md-footer> <div class=md-footer-nav> <nav class="md-footer-nav__inner md-grid" aria-label=Footer> <a href=../util/ title=Introduction class="md-footer-nav__link md-footer-nav__link--prev" rel=prev> <div class="md-footer-nav__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </div> <div class=md-footer-nav__title> <div class=md-ellipsis> <span class=md-footer-nav__direction> Previous </span> Introduction </div> </div> </a> <a href=../axioms/ title=Axioms class="md-footer-nav__link md-footer-nav__link--next" rel=next> <div class=md-footer-nav__title> <div class=md-ellipsis> <span class=md-footer-nav__direction> Next </span> Axioms </div> </div> <div class="md-footer-nav__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg> </div> </a> </nav> </div> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-footer-copyright> <div class=md-footer-copyright__highlight> Copyright &copy; 2020 <a href=https://freighttrust target=_blank rel=noopener>FreightTrust & Clearing Corporation - All Rights Reserved</a> </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> <div class=md-footer-social> <a href=https://github.com/freight-trust target=_blank rel=noopener title=github.com class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </a> <a href=https://hub.docker.com/orgs/freightcorp/repositories target=_blank rel=noopener title=hub.docker.com class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 640 512"><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg> </a> <a href=https://gitlab.com/fr8 target=_blank rel=noopener title=gitlab.com class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><path d="M105.2 24.9c-3.1-8.9-15.7-8.9-18.9 0L29.8 199.7h132c-.1 0-56.6-174.8-56.6-174.8zM.9 287.7c-2.6 8 .3 16.9 7.1 22l247.9 184-226.2-294zm160.8-88l94.3 294 94.3-294zm349.4 88l-28.8-88-226.3 294 247.9-184c6.9-5.1 9.7-14 7.2-22zM425.7 24.9c-3.1-8.9-15.7-8.9-18.9 0l-56.6 174.8h132z"/></svg> </a> <a href=https://intercom.help/freight/en target=_blank rel=noopener title=intercom.help class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><path d="M392 32H56C25.1 32 0 57.1 0 88v336c0 30.9 25.1 56 56 56h336c30.9 0 56-25.1 56-56V88c0-30.9-25.1-56-56-56zm-108.3 82.1c0-19.8 29.9-19.8 29.9 0v199.5c0 19.8-29.9 19.8-29.9 0V114.1zm-74.6-7.5c0-19.8 29.9-19.8 29.9 0v216.5c0 19.8-29.9 19.8-29.9 0V106.6zm-74.7 7.5c0-19.8 29.9-19.8 29.9 0v199.5c0 19.8-29.9 19.8-29.9 0V114.1zM59.7 144c0-19.8 29.9-19.8 29.9 0v134.3c0 19.8-29.9 19.8-29.9 0V144zm323.4 227.8c-72.8 63-241.7 65.4-318.1 0-15-12.8 4.4-35.5 19.4-22.7 65.9 55.3 216.1 53.9 279.3 0 14.9-12.9 34.3 9.8 19.4 22.7zm5.2-93.5c0 19.8-29.9 19.8-29.9 0V144c0-19.8 29.9-19.8 29.9 0v134.3z"/></svg> </a> </div> </div> </div> </footer> </div> <script src=../../assets/javascripts/vendor.d710d30a.min.js></script> <script src=../../assets/javascripts/bundle.4a5ba8d6.min.js></script><script id=__lang type=application/json>{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script> <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script> </body> </html>
