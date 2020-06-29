@@ -5,7 +5,7 @@ copyright: |
 
 extra:
   latest_version_warning:
-    url_contains: /operations/
+    url_contains: /latest/
     text: 'You are reading the latest documentation for the Freight Trust Network'
   support:
     chat: https://join.slack.com/share/zt-flnfv57l-uzh1Q46nWIeTHM7rMxzE~w
@@ -27,7 +27,6 @@ nav:
     - Document Retention Policy: operations/document-retention-policy.md
     - Safety and Continiuty: operations/safety-and-continiuty.md
     - Namespace and Inventory Management: operations/namespace.md
-    - PKI: operations/pki.md
   - Concepts:
     - Introduction: concepts/util.md
     - Mechanics and Dogma: concepts/central-dogma.md
@@ -101,8 +100,8 @@ theme:
   features:
     - tabs
   icon:
-    logo: 'assets/favicon.png'
-  #favicon: 'assets/favicon.png'
+    logo: 'material/earth'
+ # favicon: 'img/logo-notext.svg'
   palette:
     primary: 'blue-grey'
     accent: 'green'
