@@ -102,7 +102,7 @@ theme:
     - tabs
   icon:
     logo: 'assets/favicon.png'
-  favicon: 'assets/favicon.png'
+  #favicon: 'assets/favicon.png'
   palette:
     primary: 'blue-grey'
     accent: 'green'
