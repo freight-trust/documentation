@@ -5,7 +5,7 @@ copyright: |
 
 extra:
   latest_version_warning:
-    url_contains: ./
+    url_contains: /operations/
     text: 'You are reading the latest documentation for the Freight Trust Network'
   support:
     chat: https://join.slack.com/share/zt-flnfv57l-uzh1Q46nWIeTHM7rMxzE~w
