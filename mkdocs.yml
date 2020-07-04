@@ -59,8 +59,123 @@ nav:
     - Topology: blockchain/topology.md
     - Smart Contract Development: blockchain/smart-contract-dev.md
     - Smart Contract Practices: blockchain/smart-contract-practices.md
-    - VBSM: blockchain/vbsm.md.md
-  - Corpoorate:
+  - Supply Chain:
+    - Overview: supply-chain/README.md
+    - Bill of Lading: supply-chain/bol-rules.md
+    - Warehousing: supply-chain/non-negotiable-warehouse-receipt.md
+    - Non-Negotiable: supply-chain/non-negotiable-bol.md
+    - Customs Brokers: supply-chain/customs-broker-power-of-attorney.md
+    - INCO Terms: supply-chain/incoterms.md
+    - Bill of Lading Rules: supply-chain/bill-of-lading-rules.md
+    - EDI Transactions: supply-chain/856.md
+    - Maritime: supply-chain/containers.md
+  - Platform Interface:
+    - Message Structures: service-bus/message-structure.md
+    - X12 Data Transformation: service-bus/x12-parser.md
+    - X12 Data Interchange: service-bus/edi-x12.md
+    - Data Interchange Formats: service-bus/what-is-edi.md
+    - Record Layouts: service-bus/record_layout_codes.md
+    - AcceptShipmentRequest: interfaces/logic/AcceptShipmentRequest.md
+    - AccountApi: interfaces/logic/AccountApi.md
+    - AccountingInvoiceApi: interfaces/logic/AccountingInvoiceApi.md
+    - AccountingInvoiceDateRangeServiceModel: interfaces/logic/AccountingInvoiceDateRangeServiceModel.md
+    - AccountingInvoiceIncludeServiceModel: interfaces/logic/AccountingInvoiceIncludeServiceModel.md
+    - AccountingInvoiceQueryRequest: interfaces/logic/AccountingInvoiceQueryRequest.md
+    - AccountingInvoiceServiceModel: interfaces/logic/AccountingInvoiceServiceModel.md
+    - AddPermissionRequest: interfaces/logic/AddPermissionRequest.md
+    - AddPermissionServiceModel: interfaces/logic/AddPermissionServiceModel.md
+    - AddTrackingLocationRequest: interfaces/logic/AddTrackingLocationRequest.md
+    - AddUserRequest: interfaces/logic/AddUserRequest.md
+    - AddUserServiceModel: interfaces/logic/AddUserServiceModel.md
+    - AdditionalInfoServiceModel: interfaces/logic/AdditionalInfoServiceModel.md
+    - AddressInfo: interfaces/logic/AddressInfo.md
+    - AddressServiceModel: interfaces/logic/AddressServiceModel.md
+    - AnalyticServiceModel: interfaces/logic/AnalyticServiceModel.md
+    - AnchorApi: interfaces/logic/AnchorApi.md
+    - AnchorShipmentTransactionServiceModel: interfaces/logic/AnchorShipmentTransactionServiceModel.md
+    - AssignDriverRequest: interfaces/logic/AssignDriverRequest.md
+    - AuditTrailApi: interfaces/logic/AuditTrailApi.md
+    - AuditTrailQueryRequest: interfaces/logic/AuditTrailQueryRequest.md
+    - AuditTrailServiceModel: interfaces/logic/AuditTrailServiceModel.md
+    - AwardCarrierLoadRequest: interfaces/logic/AwardCarrierLoadRequest.md
+    - BaseAccountingInvoiceApi: interfaces/logic/BaseAccountingInvoiceApi.md
+    - BaseAuditTrailApi: interfaces/logic/BaseAuditTrailApi.md
+    - BaseBrokerApi: interfaces/logic/BaseBrokerApi.md
+    - BaseCarrierApi: interfaces/logic/BaseCarrierApi.md
+    - BaseCommodityTypeApi: interfaces/logic/BaseCommodityTypeApi.md
+    - BaseCompanyApi: interfaces/logic/BaseCompanyApi.md
+    - BaseDocumentApi: interfaces/logic/BaseDocumentApi.md
+    - BaseDriverApi: interfaces/logic/BaseDriverApi.md
+    - BaseDriverSafetyApi: interfaces/logic/BaseDriverSafetyApi.md
+    - BaseEdiConfigApi: interfaces/logic/BaseEdiConfigApi.md
+    - BaseEdiMessageLogApi: interfaces/logic/BaseEdiMessageLogApi.md
+    - BaseEdiTenderApi: interfaces/logic/BaseEdiTenderApi.md
+    - BaseEquipmentLengthApi: interfaces/logic/BaseEquipmentLengthApi.md
+    - BaseEquipmentTypeApi: interfaces/logic/BaseEquipmentTypeApi.md
+    - BaseHandlingUnitApi: interfaces/logic/BaseHandlingUnitApi.md
+    - BaseInvitationApi: interfaces/logic/BaseInvitationApi.md
+    - BaseInvoiceItemApi: interfaces/logic/BaseInvoiceItemApi.md
+    - BaseInvoiceItemCategoryApi: interfaces/logic/BaseInvoiceItemCategoryApi.md
+    - BaseInvoiceParticipantApi: interfaces/logic/BaseInvoiceParticipantApi.md
+    - BaseLadingItemApi: interfaces/logic/BaseLadingItemApi.md
+    - BaseLineItemTypeApi: interfaces/logic/BaseLineItemTypeApi.md
+    - BaseLoadSizeApi: interfaces/logic/BaseLoadSizeApi.md
+    - BaseNmfcClassApi: interfaces/logic/BaseNmfcClassApi.md
+    - BaseNmfcNumberApi: interfaces/logic/BaseNmfcNumberApi.md
+    - BaseOrderItemApi: interfaces/logic/BaseOrderItemApi.md
+    - BaseOrderItemReferenceNumberTypeApi: interfaces/logic/BaseOrderItemReferenceNumberTypeApi.md
+    - BasePackageTypeApi: interfaces/logic/BasePackageTypeApi.md
+    - BasePermissionApi: interfaces/logic/BasePermissionApi.md
+    - BaseRoleApi: interfaces/logic/BaseRoleApi.md
+    - BaseRoleClaimApi: interfaces/logic/BaseRoleClaimApi.md
+    - BaseSaferCarrierApi: interfaces/logic/BaseSaferCarrierApi.md
+    - BaseSamsaraConfigApi: interfaces/logic/BaseSamsaraConfigApi.md
+    - BaseShipmentApi: interfaces/logic/BaseShipmentApi.md
+    - BaseShipmentAppointmentStatusCodeApi: interfaces/logic/BaseShipmentAppointmentStatusCodeApi.md
+    - BaseShipmentConfigApi: interfaces/logic/BaseShipmentConfigApi.md
+    - BaseShipmentDeclineReasonCodeApi: interfaces/logic/BaseShipmentDeclineReasonCodeApi.md
+    - BaseShipmentDriverDispatchApi: interfaces/logic/BaseShipmentDriverDispatchApi.md
+    - BaseShipmentStatusCodeApi: interfaces/logic/BaseShipmentStatusCodeApi.md
+    - BaseShipmentStatusUpdateTypeApi: interfaces/logic/BaseShipmentStatusUpdateTypeApi.md
+    - BaseShipmentTradingPartnerApi: interfaces/logic/BaseShipmentTradingPartnerApi.md
+    - BaseShipperApi: interfaces/logic/BaseShipperApi.md
+    - BaseStopApi: interfaces/logic/BaseStopApi.md
+    - BaseStopUpdateApi: interfaces/logic/BaseStopUpdateApi.md
+    - BaseTenderApi: interfaces/logic/BaseTenderApi.md
+    - BaseTradingChannelApi: interfaces/logic/BaseTradingChannelApi.md
+    - BaseTradingPartnerApi: interfaces/logic/BaseTradingPartnerApi.md
+    - BaseTradingPartnerMessageApi: interfaces/logic/BaseTradingPartnerMessageApi.md
+    - BaseTrailerApi: interfaces/logic/BaseTrailerApi.md
+    - BaseUserApi: interfaces/logic/BaseUserApi.md
+    - BaseVehicleApi: interfaces/logic/BaseVehicleApi.md
+    - BeginRequest: interfaces/logic/BeginRequest.md
+    - BolHandlingRequirements: interfaces/logic/BolHandlingRequirements.md
+    - BrokerApi: interfaces/logic/BrokerApi.md
+    - BrokerCarrierQuoteServiceModel: interfaces/logic/BrokerCarrierQuoteServiceModel.md
+    - BrokerQueryRequest: interfaces/logic/BrokerQueryRequest.md
+    - BrokerServiceModel: interfaces/logic/BrokerServiceModel.md
+    - CarrierAdditionalInfoServiceModel: interfaces/logic/CarrierAdditionalInfoServiceModel.md
+    - CarrierApi: interfaces/logic/CarrierApi.md
+    - CarrierApproveLoadRequest: interfaces/logic/CarrierApproveLoadRequest.md
+    - CarrierCounterOfferLoadRequest: interfaces/logic/CarrierCounterOfferLoadRequest.md
+    - CarrierInformationServiceModel: interfaces/logic/CarrierInformationServiceModel.md
+    - CarrierQueryRequest: interfaces/logic/CarrierQueryRequest.md
+    - CarrierQuoteRequestApi: interfaces/logic/CarrierQuoteRequestApi.md
+    - CarrierQuoteRequestServiceModel: interfaces/logic/CarrierQuoteRequestServiceModel.md
+    - CarrierServiceModel: interfaces/logic/CarrierServiceModel.md
+    - CarrierSignRequest: interfaces/logic/CarrierSignRequest.md
+    - CommodityTypeApi: interfaces/logic/CommodityTypeApi.md
+    - CommodityTypeQueryRequest: interfaces/logic/CommodityTypeQueryRequest.md
+    - CommodityTypeServiceModel: interfaces/logic/CommodityTypeServiceModel.md
+    - CompanyApi: interfaces/logic/CompanyApi.md
+    - CompanyQueryRequest: interfaces/logic/CompanyQueryRequest.md
+    - CompanyServiceModel: interfaces/logic/CompanyServiceModel.md
+    - CompanyViewModel: interfaces/logic/CompanyViewModel.md
+    - CompleteRequest: interfaces/logic/CompleteRequest.md
+    - ConfigApi: interfaces/logic/ConfigApi.md
+    - ConfigurationServiceModel: interfaces/logic/ConfigurationServiceModel.md
+    - ConfirmEmailViewModel: interfaces/logic/ConfirmEmailViewModel.md
+  - Corporate:
     - EULA: corporate/eula.md.md
     - Pricing: corporate/transaction-pricing.md
     - Privacy Policy: corporate/privacy-policy.md
@@ -75,23 +190,6 @@ nav:
     - Software Defects: corporate/defects.md
     - Code of Conduct: corporate/code-of-conduct.md
     - PKI: corporate/pki.md
-  - Supply Chain:
-    - Overview: supply-chain/README.md
-    - Bill of Lading: supply-chain/bol-rules.md
-    - Warehousing: supply-chain/non-negotiable-warehouse-receipt.md
-    - Non-Negotiable: supply-chain/non-negotiable-bol.md
-    - Customs Brokers: supply-chain/customs-broker-power-of-attorney.md
-    - INCO Terms: supply-chain/incoterms.md
-    - Bill of Lading Rules: supply-chain/bill-of-lading-rules.md
-    - EDI Transactions: supply-chain/856.md
-    - Maritime: supply-chain/containers.md
-  - Event Streams:
-    - Message Structures: service-bus/message-structure.md
-    - X12 Data Transformation: service-bus/x12-parser.md
-    - X12 Data Interchange: service-bus/edi-x12.md
-    - Safety and Continiuty: service-bus/safety-and-continiuty.md
-    - Data Interchange Formats: service-bus/what-is-edi.md
-    - Record Layouts: service-bus/record_layout_codes.md
 docs_dir: docs
 
 theme:
