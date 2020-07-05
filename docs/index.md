@@ -1,4 +1,5 @@
----
+<!--
+
 title: Freight Trust and Clearing Omnibus Documentation
 description: Freight Trust Network Rulebook, Engineering, Technical, and more.
 :url-project: https://github.com/freight-chain
@@ -8,7 +9,7 @@ description: Freight Trust Network Rulebook, Engineering, Technical, and more.
 :url-site-readme: {url-group}/docs-site/blob/master/README.md
 :url-opendevise: https://freighttrust.com
 
----
+-->
 
 
 # Freight Trust & Clearing Omnibus 
@@ -32,17 +33,18 @@ description: Freight Trust Network Rulebook, Engineering, Technical, and more.
     + [Governance](#governance)
 
 ### Resources
-
+<!--
 * {url-project}[Community]
 * {url-docs}[Documentation]
 * {url-org}[Corporate Repositories]
+-->
 
+- [Network Design](/concepts/network-design.md)](#-network-design---concepts-network-designmd-)
+- [Ecosystem](/concepts/ecosystem.md)](#-ecosystem---concepts-ecosystemmd-)
+- [Protocol](/concepts/as2protocol.md)](#-protocol---concepts-as2protocolmd-)
+- [Pricing Precedence](/operations/pricing-spec-precedence.md)](#-pricing-precedence---operations-pricing-spec-precedencemd-)
+- [Pricing Benchmark](/operations/pricing-benchmark.md)](#-pricing-benchmark---operations-pricing-benchmarkmd-)
 
-- [[Network Design](/concepts/network-design.md)](#-network-design---concepts-network-designmd-)
-- [[Ecosystem](/concepts/ecosystem.md)](#-ecosystem---concepts-ecosystemmd-)
-- [[Protocol](/concepts/as2protocol.md)](#-protocol---concepts-as2protocolmd-)
-- [[Pricing Precedence](/operations/pricing-spec-precedence.md)](#-pricing-precedence---operations-pricing-spec-precedencemd-)
-- [[Pricing Benchmark](/operations/pricing-benchmark.md)](#-pricing-benchmark---operations-pricing-benchmarkmd-)
 
 ## Overview
 
