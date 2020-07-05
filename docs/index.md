@@ -1,15 +1,6 @@
-<!--
-
-title: Freight Trust and Clearing Omnibus Documentation
-description: Freight Trust Network Rulebook, Engineering, Technical, and more.
-:url-project: https://github.com/freight-chain
-:url-docs: https://ft-docs.netlify.app
-:url-org: https://github.com/freight-trust
-:url-group: {url-org}/docs
-:url-site-readme: {url-group}/docs-site/blob/master/README.md
-:url-opendevise: https://freighttrust.com
-
--->
+<!-- Attribution-NonCommercial-NoDerivs 2.5
+   - https://spdx.org/licenses/CC-BY-NC-ND-2.5.html 
+   - (C) 2020 FreightTrust and Clearing Corporation -->
 
 
 # Freight Trust & Clearing Omnibus 
@@ -33,17 +24,47 @@ description: Freight Trust Network Rulebook, Engineering, Technical, and more.
     + [Governance](#governance)
 
 ### Resources
-<!--
-* {url-project}[Community]
-* {url-docs}[Documentation]
-* {url-org}[Corporate Repositories]
--->
 
-- [Network Design](/concepts/network-design.md)](#-network-design---concepts-network-designmd-)
-- [Ecosystem](/concepts/ecosystem.md)](#-ecosystem---concepts-ecosystemmd-)
-- [Protocol](/concepts/as2protocol.md)](#-protocol---concepts-as2protocolmd-)
-- [Pricing Precedence](/operations/pricing-spec-precedence.md)](#-pricing-precedence---operations-pricing-spec-precedencemd-)
-- [Pricing Benchmark](/operations/pricing-benchmark.md)](#-pricing-benchmark---operations-pricing-benchmarkmd-)
+Quick System Scope
+> This is what it takes for a transaction to occur
+
+* UserRoles
+* UserTypes
+* Container
+* ContainerCodes (STIFL)
+* Conveyance
+  - Non-negotiable
+    - Bill of Lading
+    - Warehouse Receipt
+  - Negotiable
+    - Bill of Lading
+    - Warehouse Receipt
+* Transactions
+  - Electronic Data Interchange
+    - X12
+      + 4010
+        204 Motor Carrier Shipment Information
+        210 Freight Details and Invoice 
+        211 Motor Carrier Bill of Lading
+        214 Shipment Status Message
+        997 Functional Acknowledgement
+        - Additional Transactions Supported
+* Protocol
+  + AS2 Protocol
+  + Concenus Protocol
+  + MFT Protocol 
+  - PKI
+    + x.509
+    + ECDSA
+  * Maidenlane
+
+
+
+- [Network Design](/concepts/network-design.md)]
+- [Ecosystem](/concepts/ecosystem.md)]
+- [Protocol](/concepts/as2protocol.md)]
+- [Pricing Precedence](/operations/pricing-spec-precedence.md)
+- [Pricing Benchmark](/operations/pricing-benchmark.md)
 
 
 ## Overview
