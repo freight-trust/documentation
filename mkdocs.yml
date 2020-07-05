@@ -69,7 +69,7 @@ nav:
     - Bill of Lading Rules: supply-chain/bill-of-lading-rules.md
     - EDI Transactions: supply-chain/856.md
     - Maritime: supply-chain/containers.md
-  - Platform Interface:
+  - Supported Interfaces:
     - Message Structures: service-bus/message-structure.md
     - X12 Data Transformation: service-bus/x12-parser.md
     - X12 Data Interchange: service-bus/edi-x12.md
@@ -190,6 +190,12 @@ nav:
     - Software Defects: corporate/defects.md
     - Code of Conduct: corporate/code-of-conduct.md
     - PKI: corporate/pki.md
+  - EDI Services & API:
+    - X12 Segment:  x12/X12Segment.md
+    - X12 Envelope: x12/X12generic.md
+    - X12 Transaction: x12/X12Transaction.md
+    - Adv. Shipping Manfiest: x12/asn-865.md
+
 docs_dir: docs
 
 theme:
