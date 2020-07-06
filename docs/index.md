@@ -60,19 +60,20 @@ Quick System Scope
 
 
 
-- [Network Design](/concepts/network-design.md)]
-- [Ecosystem](/concepts/ecosystem.md)]
-- [Protocol](/concepts/as2protocol.md)]
+- [Network Design](/concepts/network-design.md)
+- [Ecosystem](/concepts/ecosystem.md)
+- [Protocol](/concepts/as2protocol.md)
 - [Pricing Precedence](/operations/pricing-spec-precedence.md)
 - [Pricing Benchmark](/operations/pricing-benchmark.md)
 
 
 ## Overview
-
+```
 Guide to the documentation is as follows:
-    Category *an informal name given to a section or collection of sections*. 
-        Section *a formal name given to a specific part of the* `omnibus`. 
-            Sub-Section *a formal name given to a specific part of a* `section`. 
+    * Category *an informal name given to a section or collection of sections*. 
+       - Section *a formal name given to a specific part of the* `omnibus`. 
+           + Sub-Section *a formal name given to a specific part of a* `section`. 
+```
 
 * Operations 
 - Corporate
@@ -97,9 +98,13 @@ Guide to the documentation is as follows:
     - Token Overview: Information on the $EDI Token and its utility 
     - Staking: Information on how Staking Pools
     - Network: Information on "master nodes" and the "pools" for nodes
-- Event Streams
-    - Messague Queues
-    - Schema Registry (not in the "kafka" sense)
+
+- EDI (X12)
+  - Transactions with available Parsing and Mapping Support
+  - Available Transactions with just Parsing 
+- EDI General 
+  - All supported Transactions
+  - Schema Registry
 
 
 

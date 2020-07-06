@@ -69,7 +69,8 @@ nav:
     - Bill of Lading Rules: supply-chain/bill-of-lading-rules.md
     - EDI Transactions: supply-chain/856.md
     - Maritime: supply-chain/containers.md
-  - Supported Interfaces:
+  - Legacy Interfaces: 
+    - Notice: interfaces/README.md
     - Message Structures: service-bus/message-structure.md
     - X12 Data Transformation: service-bus/x12-parser.md
     - X12 Data Interchange: service-bus/edi-x12.md

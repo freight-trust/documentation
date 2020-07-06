@@ -1,12 +1,18 @@
 # Supply Chain
 
-* User Roles
-* User Types
-* Containers 
-* Container STIFL Codes
+General Overview of the `common domain models` we have developed. This list is not exhaustive. 
+
+Note: RESTful API Services are only availble for the federated services, that is services available regardless of trading channel.
+
+- [Supply Chain](#supply-chain)
+  * [User Roles](#user-roles)
+  * [User Types](#user-types)
+  * [STIFL Codes](#stifl-codes)
+  * [INCO Terms](#inco-terms)
 
 
 ## User Roles 
+
 | userRoleID | type                      | value                                                                                                                                                                                                                                                                                      |
 |------------|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 2          | Seller                    | The party selling goods or services as stipulated in a Sales Order Contract\.                                                                                                                                                                                                              |
@@ -77,3 +83,63 @@
 | 20         | Agent                        | Agent                                                                                                                                                                                                                                |
 | 21         | 3rdParty                     | 3rd Party, e\.g\. Insurance Company                                                                                                                                                                                                  |
 | 22         | AuthorityAgent               | 3rd Party, e\.g\. a Court, notice the inversion of Authority Class here as its a discrete type                                                                                                                                       |
+
+
+
+## STIFL Codes
+
+> BIC Support Available
+
+| **compositeID** | **ISO_CODE** | **SIZE**  | **TYPE** | **DESCRIPTION**         | **STIF_CODE** |
+|-----------------|--------------|-----------|----------|-------------------------|---------------|
+| 2               | 22G0         | 20' x 8'6 | GP       | GENERAL PURPOSE         | 20DV          |
+| 3               | 22P1         | 20' x 8'6 | PF       | PLATFORM \(FIXED ENDS\) | 20FR          |
+| 4               | 22R0         | 20' x 8'6 | RE       | REFRIGERATED            | 20RF          |
+| 5               | 22T0         | 20' x 8'6 | TN       | TANK \(LIQUID\)         | 20TK          |
+| 6               | 22U1         | 20' x 8'6 | UT       | OPEN TOP                | 20OT          |
+| 7               | 25G0         | 20' x 9'6 | GP       | GENERAL PURPOSE         | 20HC          |
+| 8               | 28G0         | 20' x 4'3 | GP       | GENERAL PURPOSE         | 20DV          |
+| 9               | 29P0         | 20' x <4' | PL       | PLATFORM \(PLAIN\)      | 20PL          |
+| 10              | 42G0         | 40' x 8'6 | GP       | GENERAL PURPOSE         | 40DV          |
+| 11              | 42P1         | 40' x 8'6 | PF       | PLATFORM \(FIXED ENDS\) | 40FR          |
+| 12              | 42R0         | 40' x 8'6 | RE       | REFRIGERATED            | 40RF          |
+| 13              | 42T0         | 40' x 8'6 | TN       | TANK \(LIQUID\)         | 40TK          |
+| 14              | 42U1         | 40' x 8'6 | UT       | OPEN TOP                | 40OT          |
+| 15              | 45G0         | 40' x 9'6 | GP       | GENERAL PURPOSE         | 40HC          |
+| 16              | 45P1         | 40' x 9'6 | PF       | PLATFORM \(FIXED ENDS\) | 40SR          |
+| 17              | 45R0         | 40' x 9'6 | RE       | REFRIGERATED            | 40RH          |
+| 18              | 49P0         | 40' x <4' | PL       | PLATFORM \(PLAIN\)      | 40PL          |
+| 19              | L5G0         | 45' x 9'6 | GP       | GENERAL PURPOSE         | 45HC          |
+| 20              | L5R0         | 45' x 9'6 | RE       | REFRIGERATED            | 45RH          |
+
+
+## INCO Terms
+
+> All INCO Terms are in General Availability
+
+| *\*\**                                | **EXW**  | **FCA**      | **CPT**          | **CIP**                        | **DAT**               | **DAP**            | **DDP**             | **FAS**               | **FOB**       | **CFR**        | **CIF**                    |
+| ------------------------------------- | -------- | ------------ | ---------------- | ------------------------------ | --------------------- | ------------------ | ------------------- | --------------------- | ------------- | -------------- | -------------------------- |
+|                                       | Ex Works | Free Carrier | Carriage Paid To | "Carriage & Insurance Paid To" | Delivered at Terminal | Delivered at Place | Delivered Duty Paid | "Free Alongside Ship" | Free on Board | Cost & Freight | "Cost Insurance & Freight" |
+| SERVICES                              | Who Pays | Who Pays     | Who Pays         | Who Pays                       | Who Pays              | Who Pays           | Who Pays            | Who Pays              | Who Pays      | Who Pays       | Who Pays                   |
+| Export Packing                        | Seller   | Seller       | Seller           | Seller                         | Seller                | Seller             | Seller              | Seller                | Seller        | Seller         | Seller                     |
+| Marking \&Labeling                    | Seller   | Seller       | Seller           | Seller                         | Seller                | Seller             | Seller              | Seller                | Seller        | Seller         | Seller                     |
+| Block and Brace                       | 1        | 1            | 1                | 1                              | 1                     | 1                  | 1                   | 1                     | 1             | 1              | 1                          |
+| "Export Clearance (License, EEI/AES)" | Buyer    | Seller       | Seller           | Seller                         | Seller                | Seller             | Seller              | Seller                | Seller        | Seller         | Seller                     |
+| "Freight Forwarder                    |          |              |                  |                                |                       |                    |                     |                       |               |                |                            |
+| Documentation Fees"                   | Buyer    | Buyer        | Seller           | Seller                         | Seller                | Seller             | Seller              | Buyer                 | Buyer         | Seller         | Seller                     |
+| Inland Freight to Main Carrier        | Buyer    | 2            | Seller           | Seller                         | Seller                | Seller             | Seller              | Seller                | Seller        | Seller         | Seller                     |
+| Origin Terminal Charges               | Buyer    | Buyer        | Seller           | Seller                         | Seller                | Seller             | Seller              | Buyer                 | Seller        | Seller         | Seller                     |
+| Vessel Loading Charges                | Buyer    | Buyer        | Seller           | Seller                         | Seller                | Seller             | Seller              | Buyer                 | Seller        | Seller         | Seller                     |
+| Ocean Freight / Air Freight           | Buyer    | Buyer        | Seller           | Seller                         | Seller                | Seller             | Seller              | Buyer                 | Buyer         | Seller         | Seller                     |
+| Nominate Export Forwarder             | Buyer    | Buyer        | Seller           | Seller                         | Seller                | Seller             | Seller              | Buyer                 | Buyer         | Seller         | Seller                     |
+| Marine Insurance                      | 3        | 3            | 3                | Seller                         | 3                     | 3                  | 3                   | 3                     | 3             | 3              | Seller                     |
+| Unload Main Carrier Charges           | Buyer    | Buyer        | 4                | 4                              | Seller                | Seller             | Seller              | Buyer                 | Buyer         | 4              | 4                          |
+| Destination Terminal Charges          | Buyer    | Buyer        | 4                | 4                              | 4                     | Seller             | Seller              | Buyer                 | Buyer         | 4              | 4                          |
+| Nominate On-Carrier                   | Buyer    | Buyer        | 5                | 5                              | 5                     | 5                  | Seller              | Buyer                 | Buyer         | Buyer          | Buyer                      |
+| "Security Information                 |          |              |                  |                                |                       |                    |                     |                       |               |                |                            |
+| Requirements"                         | Buyer    | Buyer        | Buyer            | Buyer                          | Buyer                 | Buyer              | Buyer               | Buyer                 | Buyer         | Buyer          | Buyer                      |
+| "Customs Broker Clearance             |          |              |                  |                                |                       |                    |                     |                       |               |                |                            |
+| Fees"                                 | Buyer    | Buyer        | Buyer            | Buyer                          | Buyer                 | Buyer              | Seller              | Buyer                 | Buyer         | Buyer          | Buyer                      |
+| "Duty, Customs Fees, Taxes"           | Buyer    | Buyer        | Buyer            | Buyer                          | Buyer                 | Buyer              | Seller              | Buyer                 | Buyer         | Buyer          | Buyer                      |
+| Delivery to Buyer Destination         | Buyer    | Buyer        | 5                | 5                              | 5                     | 5                  | Seller              | Buyer                 | Buyer         | Buyer          | Buyer                      |
+| Delivering Carrier Unloading          | Buyer    | Buyer        | Buyer            | Buyer                          | Buyer                 | Buyer              | Buyer               | Buyer                 | Buyer         | Buyer          | Buyer                      |
