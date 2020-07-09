@@ -26,6 +26,9 @@ Papers**, and more. [Freight Trust & Clearing](https://freighttrust.com).
 !!! note
 [For a system design model, vist our design page here](https://freight-trust-model.netlify.app/)
 
+!!! note
+    [For a system design model, vist our design page here](https://freight-trust-model.netlify.app/)
+
 ### Resources
 
 Quick System Scope
