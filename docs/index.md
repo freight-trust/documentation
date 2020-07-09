@@ -23,6 +23,9 @@
   * [End-market fundamentals](#end-market-fundamentals)
     + [Governance](#governance)
 
+!!! note
+    [For a system design model, vist our design page here](https://freight-trust-model.netlify.app/)
+
 ### Resources
 
 Quick System Scope
