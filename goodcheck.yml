@@ -1,16 +1,16 @@
 rules:
   # id, pattern, message are required attributes.
-  - id: example.github
-    pattern: Github
-    message: Do you want to write GitHub?
+  - id: freight-trust
+    pattern: Freighttrust
+    message: Do you want to write FreightTrust?
     glob:
       - "**/*.rb"
       - "**/*.{yaml,yml}"
       - "public/**/*.html"
     fail:
-      - Signup via Github
+      - Signup via Freighttrust
     pass:
-      - Signup via GitHub
+      - Signup via FreightTrust
 
   # You can have *justification* to explain the exceptional cases.
   - id: example.localStorage
@@ -49,6 +49,6 @@ rules:
 #   - https://example.com/example-rules.yml
 
 # You can skip checking files.
-# exclude:
-#   - node_modules
-#   - vendor
+exclude:
+   - node_modules
+   - vendor
