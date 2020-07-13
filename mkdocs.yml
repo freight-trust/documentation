@@ -18,15 +18,6 @@ extra:
 
 nav:
   - Home: index.md
-  - Operations:
-    - Incident Recovery Plan: operations/irp.md
-    - Software Defects: operations/defects.md 
-    - Pricing: operations/transaction-pricing.md
-    - Pricing Precedence: operations/pricing-spec-precedence.md
-    - Pricing Benchmark: operations/pricing-benchmark.md
-    - Document Retention Policy: operations/document-retention-policy.md
-    - Safety and Continiuty: operations/safety-and-continiuty.md
-    - Namespace and Inventory Management: operations/namespace.md
   - Concepts:
     - Introduction: concepts/util.md
     - Mechanics and Dogma: concepts/central-dogma.md
@@ -35,6 +26,8 @@ nav:
     - Ecosystem: concepts/ecosystem.md
     - Protocol: concepts/as2protocol.md
     - Message Design: concepts/message-design.md
+  - TradeDocs:
+    - Overview: tradedocs/README.md
   - Rulebook:
     - General: rulebook/general.md
     - Governance: rulebook/governance.md
@@ -69,6 +62,20 @@ nav:
     - Bill of Lading Rules: supply-chain/bill-of-lading-rules.md
     - EDI Transactions: supply-chain/856.md
     - Maritime: supply-chain/containers.md
+  - EDI Services & API:
+    - X12 Segment:  x12/X12Segment.md
+    - X12 Envelope: x12/X12generic.md
+    - X12 Transaction: x12/X12Transaction.md
+    - Adv. Shipping Manfiest: x12/asn-865.md
+  - Operations:
+    - Incident Recovery Plan: operations/irp.md
+    - Software Defects: operations/defects.md 
+    - Pricing: operations/transaction-pricing.md
+    - Pricing Precedence: operations/pricing-spec-precedence.md
+    - Pricing Benchmark: operations/pricing-benchmark.md
+    - Document Retention Policy: operations/document-retention-policy.md
+    - Safety and Continiuty: operations/safety-and-continiuty.md
+    - Namespace and Inventory Management: operations/namespace.md
   - Legacy Interfaces: 
     - Notice: interfaces/README.md
     - Message Structures: service-bus/message-structure.md
@@ -191,11 +198,6 @@ nav:
     - Software Defects: corporate/defects.md
     - Code of Conduct: corporate/code-of-conduct.md
     - PKI: corporate/pki.md
-  - EDI Services & API:
-    - X12 Segment:  x12/X12Segment.md
-    - X12 Envelope: x12/X12generic.md
-    - X12 Transaction: x12/X12Transaction.md
-    - Adv. Shipping Manfiest: x12/asn-865.md
 
 docs_dir: docs
 

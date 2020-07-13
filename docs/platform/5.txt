@@ -1,0 +1,35 @@
+Analysis for: 0x2f66eda6b42d072627cdccfbf1477739ca6ea50f8afaafb93f5167d196c0ca58
+Block number: 9711226 at 20-03-2020 22:20:31 UTC
+Tx cost: 0.009494128 ETH
+Gas used: 1186766 / 8.0 Gwei
+Emitted events:
+SignatureReg.Registered(creator=customIcoToken, signature=0xb7df1d2500000000000000000000000000000000000000000000000000000000, method=migrate(address,uint256,uint256,address,uint256))
+SignatureReg.Registered(creator=customIcoToken, signature=0xe8e3370000000000000000000000000000000000000000000000000000000000, method=addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256))
+SignatureReg.Registered(creator=customIcoToken, signature=0xf305d71900000000000000000000000000000000000000000000000000000000, method=addLiquidityETH(address,uint256,uint256,uint256,address,uint256))
+SignatureReg.Registered(creator=customIcoToken, signature=0xbaa2abde00000000000000000000000000000000000000000000000000000000, method=removeLiquidity(address,address,uint256,uint256,uint256,address,uint256))
+SignatureReg.Registered(creator=customIcoToken, signature=0x02751cec00000000000000000000000000000000000000000000000000000000, method=removeLiquidityETH(address,uint256,uint256,uint256,address,uint256))
+SignatureReg.Registered(creator=customIcoToken, signature=0x2195995c00000000000000000000000000000000000000000000000000000000, method=removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32))
+SignatureReg.Registered(creator=customIcoToken, signature=0xded9382a00000000000000000000000000000000000000000000000000000000, method=removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32))
+SignatureReg.Registered(creator=customIcoToken, signature=0x38ed173900000000000000000000000000000000000000000000000000000000, method=swapExactTokensForTokens(uint256,uint256,address[],address,uint256))
+SignatureReg.Registered(creator=customIcoToken, signature=0x8803dbee00000000000000000000000000000000000000000000000000000000, method=swapTokensForExactTokens(uint256,uint256,address[],address,uint256))
+SignatureReg.Registered(creator=customIcoToken, signature=0x7ff36ab500000000000000000000000000000000000000000000000000000000, method=swapExactETHForTokens(uint256,address[],address,uint256))
+SignatureReg.Registered(creator=customIcoToken, signature=0x4a25d94a00000000000000000000000000000000000000000000000000000000, method=swapTokensForExactETH(uint256,uint256,address[],address,uint256))
+SignatureReg.Registered(creator=customIcoToken, signature=0x18cbafe500000000000000000000000000000000000000000000000000000000, method=swapExactTokensForETH(uint256,uint256,address[],address,uint256))
+SignatureReg.Registered(creator=customIcoToken, signature=0xfb3bdb4100000000000000000000000000000000000000000000000000000000, method=swapETHForExactTokens(uint256,address[],address,uint256))
+Execution trace:
+[1186766]: [Sender] 0x8688a84fcfd84d8f78020d0fc0b35987cc58911f
+[1113766]: customIcoToken.New()
+[73422]: SignatureReg.register(_method=migrate(address,uint256,uint256,address,uint256)) => (True)
+[89574]: SignatureReg.register(_method=addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)) => (True)
+[69106]: SignatureReg.register(_method=addLiquidityETH(address,uint256,uint256,uint256,address,uint256)) => (True)
+[89574]: SignatureReg.register(_method=removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)) => (True)
+[89574]: SignatureReg.register(_method=removeLiquidityETH(address,uint256,uint256,uint256,address,uint256)) => (True)
+[109926]: SignatureReg.register(_method=removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)) => (True)
+[109926]: SignatureReg.register(_method=removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)) => (True)
+[89574]: SignatureReg.register(_method=swapExactTokensForTokens(uint256,uint256,address[],address,uint256)) => (True)
+[89574]: SignatureReg.register(_method=swapTokensForExactTokens(uint256,uint256,address[],address,uint256)) => (True)
+[69222]: SignatureReg.register(_method=swapExactETHForTokens(uint256,address[],address,uint256)) => (True)
+[69106]: SignatureReg.register(_method=swapTokensForExactETH(uint256,uint256,address[],address,uint256)) => (True)
+[69106]: SignatureReg.register(_method=swapExactTokensForETH(uint256,uint256,address[],address,uint256)) => (True)
+[69222]: SignatureReg.register(_method=swapETHForExactTokens(uint256,address[],address,uint256)) => (True)
+[N/A]: customIcoToken.suicide()

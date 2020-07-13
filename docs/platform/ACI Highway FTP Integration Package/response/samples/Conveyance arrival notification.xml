@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aciHighwayResponse>
+	<acctId>abcd</acctId>
+	<userId>abcd001</userId>
+	<messageId>0123456789</messageId>
+	<arrivalNotification>
+		<conveyanceReferenceNumber>1ABC012345</conveyanceReferenceNumber>
+		<dateTimeOfReport>201001021234</dateTimeOfReport>
+		<portOfReport>0009</portOfReport>
+		<cargoControlNumber>ABCD0123456789</cargoControlNumber>
+	</arrivalNotification>
+</aciHighwayResponse>

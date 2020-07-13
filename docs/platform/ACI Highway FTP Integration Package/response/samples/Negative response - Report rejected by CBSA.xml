@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aciHighwayResponse>
+	<acctId>abcd</acctId>
+	<userId>abcd001</userId>
+	<messageId>0123456789</messageId>
+	<conveyance>
+		<conveyanceReferenceNumber>ABCD012345</conveyanceReferenceNumber>
+		<status>REJECTED</status>
+		<error>
+			<code>022</code>
+			<remarks>Cargo - Weight Type Code - Is mandatory</remarks>
+		</error>
+	</conveyance>
+</aciHighwayResponse>

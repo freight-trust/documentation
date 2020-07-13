@@ -1,0 +1,14 @@
+	<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<aciHighwayResponse>
+	<acctId>abcd</acctId>
+	<messageId>000000035</messageId>
+	<arrivalNotification>
+		<conveyanceReferenceNumber>1234L001170</conveyanceReferenceNumber>
+		<dateTimeOfReport>20120213</dateTimeOfReport>
+		<portOfReport>0453</portOfReport>
+		<cargoControlNumber>12340011703</cargoControlNumber>
+		<status>Arrived</status>
+		<responseCode>200</responseCode>
+		<responseText>Truck arrived at the border</responseText>
+	</arrivalNotification>
+</aciHighwayResponse>

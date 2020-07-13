@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<aciHighwayResponse>
+	<acctId>wyrt</acctId>
+	<messageId>000017455</messageId>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED</status>
+		<error/>
+	</conveyance>
+	<conveyance>
+		<conveyanceReferenceNumber>4073T001920</conveyanceReferenceNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<messageFunctionCode>4073T001920</messageFunctionCode>
+		<status>ACCEPTED</status>
+		<error/>
+	</conveyance>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</conveyance>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</conveyance>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED</status>
+		<error/>
+	</conveyance>
+	<conveyance>
+		<conveyanceReferenceNumber>4073T001920</conveyanceReferenceNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<messageFunctionCode>4073T001920</messageFunctionCode>
+		<status>ACCEPTED</status>
+		<error/>
+	</conveyance>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</conveyance>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</conveyance>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED</status>
+		<error/>
+	</conveyance>
+	<conveyance>
+		<conveyanceReferenceNumber>4073T001920</conveyanceReferenceNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<messageFunctionCode>4073T001920</messageFunctionCode>
+		<status>ACCEPTED</status>
+		<error/>
+	</conveyance>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</conveyance>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</conveyance>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED</status>
+		<error/>
+	</conveyance>
+	<conveyance>
+		<conveyanceReferenceNumber>4073T001920</conveyanceReferenceNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<messageFunctionCode>4073T001920</messageFunctionCode>
+		<status>ACCEPTED</status>
+		<error/>
+	</conveyance>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</conveyance>
+	<conveyance>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</conveyance>
+	<cargo>
+		<cargoControlNumber>4073PARS114317</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED</status>
+		<error/>
+	</cargo>
+	<cargo>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<messageFunctionCode>4073T001920</messageFunctionCode>
+		<status>ACCEPTED</status>
+		<error/>
+	</cargo>
+	<cargo>
+		<cargoControlNumber>4073PARS114317</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</cargo>
+	<cargo>
+		<cargoControlNumber>4073T001920</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</cargo>
+	<cargo>
+		<cargoControlNumber>4073PARS114317</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED</status>
+		<error/>
+	</cargo>
+	<cargo>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<messageFunctionCode>4073T001920</messageFunctionCode>
+		<status>ACCEPTED</status>
+		<error/>
+	</cargo>
+	<cargo>
+		<cargoControlNumber>4073PARS114317</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</cargo>
+	<cargo>
+		<cargoControlNumber>4073T001920</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</cargo>
+	<cargo>
+		<cargoControlNumber>4073PARS114317</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED</status>
+		<error/>
+	</cargo>
+	<cargo>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<messageFunctionCode>4073T001920</messageFunctionCode>
+		<status>ACCEPTED</status>
+		<error/>
+	</cargo>
+	<cargo>
+		<cargoControlNumber>4073PARS114317</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</cargo>
+	<cargo>
+		<cargoControlNumber>4073T001920</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</cargo>
+	<cargo>
+		<cargoControlNumber>4073PARS114317</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED</status>
+		<error/>
+	</cargo>
+	<cargo>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<messageFunctionCode>4073T001920</messageFunctionCode>
+		<status>ACCEPTED</status>
+		<error/>
+	</cargo>
+	<cargo>
+		<cargoControlNumber>4073PARS114317</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</cargo>
+	<cargo>
+		<cargoControlNumber>4073T001920</cargoControlNumber>
+		<acknowledgement>
+			<dateTime>201207202336</dateTime>
+		</acknowledgement>
+		<status>ACCEPTED WITH ERRORS</status>
+		<error>
+			<code>V67</code>
+			<remarks>Cargo, Conv Expected Arrival Date/Time/Time Zone Insufficient review time</remarks>
+		</error>
+	</cargo>
+	<releaseNotification>
+		<cargoControlNumber>4073T001920</cargoControlNumber>
+	</releaseNotification>
+</aciHighwayResponse>

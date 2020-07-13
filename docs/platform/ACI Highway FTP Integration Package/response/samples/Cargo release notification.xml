@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aciHighwayResponse>
+	<acctId>abcd</acctId>
+	<userId>abcd001</userId>
+	<releaseNotification>
+		<cargoControlNumber>1ABC0123456789</cargoControlNumber>
+		<serviceOptionIdentifier>463</serviceOptionIdentifier>
+		<transactionNumber>1234567890</transactionNumber>
+		<processingDateTime>201001021234</processingDateTime>
+		<processingIndicator>4</processingIndicator>
+		<portOfClearance>0009</portOfClearance>
+	</releaseNotification>
+</aciHighwayResponse>

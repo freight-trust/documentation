@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?><!DOCTYPE svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1432px" height="721px" xmlns:ev="http://www.w3.org/2001/xml-events" style="overflow: hidden; "><g id="viewport-20200711083311596" class="svg-pan-zoom_viewport" transform="matrix(2.29409161242746,0,0,2.29409161242746,-0.024155054058665498,28.534265462120096)" style="transform: matrix(2.29409, 0, 0, 2.29409, -0.0241551, 28.5343);">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 286)">
+<title>system</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-286 621.72,-286 621.72,4 -4,4"></polygon>
+<!-- BusinessDayConvention -->
+<g id="node1" class="node">
+<title>BusinessDayConvention</title>
+<polygon fill="none" stroke="#000000" points="0,-139.5 0,-275.5 124.914,-275.5 124.914,-139.5 0,-139.5"></polygon>
+<text text-anchor="start" x="8" y="-262.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&lt;&lt;enumeration&gt;&gt;</text>
+<text text-anchor="middle" x="62.457" y="-250.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">BusinessDayConvention</text>
+<polyline fill="none" stroke="#000000" points="0,-243.5 124.914,-243.5 "></polyline>
+<text text-anchor="start" x="8" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FOLLOWING</text>
+<text text-anchor="start" x="8" y="-218.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FRN</text>
+<text text-anchor="start" x="8" y="-206.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">MODFOLLOWING</text>
+<text text-anchor="start" x="8" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">PRECEDING</text>
+<text text-anchor="start" x="8" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">MODPRECEDING</text>
+<text text-anchor="start" x="8" y="-170.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">NEAREST</text>
+<text text-anchor="start" x="8" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">NONE</text>
+<text text-anchor="start" x="8" y="-146.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">NotApplicable</text>
+</g>
+<!-- DayType -->
+<g id="node2" class="node">
+<title>DayType</title>
+<polygon fill="none" stroke="#000000" points="143.215,-145.5 143.215,-269.5 313.699,-269.5 313.699,-145.5 143.215,-145.5"></polygon>
+<text text-anchor="start" x="151.215" y="-256.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&lt;&lt;enumeration&gt;&gt;</text>
+<text text-anchor="middle" x="228.457" y="-244.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DayType</text>
+<polyline fill="none" stroke="#000000" points="143.215,-237.5 313.699,-237.5 "></polyline>
+<text text-anchor="start" x="151.215" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">days_after_days</text>
+<text text-anchor="start" x="151.215" y="-212.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">day_release_days</text>
+<text text-anchor="start" x="151.215" y="-200.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">day_release_date_i</text>
+<text text-anchor="start" x="151.215" y="-188.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">day_release_date_ii</text>
+<text text-anchor="start" x="151.215" y="-176.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">days_days_prior_to_release_date</text>
+<text text-anchor="start" x="151.215" y="-164.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">days_timely_days</text>
+<text text-anchor="start" x="151.215" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">days_days_after_timely_statement</text>
+</g>
+<!-- GoverningLaw -->
+<g id="node3" class="node">
+<title>GoverningLaw</title>
+<polygon fill="none" stroke="#000000" points="332.1645,-133.5 332.1645,-281.5 488.7495,-281.5 488.7495,-133.5 332.1645,-133.5"></polygon>
+<text text-anchor="start" x="340.1645" y="-268.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&lt;&lt;enumeration&gt;&gt;</text>
+<text text-anchor="middle" x="410.457" y="-256.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">GoverningLaw</text>
+<polyline fill="none" stroke="#000000" points="332.1645,-249.5 488.7495,-249.5 "></polyline>
+<text text-anchor="start" x="340.1645" y="-236.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AsSpecifiedInMasterAgreement</text>
+<text text-anchor="start" x="340.1645" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">GBEN</text>
+<text text-anchor="start" x="340.1645" y="-212.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">JP</text>
+<text text-anchor="start" x="340.1645" y="-200.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">USCA</text>
+<text text-anchor="start" x="340.1645" y="-188.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">USDE</text>
+<text text-anchor="start" x="340.1645" y="-176.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">USIL</text>
+<text text-anchor="start" x="340.1645" y="-164.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">USNY</text>
+<text text-anchor="start" x="340.1645" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">RelatedMasterAgreement</text>
+<text text-anchor="start" x="340.1645" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">EU</text>
+</g>
+<!-- bill -->
+<g id="node4" class="node">
+<title>bill</title>
+<polygon fill="none" stroke="#000000" points="506.457,-177.5 506.457,-237.5 560.457,-237.5 560.457,-177.5 506.457,-177.5"></polygon>
+<text text-anchor="middle" x="533.065" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">bill</text>
+<polyline fill="none" stroke="#000000" points="506.457,-217.5 559.673,-217.5 "></polyline>
+<text text-anchor="middle" x="533.065" y="-204.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="506.457,-197.5 559.673,-197.5 "></polyline>
+<text text-anchor="middle" x="533.065" y="-184.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- _Component -->
+<g id="node5" class="node">
+<title>_Component</title>
+<polygon fill="none" stroke="#000000" points="449.194,-.5 449.194,-96.5 617.72,-96.5 617.72,-.5 449.194,-.5"></polygon>
+<text text-anchor="middle" x="533.457" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_Component</text>
+<polyline fill="none" stroke="#000000" points="449.194,-76.5 617.72,-76.5 "></polyline>
+<text text-anchor="start" x="457.194" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ id : string</text>
+<polyline fill="none" stroke="#000000" points="449.194,-56.5 617.72,-56.5 "></polyline>
+<text text-anchor="start" x="457.194" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ destroy()</text>
+<text text-anchor="start" x="457.194" y="-31.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ error(e : object)</text>
+<text text-anchor="start" x="457.194" y="-19.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ init(document : object)</text>
+<text text-anchor="start" x="457.194" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ require(id : string) : _Component</text>
+</g>
+<!-- bill&#45;&gt;_Component -->
+<g id="edge1" class="edge">
+<title>bill-&gt;_Component</title>
+<path fill="none" stroke="#000000" d="M533.457,-177.2191C533.457,-157.3515 533.457,-130.7227 533.457,-106.8412"></path>
+<polygon fill="none" stroke="#000000" points="536.9571,-106.8021 533.457,-96.8022 529.9571,-106.8022 536.9571,-106.8021"></polygon>
+</g>
+</g>
+</g></svg>
