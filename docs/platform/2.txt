@@ -1,0 +1,17 @@
+Analysis for: 0x259d110ffaced3b0ac112a38d526891fcf82ba8776d14ed8e475f0a279247a8b
+Block number: 8876448 at 05-11-2019 08:10:46 UTC
+Tx cost: 0.002092905 ETH
+Gas used: 418581 / 5.0 Gwei
+Emitted events:
+SignatureReg.Registered(creator=[Receiver] MassParityRegistry, signature=0x442026ed00000000000000000000000000000000000000000000000000000000, method=approveMakerAssetProxy(bytes))
+SignatureReg.Registered(creator=[Receiver] MassParityRegistry, signature=0x942d33c000000000000000000000000000000000000000000000000000000000, method=marketBuyOrdersWithEth((address,address,address,address,uint256,uint256,uint256,uint256,uint256,uint256,bytes,bytes,bytes,bytes)[],uint256,bytes[],uint256,address))
+SignatureReg.Registered(creator=[Receiver] MassParityRegistry, signature=0xae93b97a00000000000000000000000000000000000000000000000000000000, method=marketSellOrdersWithEth((address,address,address,address,uint256,uint256,uint256,uint256,uint256,uint256,bytes,bytes,bytes,bytes)[],bytes[],uint256,address))
+SignatureReg.Registered(creator=[Receiver] MassParityRegistry, signature=0x630f1e6c00000000000000000000000000000000000000000000000000000000, method=withdrawAsset(bytes,uint256))
+Execution trace:
+[418581]: [Sender] 0xfeeea80c14f72afab75b9a6b1de4bdc937698760
+[367293]: [Receiver] MassParityRegistry.registerSignatures(signatures=['00000000000000000000000000000000000000000000000000000000000000a0', '00000000000000000000000000000000000000000000000000000000000000e0', '00000000000000000000000000000000000000000000000000000000000001c0', '0000000000000000000000000000000000000000000000000000000000000280', '00000000000000000000000000000000000000000000000000000000000002c0']) => (['True', 'True', 'True', 'False', 'True'])
+[31152]: SignatureReg.register(_method=approveMakerAssetProxy(bytes)) => (True)
+[153030]: SignatureReg.register(_method=marketBuyOrdersWithEth((address,address,address,address,uint256,uint256,uint256,uint256,uint256,uint256,bytes,bytes,bytes,bytes)[],uint256,bytes[],uint256,address)) => (True)
+[132678]: SignatureReg.register(_method=marketSellOrdersWithEth((address,address,address,address,uint256,uint256,uint256,uint256,uint256,uint256,bytes,bytes,bytes,bytes)[],bytes[],uint256,address)) => (True)
+[1886]: SignatureReg.register(_method=transferOwnership(address)) => (False)
+[31152]: SignatureReg.register(_method=withdrawAsset(bytes,uint256)) => (True)

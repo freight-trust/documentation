@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<aciHighwaySubmission>
+	<acctId>iilt</acctId>
+	<userId>iilt001</userId>
+	<messageId>2012241630173</messageId>
+	<conveyance>
+		<carrierCode>1111</carrierCode>
+		<conveyanceReferenceNumber>CL02</conveyanceReferenceNumber>
+		<messageFunctionCode>ORIGINAL</messageFunctionCode>
+		<portOfEntryCode>0427</portOfEntryCode>
+		<expectedDateTimeOfArrival>201112250520</expectedDateTimeOfArrival>
+		<expectedDateTimeOfArrivalTimeZone>CS</expectedDateTimeOfArrivalTimeZone>
+		<person>
+			<roleCode>EJ</roleCode>
+			<personalDocument>
+				<documentType>FST</documentType>
+				<documentNumber>41234567890123</documentNumber>
+			</personalDocument>
+		</person>
+		<equipment>
+			<equipmentTypeCode>TV</equipmentTypeCode>
+			<equipmentNumber>c100</equipmentNumber>
+			<isEmpty>FALSE</isEmpty>
+			<licensePlateNumber>SDE136</licensePlateNumber>
+			<countryCode>US</countryCode>
+			<stateCode>DC</stateCode>
+		</equipment>
+		<equipment>
+			<equipmentTypeCode>TL</equipmentTypeCode>
+			<equipmentNumber>t105</equipmentNumber>
+			<licensePlateNumber>987EEE</licensePlateNumber>
+			<countryCode>CA</countryCode>
+			<stateCode>SK</stateCode>
+		</equipment>
+	</conveyance>
+</aciHighwaySubmission>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<aciHighwaySubmission>
+	<acctId>iilt</acctId>
+	<userId>iilt001</userId>
+	<messageId>2012241630173</messageId>
+	<conveyance>
+		<carrierCode>1111</carrierCode>
+		<conveyanceReferenceNumber>CL01</conveyanceReferenceNumber>
+		<messageFunctionCode>ORIGINAL</messageFunctionCode>
+		<portOfEntryCode>0427</portOfEntryCode>
+		<expectedDateTimeOfArrival>201112250520</expectedDateTimeOfArrival>
+		<expectedDateTimeOfArrivalTimeZone>CS</expectedDateTimeOfArrivalTimeZone>
+		<person>
+			<roleCode>EJ</roleCode>
+			<firstName>Cliff</firstName>
+			<lastName>Barnes</lastName>
+			<countryCode>CA</countryCode>
+			<dateOfBirth>19810101</dateOfBirth>
+			<personalDocument>
+				<documentType>ACW</documentType>
+				<documentNumber>123456789</documentNumber>
+				<issuingCountryCode>CA</issuingCountryCode>
+				<expiryDate>20141231</expiryDate>
+			</personalDocument>
+		</person>
+		<equipment>
+			<equipmentTypeCode>TV</equipmentTypeCode>
+			<equipmentNumber>c100</equipmentNumber>
+			<isEmpty>FALSE</isEmpty>
+			<licensePlateNumber>SDE136</licensePlateNumber>
+			<countryCode>US</countryCode>
+			<stateCode>DC</stateCode>
+		</equipment>
+		<equipment>
+			<equipmentTypeCode>TL</equipmentTypeCode>
+			<equipmentNumber>t105</equipmentNumber>
+			<licensePlateNumber>987EEE</licensePlateNumber>
+			<countryCode>CA</countryCode>
+			<stateCode>SK</stateCode>
+		</equipment>
+	</conveyance>
+	<cargo>
+		<cargoType>REGULAR</cargoType>
+		<carrierCode>1111</carrierCode>
+		<cargoControlNumber>CL012014</cargoControlNumber>
+		<equipmentNumber>t105</equipmentNumber>
+		<messageFunctionCode>ORIGINAL</messageFunctionCode>
+		<firstPortOfArrival>0427</firstPortOfArrival>
+		<expectedDateTimeOfArrival>201112211720</expectedDateTimeOfArrival>
+		<expectedDateTimeOfArrivalTimeZone>CS</expectedDateTimeOfArrivalTimeZone>
+		<portMovement>
+			<functionCode>J</functionCode>
+			<locationType>SC</locationType>
+			<location>New York</location>
+			<countryCode>US</countryCode>
+			<stateCode>NY</stateCode>
+		</portMovement>
+		<isConsolidated>FALSE</isConsolidated>
+		<administrativeContact>
+			<function>IC</function>
+			<name>Contact Name</name>
+			<communicationType>TE</communicationType>
+			<communicationNumber>999 999 9999</communicationNumber>
+		</administrativeContact>
+		<tradeParty>
+			<partyTypeCode>SHIPPER</partyTypeCode>
+			<name>Allied Trucking Head Office</name>
+			<address>123 Main Street</address>
+			<city>Graceville</city>
+			<countryCode>US</countryCode>
+			<postalCode>90210</postalCode>
+			<stateCode>FL</stateCode>
+			<administrativeContact>
+				<function>IC</function>
+				<name>Jones Kristin</name>
+				<communicationType>TE</communicationType>
+				<communicationNumber>555 555 5555</communicationNumber>
+			</administrativeContact>
+		</tradeParty>
+		<tradeParty>
+			<partyTypeCode>CONSIGNEE</partyTypeCode>
+			<name>CRIMSON</name>
+			<address>100 York Blvd</address>
+			<city>Richmond Hill</city>
+			<countryCode>CA</countryCode>
+			<postalCode>L4B1J8</postalCode>
+			<stateCode>ON</stateCode>
+		</tradeParty>
+		<commodity>
+			<quantity>1000</quantity>
+			<description>Bags of Grain</description>
+			<weight>1000</weight>
+			<weightUnitOfMeasurement>L</weightUnitOfMeasurement>
+			<packageUnitOfMeasurement>BAG</packageUnitOfMeasurement>
+		</commodity>
+	</cargo>
+</aciHighwaySubmission>

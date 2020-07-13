@@ -1,0 +1,1039 @@
+openapi: 3.0.0
+info:
+  title: Freight Document primitiveization Application
+  description: This is the api reference for creation of 211, 210, and other EDI spec'd shipping documents.
+  termsOfService: https://freighttrust.com/
+  contact:
+    email: sam@freighttrust.com
+  license:
+    name: BSD-3-Clause
+    url: http://github.com/freight-chain/regulatory
+  version: 2-oas3
+externalDocs:
+  description: Find out more about Postman
+  url: http://postman.com
+servers:
+- url: https://api.freighttrust.net
+tags:
+- name: Proxy and Upgrade
+  description: Allows Freight Trust Network to Control the App
+- name: EDI Primitive
+  description: Exposes the Freight Trust instrment primitive methods
+paths:
+  /getNonce:
+    get:
+      summary: Returns the current message Freight Trust needs to sign to verify their
+        next post request
+      operationId: getNonce
+      responses:
+        "200":
+          description: Successful query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: Default
+  /primitive/name:
+    get:
+      tags:
+      - EDI Primitive
+      summary: Returns the primitive contract's name
+      operationId: name
+      responses:
+        "200":
+          description: Successful query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/symbol:
+    get:
+      tags:
+      - EDI Primitive
+      summary: Returns the primitive contract's symbol
+      operationId: symbol
+      responses:
+        "200":
+          description: Successful query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/totalSupply:
+    get:
+      tags:
+      - EDI Primitive
+      summary: An API endpoint to get the total supply of primitives in the ERC721
+        contract
+      description: Returns the total supply of Non fungible primitives
+      operationId: totalSupply
+      responses:
+        "200":
+          description: Successful query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/primitiveURI/:
+    get:
+      tags:
+      - EDI Primitive
+      summary: Enumerate primitives assigned to an owner
+      operationId: primitiveURIById
+      parameters:
+      - name: primitiveId
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          maximum: 1.157920892373162E+77
+          minimum: 0
+          type: integer
+      responses:
+        "200":
+          description: Successful Query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/supportsInterface/:
+    get:
+      tags:
+      - EDI Primitive
+      summary: Returns an interface's support status
+      operationId: supportsInterfaceById
+      parameters:
+      - name: interfaceId
+        in: query
+        description: The Id of the interface to check
+        required: true
+        style: form
+        explode: true
+        schema:
+          maximum: 4294967295
+          minimum: 0
+          type: integer
+      responses:
+        "200":
+          description: Successful Query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/primitiveByIndex/:
+    get:
+      tags:
+      - EDI Primitive
+      summary: Returns the primitive identifier of the `index`-th primitive tracked
+        by the contract
+      operationId: primitiveByIndex
+      parameters:
+      - name: index
+        in: query
+        description: A counter less than `totalSupply()`
+        required: true
+        style: form
+        explode: true
+        schema:
+          maximum: 1.157920892373162E+77
+          minimum: 0
+          type: integer
+      responses:
+        "200":
+          description: Successful Query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/primitiveOfOwnerByIndex/:
+    get:
+      tags:
+      - EDI Primitive
+      summary: Returns the primitive identifier of the `index`-th primitive assigned
+        to the `owner`
+      operationId: primitiveOfOwnerByIndex
+      parameters:
+      - name: owner
+        in: query
+        description: The address of the owner
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      - name: index
+        in: query
+        description: The index of the primitive assigned to the owner
+        required: true
+        style: form
+        explode: true
+        schema:
+          maximum: 1.157920892373162E+77
+          minimum: 0
+          type: integer
+      responses:
+        "200":
+          description: Successful Query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/balanceOf/:
+    get:
+      tags:
+      - EDI Primitive
+      summary: Count all primitives assigned to an owner
+      operationId: balanceOf
+      parameters:
+      - name: owner
+        in: query
+        description: The address of the owner
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      responses:
+        "200":
+          description: Successful Query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/ownerOf/:
+    get:
+      tags:
+      - EDI Primitive
+      summary: Find the owner of an primitive
+      operationId: ownerOf
+      parameters:
+      - name: primitiveId
+        in: query
+        description: The Id of the primitive in question
+        required: true
+        style: form
+        explode: true
+        schema:
+          maximum: 1.157920892373162E+77
+          minimum: 0
+          type: integer
+      responses:
+        "200":
+          description: Successful Query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/safeTransferFrom/:
+    post:
+      tags:
+      - EDI Primitive
+      summary: Transfers the ownership of an primitive from one address to another
+        address
+      operationId: safeTransferFrom
+      parameters:
+      - name: from
+        in: query
+        description: The sender of the transfer
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      - name: to
+        in: query
+        description: The recipient of the transfer
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      - name: primitiveId
+        in: query
+        description: The id of the primitive to be transferred
+        required: true
+        style: form
+        explode: true
+        schema:
+          maximum: 1.157920892373162E+77
+          minimum: 0
+          type: integer
+      - name: extraData
+        in: query
+        description: Optional data to be sent with the transaction
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/auth'
+      responses:
+        "200":
+          description: Successful Transfer
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/transferFrom/:
+    post:
+      tags:
+      - EDI Primitive
+      summary: Transfer ownership of an primitive without safety checks
+      description: Allows Freight Trust to tranfer primitives unsafely -- THE CALLER
+        IS RESPONSIBLE TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING primitiveS OR
+        ELSE THEY MAY BE PERMANENTLY LOST
+      operationId: transferFrom
+      parameters:
+      - name: from
+        in: query
+        description: The sender of the transfer
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      - name: to
+        in: query
+        description: The recipient of the transfer
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      - name: primitiveId
+        in: query
+        description: The id of the primitive to be transferred
+        required: true
+        style: form
+        explode: true
+        schema:
+          maximum: 1.157920892373162E+77
+          minimum: 0
+          type: integer
+      requestBody:
+        $ref: '#/components/requestBodies/auth'
+      responses:
+        "200":
+          description: Successful Transfer
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/approve/:
+    post:
+      tags:
+      - EDI Primitive
+      summary: Change or reaffirm the approved address for an primitive
+      operationId: approve
+      parameters:
+      - name: approved
+        in: query
+        description: The address being approved
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      - name: primitiveId
+        in: query
+        description: The id of the primitive to be approved
+        required: true
+        style: form
+        explode: true
+        schema:
+          maximum: 1.157920892373162E+77
+          minimum: 0
+          type: integer
+      requestBody:
+        $ref: '#/components/requestBodies/auth'
+      responses:
+        "200":
+          description: Successful Approve
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/setApprovalForAll/:
+    post:
+      tags:
+      - EDI Primitive
+      summary: Allows Freight Trust to issue univeral approval
+      description: Enable or disable approval for a third party (`operator`) to manage
+        all of Freight Trust's assets
+      operationId: setApprovalForAll
+      parameters:
+      - name: operator
+        in: query
+        description: Address to add to the set of authorized operators
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      - name: approved
+        in: query
+        description: True if the operator is approved, false to revoke approval
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: boolean
+      requestBody:
+        $ref: '#/components/requestBodies/auth'
+      responses:
+        "200":
+          description: Successful Approve
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/getApproved/:
+    get:
+      tags:
+      - EDI Primitive
+      summary: Get the approved address for a single primitive
+      description: The approved address for this primitive, or the zero address if
+        there is none
+      operationId: getApprovedById
+      parameters:
+      - name: primitiveId
+        in: query
+        description: The primitive to find the approved address for
+        required: true
+        style: form
+        explode: true
+        schema:
+          maximum: 1.157920892373162E+77
+          minimum: 0
+          type: integer
+      responses:
+        "200":
+          description: Successful Query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/isApprovedForAll/:
+    get:
+      tags:
+      - EDI Primitive
+      summary: Query if an address is an authorized operator for another address
+      description: True if `operator` is an approved operator for `owner`, false otherwise
+      operationId: isApprovedForAll
+      parameters:
+      - name: owner
+        in: query
+        description: The address that owns the primitives
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      - name: operator
+        in: query
+        description: The address that acts on behalf of the owner
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      responses:
+        "200":
+          description: Successful Query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/signedTransfer/:
+    post:
+      tags:
+      - EDI Primitive
+      summary: Signed Transfer
+      description: Allows Freight Trust to sign and transfer a EDI Primitive on the
+        behalf of its holder
+      operationId: signedTransfer
+      parameters:
+      - name: from
+        in: query
+        description: The sender of the transfer
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      - name: to
+        in: query
+        description: The recipient of the transfer
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      - name: primitiveId
+        in: query
+        description: The id of the primitive to be transferred
+        required: true
+        style: form
+        explode: true
+        schema:
+          maximum: 1.157920892373162E+77
+          minimum: 0
+          type: integer
+      - name: data
+        in: query
+        description: Optional data to be sent with the transaction
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      requestBody:
+        description: The Freight Trust authorization signature followed by the signature
+          of the sender of the transfer.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/body'
+        required: true
+      responses:
+        "200":
+          description: Successful Transfer
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/createRecord/:
+    post:
+      tags:
+      - EDI Primitive
+      summary: Creates a new record
+      description: Allows Freight Trust to create a record with the signature of the
+        owner and of the participant.
+      operationId: createRecord
+      parameters:
+      - name: recordID
+        in: query
+        description: The identifying hash of the record
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 66
+          minLength: 66
+          type: string
+      - name: owner
+        in: query
+        description: The owner of the record
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      - name: participant
+        in: query
+        description: The address of the participant in the record
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      requestBody:
+        description: The Freight Trust nonce signature, followed by the owner's signature
+          and the participant's signature
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/body_1'
+        required: true
+      responses:
+        "200":
+          description: Successful Creation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/versionRecord/:
+    post:
+      tags:
+      - EDI Primitive
+      summary: Versions a record for Freight Trust
+      description: Allows Freight Trust to version one of the records they own.
+      operationId: versionRecord
+      parameters:
+      - name: current
+        in: query
+        description: The identifying hash of the record
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 66
+          minLength: 66
+          type: string
+      - name: new
+        in: query
+        description: The new identifying hash of the record
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 66
+          minLength: 66
+          type: string
+      requestBody:
+        description: The Freight Trust nonce signature to verify this action
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/auth'
+        required: true
+      responses:
+        "200":
+          description: Successful Edit
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /primitive/versionRecord/signed/:
+    post:
+      tags:
+      - EDI Primitive
+      summary: Versions a record for the owner
+      description: Allows Freight Trust to version a record for the owner using the
+        owner's signature.
+      operationId: versionRecordSigned
+      parameters:
+      - name: current
+        in: query
+        description: The identifying hash of the record
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 66
+          minLength: 66
+          type: string
+      - name: new
+        in: query
+        description: The new identifying hash of the record
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 66
+          minLength: 66
+          type: string
+      - name: owner
+        in: query
+        description: The owner of the record which will be updated
+        required: false
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      requestBody:
+        description: The Freight Trust nonce signature followed by the owner's signature
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/body_2'
+        required: true
+      responses:
+        "200":
+          description: Successful Editing
+        "420":
+          description: Bad Request
+        "428":
+          description: Request Timeout
+      x-swagger-router-controller: EDIPrimitive
+  /proxy/getTarget/:
+    get:
+      tags:
+      - Proxy and Upgrade
+      summary: Gets address of Function
+      description: Gets address that is delegate called to run a function's logic.
+      operationId: getTarget
+      parameters:
+      - name: id
+        in: query
+        description: The function selector the return the target of
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 10
+          minLength: 10
+          type: string
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "425":
+          description: Invalid Input
+      x-swagger-router-controller: ProxyAndUpgrade
+  /proxy/getMaster:
+    get:
+      tags:
+      - Proxy and Upgrade
+      summary: Gets address of the Master Contract
+      description: Gets the address of the master contract.
+      operationId: getMaster
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+      x-swagger-router-controller: ProxyAndUpgrade
+  /proxy/getControler:
+    get:
+      tags:
+      - Proxy and Upgrade
+      summary: Gets address of the controler Contract
+      description: Gets the address of the controler contract.
+      operationId: getControler
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+      x-swagger-router-controller: ProxyAndUpgrade
+  /proxy/getUniversalProxy:
+    get:
+      tags:
+      - Proxy and Upgrade
+      summary: Gets address of the Universal Proxy Contract
+      description: Gets the address of the Universal Proxy contract.
+      operationId: getUniversalProxy
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+      x-swagger-router-controller: ProxyAndUpgrade
+  /proxy/setTarget/:
+    post:
+      tags:
+      - Proxy and Upgrade
+      summary: Sets the address of Function
+      description: Sets address that is delegate called to run a function's logic.
+        This function must be called with an signed nonce from the Freight Trust account
+        in the https body.
+      operationId: setTarget
+      parameters:
+      - name: id
+        in: query
+        description: Function selector whose target to change.
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 10
+          minLength: 10
+          type: string
+      - name: target
+        in: query
+        description: The address to set the function too
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/auth'
+      responses:
+        "200":
+          description: Successfuly Changed
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "425":
+          description: Invalid Input
+      x-swagger-router-controller: ProxyAndUpgrade
+  /proxy/changeMaster/:
+    post:
+      tags:
+      - Proxy and Upgrade
+      summary: Sets the address of Function
+      description: Sets address that is delegate called to run a function's logic.
+        This function must be called with an signed nonce from the Freight Trust account
+        in the https body.
+      operationId: changeMaster
+      parameters:
+      - name: newMaster
+        in: query
+        description: The new master address
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/auth'
+      responses:
+        "200":
+          description: Successfuly Changed
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "425":
+          description: Invalid Input
+      x-swagger-router-controller: ProxyAndUpgrade
+  /proxy/changeController/:
+    post:
+      tags:
+      - Proxy and Upgrade
+      summary: Sets the the new controller address
+      description: Sets the new controller address.
+      operationId: changeController
+      parameters:
+      - name: newController
+        in: query
+        description: The new controller address
+        required: true
+        style: form
+        explode: true
+        schema:
+          maxLength: 42
+          minLength: 42
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/auth'
+      responses:
+        "200":
+          description: Successfuly Changed
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "425":
+          description: Invalid Input
+      x-swagger-router-controller: ProxyAndUpgrade
+  /proxy/pause:
+    post:
+      tags:
+      - Proxy and Upgrade
+      summary: Pauses the execution
+      description: Calls the pause method in the universal proxy, blocking any state
+        changes while Blockarray updates.
+      operationId: pause
+      requestBody:
+        $ref: '#/components/requestBodies/auth'
+      responses:
+        "200":
+          description: Successfuly Paused
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        "425":
+          description: Invalid Input
+      x-swagger-router-controller: ProxyAndUpgrade
+components:
+  schemas:
+    auth:
+      required:
+      - signature
+      type: object
+      properties:
+        signature:
+          maxLength: 132
+          minLength: 132
+          type: string
+    ApiResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        type:
+          type: string
+        message:
+          type: string
+      example:
+        code: 0
+        type: type
+        message: message
+    body:
+      type: object
+      properties:
+        blockArrayAuth:
+          $ref: '#/components/schemas/auth'
+        senderAuth:
+          $ref: '#/components/schemas/auth'
+    body_1:
+      type: object
+      properties:
+        blockArrayAuth:
+          $ref: '#/components/schemas/auth'
+        ownerAuth:
+          $ref: '#/components/schemas/auth'
+        partAuth:
+          $ref: '#/components/schemas/auth'
+    body_2:
+      type: object
+      properties:
+        blockArrayAuth:
+          $ref: '#/components/schemas/auth'
+        ownerAuth:
+          $ref: '#/components/schemas/auth'
+  requestBodies:
+    auth:
+      description: The Freight Trust signature of the nonce
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/auth'
+      required: true

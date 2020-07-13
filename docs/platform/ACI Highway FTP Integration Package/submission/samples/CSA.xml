@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<aciHighwaySubmission>
+	<acctId>iilt</acctId>
+	<userId>iilt001</userId>
+	<messageId>2012130635411</messageId>
+	<cargo>
+		<cargoType>CSA</cargoType>
+		<carrierCode>4552</carrierCode>
+		<cargoControlNumber>TESTCARGOS210</cargoControlNumber>
+		<messageFunctionCode>ORIGINAL</messageFunctionCode>
+		<firstPortOfArrival>0427</firstPortOfArrival>
+		<expectedDateTimeOfArrival>201112131620</expectedDateTimeOfArrival>
+		<expectedDateTimeOfArrivalTimeZone>CS</expectedDateTimeOfArrivalTimeZone>
+		<portMovement>
+			<functionCode>J</functionCode>
+			<locationType>SC</locationType>
+			<location>New York</location>
+			<countryCode>US</countryCode>
+			<stateCode>NY</stateCode>
+		</portMovement>
+		<isConsolidated>FALSE</isConsolidated>
+		<administrativeContact>
+			<function>IC</function>
+			<name>Contact Name</name>
+			<communicationType>TE</communicationType>
+			<communicationNumber>999 999 9999</communicationNumber>
+		</administrativeContact>
+		<tradeParty>
+			<partyTypeCode>SHIPPER</partyTypeCode>
+			<name>Allied Trucking Head Office</name>
+			<address>123 Main Street</address>
+			<city>Graceville</city>
+			<countryCode>US</countryCode>
+			<postalCode>90210</postalCode>
+			<stateCode>FL</stateCode>
+		</tradeParty>
+		<tradeParty>
+			<partyTypeCode>CONSIGNEE</partyTypeCode>
+			<businessNumber>999999999RM9999</businessNumber>
+			<name>CSA</name>
+			<address> 304 15 Innovation Boulevard</address>
+			<city>Toronto</city>
+			<countryCode>CA</countryCode>
+			<postalCode>L4B0B1</postalCode>
+			<stateCode>ON</stateCode>
+		</tradeParty>
+		<commodity>
+			<quantity>15</quantity>
+			<description>Skids of Grain</description>
+			<weight>150</weight>
+			<weightUnitOfMeasurement>L</weightUnitOfMeasurement>
+			<packageUnitOfMeasurement>SKD</packageUnitOfMeasurement>
+		</commodity>
+	</cargo>
+</aciHighwaySubmission>

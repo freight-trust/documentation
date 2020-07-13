@@ -1,0 +1,4856 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Freight Trust Interface OpenAPI",
+        "version": "1.0.0",
+        "contact": {
+            "email": "admin@freighttrust.com",
+            "name": "Operations Group"
+        },
+        "license": {
+            "url": "https://www.mozilla.org/en-US/MPL/2.0/",
+            "name": "Mozilla Public License Version 2.0"
+        },
+        "termsOfService": "https://github.com/freight-trust/legal/blob/master/src/terms-of-service.md",
+        "description": "Freight Trust and Clearing Platform Interface "
+    },
+    "servers": [
+        {
+            "url": "https://api.freighttrust.com/interface/$oas"
+        }
+    ],
+    "paths": {
+        "/certificates": {
+            "get": {
+                "summary": "Return certificates",
+                "description": "Returns records from the certificates entity that match the specified query parameters.  All records will be returned when no parameters are specified.",
+                "tags": [
+                    "certificates"
+                ],
+                "operationId": "getAllcertificates",
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A comma-separated list of properties to include in the results. When this field is left empty, all properties will be returned."
+                    },
+                    {
+                        "name": "$orderby",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Order the results by this property in ascending or descending order.  Example for ascending: 'Name ASC' Example for descending: 'Name DESC'"
+                    },
+                    {
+                        "name": "$top",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "The number of results to return."
+                    },
+                    {
+                        "name": "$skip",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "This is the offset of results to skip when returning results."
+                    },
+                    {
+                        "name": "$count",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "When set, the results will return a count of results and not the actual results."
+                    },
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "certificates response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/certificates"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create certificates",
+                "description": "Creates a new certificates object with the specified parameters.",
+                "tags": [
+                    "certificates"
+                ],
+                "operationId": "createcertificates",
+                "requestBody": {
+                    "description": "The certificates entity to post",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/certificates"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "certificates created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/certificates"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/certificates/$count": {
+            "get": {
+                "summary": "Return count of certificates",
+                "description": "Returns count of records from the certificates entity that match the specified query parameters.  All count will be returned when no parameters are specified.",
+                "tags": [
+                    "certificates"
+                ],
+                "operationId": "getcertificatesCount",
+                "parameters": [
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The count",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/certificates('{Name}')": {
+            "get": {
+                "summary": "Return a single certificates",
+                "description": "Returns a single certificates object using the specified key.",
+                "tags": [
+                    "certificates"
+                ],
+                "operationId": "getcertificates",
+                "parameters": [
+                    {
+                        "name": "Name",
+                        "in": "path",
+                        "description": "The key Name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Select structural property"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "certificates response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/certificates"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete certificates",
+                "description": "Deletes the specified certificates object.",
+                "tags": [
+                    "certificates"
+                ],
+                "operationId": "deletecertificates",
+                "parameters": [
+                    {
+                        "name": "Name",
+                        "in": "path",
+                        "description": "The key Name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "certificates deleted",
+                        "content": {}
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/certificates('{Name}')/{propertyName}/$value": {
+            "get": {
+                "summary": "Return specified property value of specified certificates",
+                "description": "Returns property value of certificates object using the specified key and property name.",
+                "tags": [
+                    "certificates"
+                ],
+                "operationId": "getcertificatesProperty",
+                "parameters": [
+                    {
+                        "name": "Name",
+                        "in": "path",
+                        "description": "The key Name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "propertyName",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The property name",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The property value",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/connectors": {
+            "get": {
+                "summary": "Return connectors",
+                "description": "Returns records from the connectors entity that match the specified query parameters.  All records will be returned when no parameters are specified.",
+                "tags": [
+                    "connectors"
+                ],
+                "operationId": "getAllconnectors",
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A comma-separated list of properties to include in the results. When this field is left empty, all properties will be returned."
+                    },
+                    {
+                        "name": "$orderby",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Order the results by this property in ascending or descending order.  Example for ascending: 'Name ASC' Example for descending: 'Name DESC'"
+                    },
+                    {
+                        "name": "$top",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "The number of results to return."
+                    },
+                    {
+                        "name": "$skip",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "This is the offset of results to skip when returning results."
+                    },
+                    {
+                        "name": "$count",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "When set, the results will return a count of results and not the actual results."
+                    },
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "connectors response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/connectors"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create connectors",
+                "description": "Creates a new connectors object with the specified parameters.",
+                "tags": [
+                    "connectors"
+                ],
+                "operationId": "createconnectors",
+                "requestBody": {
+                    "description": "The connectors entity to post",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/connectors"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "connectors created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/connectors"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/connectors/$count": {
+            "get": {
+                "summary": "Return count of connectors",
+                "description": "Returns count of records from the connectors entity that match the specified query parameters.  All count will be returned when no parameters are specified.",
+                "tags": [
+                    "connectors"
+                ],
+                "operationId": "getconnectorsCount",
+                "parameters": [
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The count",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/connectors('{ConnectorId}')": {
+            "get": {
+                "summary": "Return a single connectors",
+                "description": "Returns a single connectors object using the specified key.",
+                "tags": [
+                    "connectors"
+                ],
+                "operationId": "getconnectors",
+                "parameters": [
+                    {
+                        "name": "ConnectorId",
+                        "in": "path",
+                        "description": "The key ConnectorId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Select structural property"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "connectors response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/connectors"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update connectors",
+                "description": "Updates the specified connectors object.",
+                "tags": [
+                    "connectors"
+                ],
+                "operationId": "updateconnectors",
+                "parameters": [
+                    {
+                        "name": "ConnectorId",
+                        "in": "path",
+                        "description": "The key ConnectorId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "The connectors entity to update.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/connectors"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "EntitySet connectors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/connectors"
+                                }
+                            }
+                        }
+                    },
+                    "204": {
+                        "description": "connectors updated",
+                        "content": {}
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete connectors",
+                "description": "Deletes the specified connectors object.",
+                "tags": [
+                    "connectors"
+                ],
+                "operationId": "deleteconnectors",
+                "parameters": [
+                    {
+                        "name": "ConnectorId",
+                        "in": "path",
+                        "description": "The key ConnectorId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "connectors deleted",
+                        "content": {}
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/connectors('{ConnectorId}')/{propertyName}/$value": {
+            "get": {
+                "summary": "Return specified property value of specified connectors",
+                "description": "Returns property value of connectors object using the specified key and property name.",
+                "tags": [
+                    "connectors"
+                ],
+                "operationId": "getconnectorsProperty",
+                "parameters": [
+                    {
+                        "name": "ConnectorId",
+                        "in": "path",
+                        "description": "The key ConnectorId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "propertyName",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The property name",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The property value",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/files": {
+            "get": {
+                "summary": "Return files",
+                "description": "Returns records from the files entity that match the specified query parameters.  All records will be returned when no parameters are specified.",
+                "tags": [
+                    "files"
+                ],
+                "operationId": "getAllfiles",
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A comma-separated list of properties to include in the results. When this field is left empty, all properties will be returned."
+                    },
+                    {
+                        "name": "$orderby",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Order the results by this property in ascending or descending order.  Example for ascending: 'Name ASC' Example for descending: 'Name DESC'"
+                    },
+                    {
+                        "name": "$top",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "The number of results to return."
+                    },
+                    {
+                        "name": "$skip",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "This is the offset of results to skip when returning results."
+                    },
+                    {
+                        "name": "$count",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "When set, the results will return a count of results and not the actual results."
+                    },
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "files response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/files"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create files",
+                "description": "Creates a new files object with the specified parameters.",
+                "tags": [
+                    "files"
+                ],
+                "operationId": "createfiles",
+                "requestBody": {
+                    "description": "The files entity to post",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/files"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "files created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/files"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/files/$count": {
+            "get": {
+                "summary": "Return count of files",
+                "description": "Returns count of records from the files entity that match the specified query parameters.  All count will be returned when no parameters are specified.",
+                "tags": [
+                    "files"
+                ],
+                "operationId": "getfilesCount",
+                "parameters": [
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The count",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/files(ConnectorId='{ConnectorId}',Folder='{Folder}',Filename='{Filename}',MessageId='{MessageId}')": {
+            "get": {
+                "summary": "Return a single files",
+                "description": "Returns a single files object using the specified key.",
+                "tags": [
+                    "files"
+                ],
+                "operationId": "getfiles",
+                "parameters": [
+                    {
+                        "name": "ConnectorId",
+                        "in": "path",
+                        "description": "The key ConnectorId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Folder",
+                        "in": "path",
+                        "description": "The key Folder",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Filename",
+                        "in": "path",
+                        "description": "The key Filename",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "MessageId",
+                        "in": "path",
+                        "description": "The key MessageId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Select structural property"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "files response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/files"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update files",
+                "description": "Updates the specified files object.",
+                "tags": [
+                    "files"
+                ],
+                "operationId": "updatefiles",
+                "parameters": [
+                    {
+                        "name": "ConnectorId",
+                        "in": "path",
+                        "description": "The key ConnectorId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Folder",
+                        "in": "path",
+                        "description": "The key Folder",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Filename",
+                        "in": "path",
+                        "description": "The key Filename",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "MessageId",
+                        "in": "path",
+                        "description": "The key MessageId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "The files entity to update.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/files"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "EntitySet files",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/files"
+                                }
+                            }
+                        }
+                    },
+                    "204": {
+                        "description": "files updated",
+                        "content": {}
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete files",
+                "description": "Deletes the specified files object.",
+                "tags": [
+                    "files"
+                ],
+                "operationId": "deletefiles",
+                "parameters": [
+                    {
+                        "name": "ConnectorId",
+                        "in": "path",
+                        "description": "The key ConnectorId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Folder",
+                        "in": "path",
+                        "description": "The key Folder",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Filename",
+                        "in": "path",
+                        "description": "The key Filename",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "MessageId",
+                        "in": "path",
+                        "description": "The key MessageId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "files deleted",
+                        "content": {}
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/files(ConnectorId='{ConnectorId}',Folder='{Folder}',Filename='{Filename}',MessageId='{MessageId}')/{propertyName}/$value": {
+            "get": {
+                "summary": "Return specified property value of specified files",
+                "description": "Returns property value of files object using the specified key and property name.",
+                "tags": [
+                    "files"
+                ],
+                "operationId": "getfilesProperty",
+                "parameters": [
+                    {
+                        "name": "ConnectorId",
+                        "in": "path",
+                        "description": "The key ConnectorId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Folder",
+                        "in": "path",
+                        "description": "The key Folder",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Filename",
+                        "in": "path",
+                        "description": "The key Filename",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "MessageId",
+                        "in": "path",
+                        "description": "The key MessageId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "propertyName",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The property name",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The property value",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/logs": {
+            "get": {
+                "summary": "Return logs",
+                "description": "Returns records from the logs entity that match the specified query parameters.  All records will be returned when no parameters are specified.",
+                "tags": [
+                    "logs"
+                ],
+                "operationId": "getAlllogs",
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A comma-separated list of properties to include in the results. When this field is left empty, all properties will be returned."
+                    },
+                    {
+                        "name": "$orderby",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Order the results by this property in ascending or descending order.  Example for ascending: 'Name ASC' Example for descending: 'Name DESC'"
+                    },
+                    {
+                        "name": "$top",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "The number of results to return."
+                    },
+                    {
+                        "name": "$skip",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "This is the offset of results to skip when returning results."
+                    },
+                    {
+                        "name": "$count",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "When set, the results will return a count of results and not the actual results."
+                    },
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "logs response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/logs"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/logs/$count": {
+            "get": {
+                "summary": "Return count of logs",
+                "description": "Returns count of records from the logs entity that match the specified query parameters.  All count will be returned when no parameters are specified.",
+                "tags": [
+                    "logs"
+                ],
+                "operationId": "getlogsCount",
+                "parameters": [
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The count",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/logs('{Id}')": {
+            "get": {
+                "summary": "Return a single logs",
+                "description": "Returns a single logs object using the specified key.",
+                "tags": [
+                    "logs"
+                ],
+                "operationId": "getlogs",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "The key Id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Select structural property"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "logs response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/logs"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/logs('{Id}')/{propertyName}/$value": {
+            "get": {
+                "summary": "Return specified property value of specified logs",
+                "description": "Returns property value of logs object using the specified key and property name.",
+                "tags": [
+                    "logs"
+                ],
+                "operationId": "getlogsProperty",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "The key Id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "propertyName",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The property name",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The property value",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/ports": {
+            "get": {
+                "summary": "Return ports",
+                "description": "Returns records from the ports entity that match the specified query parameters.  All records will be returned when no parameters are specified.",
+                "tags": [
+                    "ports"
+                ],
+                "operationId": "getAllports",
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A comma-separated list of properties to include in the results. When this field is left empty, all properties will be returned."
+                    },
+                    {
+                        "name": "$orderby",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Order the results by this property in ascending or descending order.  Example for ascending: 'Name ASC' Example for descending: 'Name DESC'"
+                    },
+                    {
+                        "name": "$top",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "The number of results to return."
+                    },
+                    {
+                        "name": "$skip",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "This is the offset of results to skip when returning results."
+                    },
+                    {
+                        "name": "$count",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "When set, the results will return a count of results and not the actual results."
+                    },
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ports response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/ports"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create ports",
+                "description": "Creates a new ports object with the specified parameters.",
+                "tags": [
+                    "ports"
+                ],
+                "operationId": "createports",
+                "requestBody": {
+                    "description": "The ports entity to post",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ports"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "ports created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ports"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/ports/$count": {
+            "get": {
+                "summary": "Return count of ports",
+                "description": "Returns count of records from the ports entity that match the specified query parameters.  All count will be returned when no parameters are specified.",
+                "tags": [
+                    "ports"
+                ],
+                "operationId": "getportsCount",
+                "parameters": [
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The count",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/ports('{PortId}')": {
+            "get": {
+                "summary": "Return a single ports",
+                "description": "Returns a single ports object using the specified key.",
+                "tags": [
+                    "ports"
+                ],
+                "operationId": "getports",
+                "parameters": [
+                    {
+                        "name": "PortId",
+                        "in": "path",
+                        "description": "The key PortId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Select structural property"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ports response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ports"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update ports",
+                "description": "Updates the specified ports object.",
+                "tags": [
+                    "ports"
+                ],
+                "operationId": "updateports",
+                "parameters": [
+                    {
+                        "name": "PortId",
+                        "in": "path",
+                        "description": "The key PortId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "The ports entity to update.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ports"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "EntitySet ports",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ports"
+                                }
+                            }
+                        }
+                    },
+                    "204": {
+                        "description": "ports updated",
+                        "content": {}
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete ports",
+                "description": "Deletes the specified ports object.",
+                "tags": [
+                    "ports"
+                ],
+                "operationId": "deleteports",
+                "parameters": [
+                    {
+                        "name": "PortId",
+                        "in": "path",
+                        "description": "The key PortId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "ports deleted",
+                        "content": {}
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/ports('{PortId}')/{propertyName}/$value": {
+            "get": {
+                "summary": "Return specified property value of specified ports",
+                "description": "Returns property value of ports object using the specified key and property name.",
+                "tags": [
+                    "ports"
+                ],
+                "operationId": "getportsProperty",
+                "parameters": [
+                    {
+                        "name": "PortId",
+                        "in": "path",
+                        "description": "The key PortId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "propertyName",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The property name",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The property value",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/profile": {
+            "get": {
+                "summary": "Return profile",
+                "description": "Returns records from the profile entity that match the specified query parameters.  All records will be returned when no parameters are specified.",
+                "tags": [
+                    "profile"
+                ],
+                "operationId": "getAllprofile",
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A comma-separated list of properties to include in the results. When this field is left empty, all properties will be returned."
+                    },
+                    {
+                        "name": "$orderby",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Order the results by this property in ascending or descending order.  Example for ascending: 'Name ASC' Example for descending: 'Name DESC'"
+                    },
+                    {
+                        "name": "$top",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "The number of results to return."
+                    },
+                    {
+                        "name": "$skip",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "This is the offset of results to skip when returning results."
+                    },
+                    {
+                        "name": "$count",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "When set, the results will return a count of results and not the actual results."
+                    },
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "profile response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/profile"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update profile",
+                "description": "Updates the specified profile object.",
+                "tags": [
+                    "profile"
+                ],
+                "operationId": "updateprofile",
+                "requestBody": {
+                    "description": "The profile entity to update.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/profile"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "204": {
+                        "description": "profile updated",
+                        "content": {}
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/profile/$count": {
+            "get": {
+                "summary": "Return count of profile",
+                "description": "Returns count of records from the profile entity that match the specified query parameters.  All count will be returned when no parameters are specified.",
+                "tags": [
+                    "profile"
+                ],
+                "operationId": "getprofileCount",
+                "parameters": [
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The count",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/requests": {
+            "get": {
+                "summary": "Return requests",
+                "description": "Returns records from the requests entity that match the specified query parameters.  All records will be returned when no parameters are specified.",
+                "tags": [
+                    "requests"
+                ],
+                "operationId": "getAllrequests",
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A comma-separated list of properties to include in the results. When this field is left empty, all properties will be returned."
+                    },
+                    {
+                        "name": "$orderby",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Order the results by this property in ascending or descending order.  Example for ascending: 'Name ASC' Example for descending: 'Name DESC'"
+                    },
+                    {
+                        "name": "$top",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "The number of results to return."
+                    },
+                    {
+                        "name": "$skip",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "This is the offset of results to skip when returning results."
+                    },
+                    {
+                        "name": "$count",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "When set, the results will return a count of results and not the actual results."
+                    },
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "requests response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/requests"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/requests/$count": {
+            "get": {
+                "summary": "Return count of requests",
+                "description": "Returns count of records from the requests entity that match the specified query parameters.  All count will be returned when no parameters are specified.",
+                "tags": [
+                    "requests"
+                ],
+                "operationId": "getrequestsCount",
+                "parameters": [
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The count",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/requests('{Id}')": {
+            "get": {
+                "summary": "Return a single requests",
+                "description": "Returns a single requests object using the specified key.",
+                "tags": [
+                    "requests"
+                ],
+                "operationId": "getrequests",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "The key Id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Select structural property"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "requests response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/requests"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/requests('{Id}')/{propertyName}/$value": {
+            "get": {
+                "summary": "Return specified property value of specified requests",
+                "description": "Returns property value of requests object using the specified key and property name.",
+                "tags": [
+                    "requests"
+                ],
+                "operationId": "getrequestsProperty",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "The key Id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "propertyName",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The property name",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The property value",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/transactions": {
+            "get": {
+                "summary": "Return transactions",
+                "description": "Returns records from the transactions entity that match the specified query parameters.  All records will be returned when no parameters are specified.",
+                "tags": [
+                    "transactions"
+                ],
+                "operationId": "getAlltransactions",
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A comma-separated list of properties to include in the results. When this field is left empty, all properties will be returned."
+                    },
+                    {
+                        "name": "$orderby",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Order the results by this property in ascending or descending order.  Example for ascending: 'Name ASC' Example for descending: 'Name DESC'"
+                    },
+                    {
+                        "name": "$top",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "The number of results to return."
+                    },
+                    {
+                        "name": "$skip",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "This is the offset of results to skip when returning results."
+                    },
+                    {
+                        "name": "$count",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "When set, the results will return a count of results and not the actual results."
+                    },
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "transactions response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/transactions"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/transactions/$count": {
+            "get": {
+                "summary": "Return count of transactions",
+                "description": "Returns count of records from the transactions entity that match the specified query parameters.  All count will be returned when no parameters are specified.",
+                "tags": [
+                    "transactions"
+                ],
+                "operationId": "gettransactionsCount",
+                "parameters": [
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The count",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/transactions('{Id}')": {
+            "get": {
+                "summary": "Return a single transactions",
+                "description": "Returns a single transactions object using the specified key.",
+                "tags": [
+                    "transactions"
+                ],
+                "operationId": "gettransactions",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "The key Id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Select structural property"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "transactions response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/transactions"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete transactions",
+                "description": "Deletes the specified transactions object.",
+                "tags": [
+                    "transactions"
+                ],
+                "operationId": "deletetransactions",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "The key Id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "transactions deleted",
+                        "content": {}
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/transactions('{Id}')/{propertyName}/$value": {
+            "get": {
+                "summary": "Return specified property value of specified transactions",
+                "description": "Returns property value of transactions object using the specified key and property name.",
+                "tags": [
+                    "transactions"
+                ],
+                "operationId": "gettransactionsProperty",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "The key Id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "propertyName",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The property name",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The property value",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/workspaces": {
+            "get": {
+                "summary": "Return workspaces",
+                "description": "Returns records from the workspaces entity that match the specified query parameters.  All records will be returned when no parameters are specified.",
+                "tags": [
+                    "workspaces"
+                ],
+                "operationId": "getAllworkspaces",
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A comma-separated list of properties to include in the results. When this field is left empty, all properties will be returned."
+                    },
+                    {
+                        "name": "$orderby",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Order the results by this property in ascending or descending order.  Example for ascending: 'Name ASC' Example for descending: 'Name DESC'"
+                    },
+                    {
+                        "name": "$top",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "The number of results to return."
+                    },
+                    {
+                        "name": "$skip",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "This is the offset of results to skip when returning results."
+                    },
+                    {
+                        "name": "$count",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "When set, the results will return a count of results and not the actual results."
+                    },
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "workspaces response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/workspaces"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create workspaces",
+                "description": "Creates a new workspaces object with the specified parameters.",
+                "tags": [
+                    "workspaces"
+                ],
+                "operationId": "createworkspaces",
+                "requestBody": {
+                    "description": "The workspaces entity to post",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/workspaces"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "workspaces created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/workspaces"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/workspaces/$count": {
+            "get": {
+                "summary": "Return count of workspaces",
+                "description": "Returns count of records from the workspaces entity that match the specified query parameters.  All count will be returned when no parameters are specified.",
+                "tags": [
+                    "workspaces"
+                ],
+                "operationId": "getworkspacesCount",
+                "parameters": [
+                    {
+                        "name": "$filter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Use this to filter the results by specific property values. For example, you can use the following filter to retrieve records with the name 'John': $filter=Name eq 'John'"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The count",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/workspaces('{Workspaceid}')": {
+            "get": {
+                "summary": "Return a single workspaces",
+                "description": "Returns a single workspaces object using the specified key.",
+                "tags": [
+                    "workspaces"
+                ],
+                "operationId": "getworkspaces",
+                "parameters": [
+                    {
+                        "name": "Workspaceid",
+                        "in": "path",
+                        "description": "The key Workspaceid",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "$select",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Select structural property"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "workspaces response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/workspaces"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete workspaces",
+                "description": "Deletes the specified workspaces object.",
+                "tags": [
+                    "workspaces"
+                ],
+                "operationId": "deleteworkspaces",
+                "parameters": [
+                    {
+                        "name": "Workspaceid",
+                        "in": "path",
+                        "description": "The key Workspaceid",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "workspaces deleted",
+                        "content": {}
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/workspaces('{Workspaceid}')/{propertyName}/$value": {
+            "get": {
+                "summary": "Return specified property value of specified workspaces",
+                "description": "Returns property value of workspaces object using the specified key and property name.",
+                "tags": [
+                    "workspaces"
+                ],
+                "operationId": "getworkspacesProperty",
+                "parameters": [
+                    {
+                        "name": "Workspaceid",
+                        "in": "path",
+                        "description": "The key Workspaceid",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "propertyName",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The property name",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The property value",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "text/plain; charset=utf-8": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ]
+            }
+        },
+        "/archiveLogs": {
+            "post": {
+                "summary": "Archives log files for the specified connector(s). This removes files from the application database but retains the files in an archive on disk for auditing at a later date.",
+                "description": "Archives log files for the specified connector(s). This removes files from the application database but retains the files in an archive on disk for auditing at a later date.",
+                "tags": [
+                    "archiveLogs"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/archiveLogs_input"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result"
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/copyConnector": {
+            "post": {
+                "summary": "This action will copy the connector settings to a new connector based on the newly specified Id.",
+                "description": "This action will copy the connector settings to a new connector based on the newly specified Id.",
+                "tags": [
+                    "copyConnector"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/copyConnector_input"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result"
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/copyPort": {
+            "post": {
+                "summary": "This action will copy the port settings to a new port based on the newly specified Id.",
+                "description": "This action will copy the port settings to a new port based on the newly specified Id.",
+                "tags": [
+                    "copyPort"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/copyPort_input"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result"
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/createCert": {
+            "post": {
+                "summary": "Create the public/private certificate key pair.",
+                "description": "Create the public/private certificate key pair.",
+                "tags": [
+                    "createCert"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/createCert_input"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/createCert_output"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/deleteLogs": {
+            "post": {
+                "summary": "Delete all the application and access logs older than the specified timestamp.",
+                "description": "Delete all the application and access logs older than the specified timestamp.",
+                "tags": [
+                    "deleteLogs"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/deleteLogs_input"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result"
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/deleteTransactions": {
+            "post": {
+                "summary": "Delete all the transaction logs for the connector older than the specified timestamp.",
+                "description": "Delete all the transaction logs for the connector older than the specified timestamp.",
+                "tags": [
+                    "deleteTransactions"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/deleteTransactions_input"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result"
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/downloadFile": {
+            "post": {
+                "summary": "Download files for this connector.",
+                "description": "Download files for this connector.",
+                "tags": [
+                    "downloadFile"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/downloadFile_input"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/downloadFile_output"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/exchangeCert": {
+            "post": {
+                "summary": "Exchange the specified certificate.",
+                "description": "Exchange the specified certificate.",
+                "tags": [
+                    "exchangeCert"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/exchangeCert_input"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result"
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/getTransactionLogs": {
+            "post": {
+                "summary": "Retrieves the transaction details of the application.",
+                "description": "Retrieves the transaction details of the application.",
+                "tags": [
+                    "getTransactionLogs"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/getTransactionLogs_input"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/getTransactionLogs_output"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/importProfiles": {
+            "post": {
+                "summary": "This action will import partner/connector profiles from previous versions of the application.",
+                "description": "This action will import partner/connector profiles from previous versions of the application.",
+                "tags": [
+                    "importProfiles"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/importProfiles_input"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result"
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/refreshTransactions": {
+            "post": {
+                "summary": "Refresh the transaction log for the specified connector.",
+                "description": "Refresh the transaction log for the specified connector.",
+                "tags": [
+                    "refreshTransactions"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/refreshTransactions_input"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/refreshTransactions_output"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/restartFile": {
+            "post": {
+                "summary": "Restart an outgoing transmission for the specified file.",
+                "description": "Restart an outgoing transmission for the specified file.",
+                "tags": [
+                    "restartFile"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/restartFile_input"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result"
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/sendFile": {
+            "post": {
+                "summary": "Sends a file using the specified connector.",
+                "description": "Sends a file using the specified connector.",
+                "tags": [
+                    "sendFile"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/sendFile_input"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The action result",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/sendFile_output"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CDataError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "basic": []
+                    },
+                    {
+                        "authtoken_header": []
+                    },
+                    {
+                        "authtoken_query": []
+                    }
+                ],
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "certificates": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "The name of the certificate file.",
+                        "type": "string"
+                    },
+                    "Data": {
+                        "description": "The base-64 encoded contents of the certificate file.",
+                        "type": "string"
+                    },
+                    "StoreType": {
+                        "description": "The store type.",
+                        "type": "string"
+                    },
+                    "Subject": {
+                        "description": "The certificate subject.",
+                        "type": "string"
+                    },
+                    "Issuer": {
+                        "description": "The issuer of the certificate.",
+                        "type": "string"
+                    },
+                    "IssuedTo": {
+                        "description": "The common name of certificate subject.",
+                        "type": "string"
+                    },
+                    "IssuedBy": {
+                        "description": "The common name of certificate issuer.",
+                        "type": "string"
+                    },
+                    "EffectiveDate": {
+                        "description": "The effective date of the certificate.",
+                        "type": "string"
+                    },
+                    "ExpirationDate": {
+                        "description": "The expiration date of the certificate.",
+                        "type": "string"
+                    },
+                    "ExpirationDays": {
+                        "description": "The days until the expiration date of the certificate.",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "Serialnumber": {
+                        "description": "The serial number of the certificate.",
+                        "type": "string"
+                    },
+                    "Thumbprint": {
+                        "description": "The SHA1 thumbprint of the certificate.",
+                        "type": "string"
+                    },
+                    "Keysize": {
+                        "description": "The key size of the certificate.",
+                        "type": "string"
+                    },
+                    "SignatureAlgorithm": {
+                        "description": "The algorithm used to sign the certificate.",
+                        "type": "string"
+                    },
+                    "ConnectorId": {
+                        "description": "The Id of the connector configured to use the certificate.",
+                        "type": "string"
+                    },
+                    "PortId": {
+                        "description": "The Id of the port configured to use the certificate.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Name"
+                ]
+            },
+            "connectors": {
+                "type": "object",
+                "properties": {
+                    "ConnectorId": {
+                        "description": "The id of the connector.",
+                        "type": "string"
+                    },
+                    "Workspace": {
+                        "description": "The workspace of the connector.",
+                        "type": "string"
+                    },
+                    "ConnectorType": {
+                        "description": "The type of the connector.",
+                        "type": "string"
+                    },
+                    "ParentConnector": {
+                        "description": "The parent connector separated by a comma.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "ConnectorId"
+                ]
+            },
+            "files": {
+                "type": "object",
+                "properties": {
+                    "ConnectorId": {
+                        "description": "The id of the connector.",
+                        "type": "string"
+                    },
+                    "PortId": {
+                        "description": "The id of the port.",
+                        "type": "string"
+                    },
+                    "Folder": {
+                        "description": "The folder of the file.",
+                        "type": "string"
+                    },
+                    "Filename": {
+                        "description": "The name of the file.",
+                        "type": "string"
+                    },
+                    "MessageId": {
+                        "description": "The message id of the file. This will only have a value if the file is a message.",
+                        "type": "string"
+                    },
+                    "Subfolder": {
+                        "description": "The subfolder of the file.",
+                        "type": "string"
+                    },
+                    "TimeCreated": {
+                        "description": "The time the file was created.",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "FilePath": {
+                        "description": "The full path to the file.",
+                        "type": "string"
+                    },
+                    "FileSize": {
+                        "description": "The size of the file.",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "Content": {
+                        "description": "The Base64 encode file contents. This will only be returned when a specific file is requested. This field cannot be used when filtering results using the $filter parameter.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "ConnectorId",
+                    "Folder",
+                    "Filename",
+                    "MessageId"
+                ]
+            },
+            "logs": {
+                "type": "object",
+                "properties": {
+                    "Id": {
+                        "description": "The Id of the log message.",
+                        "type": "string"
+                    },
+                    "Type": {
+                        "description": "The type of the log message.",
+                        "type": "string"
+                    },
+                    "Timestamp": {
+                        "description": "The time when the event occurred.",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "Script": {
+                        "description": "The app causing the error.",
+                        "type": "string"
+                    },
+                    "Message": {
+                        "description": "The message.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Id"
+                ]
+            },
+            "ports": {
+                "type": "object",
+                "properties": {
+                    "PortId": {
+                        "description": "The id of the port.",
+                        "type": "string"
+                    },
+                    "Workspace": {
+                        "description": "The workspace of the port.",
+                        "type": "string"
+                    },
+                    "PortType": {
+                        "description": "The type of the port.",
+                        "type": "string"
+                    },
+                    "ParentPort": {
+                        "description": "The parent ports separated by a comma.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "PortId"
+                ]
+            },
+            "profile": {
+                "type": "object",
+                "properties": {
+                    "HeartbeatInterval": {
+                        "description": "The interval in which the application will perform scheduled tasks such as sending files to your trading partners.",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "NotifyEmail": {
+                        "description": "Send an email to the specified email addresses when an error is encountered.",
+                        "type": "string"
+                    },
+                    "NotifyEmailFrom": {
+                        "description": "The sender of notification emails.",
+                        "type": "string"
+                    },
+                    "NotifyEmailTo": {
+                        "description": "The receiver of notification emails.",
+                        "type": "string"
+                    },
+                    "NotifyEmailSubject": {
+                        "description": "The subject of notification emails.",
+                        "type": "string"
+                    },
+                    "SMTPServer": {
+                        "description": "The host name or IP address of your SMTP server.",
+                        "type": "string"
+                    },
+                    "SMTPUser": {
+                        "description": "The username to authenticate to your SMTP server.",
+                        "type": "string"
+                    },
+                    "SMTPPassword": {
+                        "description": "The password to authenticate to your SMTP server.",
+                        "type": "string"
+                    },
+                    "SMTPPort": {
+                        "description": "The port of your SMTP server.",
+                        "type": "string"
+                    },
+                    "SMTPSSLMode": {
+                        "description": "The SSL mode of your SMTP server.",
+                        "type": "string"
+                    },
+                    "SendStatusReport": {
+                        "description": "Send a status report to the email address .",
+                        "type": "boolean"
+                    },
+                    "SendReportInterval": {
+                        "description": "The interval of send a status report to the email address.",
+                        "type": "string"
+                    },
+                    "NotifyWindowsEvent": {
+                        "description": "Write error messages to the Windows Application Event Log.",
+                        "type": "boolean"
+                    },
+                    "NotifyStopStart": {
+                        "description": "Log when the application starts and stops in the event log.",
+                        "type": "boolean"
+                    },
+                    "ProxyType": {
+                        "description": "The type of proxy to connect through.",
+                        "type": "string"
+                    },
+                    "ProxyHost": {
+                        "description": "The host name or IP address of the proxy.",
+                        "type": "string"
+                    },
+                    "ProxyPort": {
+                        "description": "The port of your proxy.",
+                        "type": "string"
+                    },
+                    "ProxyUser": {
+                        "description": "The username to use when authenticating to your proxy.",
+                        "type": "string"
+                    },
+                    "ProxyPassword": {
+                        "description": "The password to use when authenticating to your proxy.",
+                        "type": "string"
+                    },
+                    "ProxyAuthscheme": {
+                        "description": "The auth scheme to use when authenticating to your proxy.",
+                        "type": "string"
+                    }
+                }
+            },
+            "requests": {
+                "type": "object",
+                "properties": {
+                    "Id": {
+                        "description": "The Id of the request.",
+                        "type": "string"
+                    },
+                    "Timestamp": {
+                        "description": "The time when the request was handled.",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "URL": {
+                        "description": "The URL of the request.",
+                        "type": "string"
+                    },
+                    "Method": {
+                        "description": "The HTTP method.",
+                        "type": "string"
+                    },
+                    "User": {
+                        "description": "The user.",
+                        "type": "string"
+                    },
+                    "RemoteIP": {
+                        "description": "The remote IP address from the request.",
+                        "type": "string"
+                    },
+                    "Script": {
+                        "description": "The script.",
+                        "type": "string"
+                    },
+                    "Bytes": {
+                        "description": "The size of the request.",
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "Time": {
+                        "description": "The time of the request.",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "Error": {
+                        "description": "The error of the request.",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "The status of the request.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Id"
+                ]
+            },
+            "transactions": {
+                "type": "object",
+                "properties": {
+                    "Id": {
+                        "description": "The id of the logs.",
+                        "type": "string"
+                    },
+                    "ConnectorId": {
+                        "description": "The id of the connector.",
+                        "type": "string"
+                    },
+                    "PortId": {
+                        "description": "The id of the port.",
+                        "type": "string"
+                    },
+                    "MessageId": {
+                        "description": "The message Id.",
+                        "type": "string"
+                    },
+                    "Direction": {
+                        "description": "The direction of the file transaction.",
+                        "type": "string"
+                    },
+                    "Status": {
+                        "description": "The status of the transaction.",
+                        "type": "string"
+                    },
+                    "Filename": {
+                        "description": "The name of the file being transferred.",
+                        "type": "string"
+                    },
+                    "FilePath": {
+                        "description": "The full path to the file that was sent or received.",
+                        "type": "string"
+                    },
+                    "FileSize": {
+                        "description": "The size of the file.",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "Timestamp": {
+                        "description": "The time that the file was sent or received.",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "ETag": {
+                        "description": "The ETag for the file being transferred. This is only available when using AS2 Restart.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Id"
+                ]
+            },
+            "workspaces": {
+                "type": "object",
+                "properties": {
+                    "Workspaceid": {
+                        "description": "The Id of the workspace.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Workspaceid"
+                ]
+            },
+            "archiveLogs_input": {
+                "type": "object",
+                "required": [
+                    "Age"
+                ],
+                "properties": {
+                    "Age": {
+                        "type": "string",
+                        "description": "Minimum file age of the files to be archived, in days. Files more recent than the specified age will not be archived."
+                    },
+                    "ConnectorId": {
+                        "type": "string",
+                        "description": "The Id of the connector to be archived. If not set, all connectors will be archived."
+                    },
+                    "PortId": {
+                        "type": "string",
+                        "description": "The Id of the Port to be archived. If not set, all ports will be archived."
+                    },
+                    "Folder": {
+                        "type": "string",
+                        "description": "Archive directory name. By default, the application will create an 'Archive' directory in the connector folder."
+                    },
+                    "DeleteTransactions": {
+                        "type": "string",
+                        "description": "If true, entries corresponding to the archived logs will be deleted from the corresponding Transactions table in the database.  Default is true."
+                    }
+                }
+            },
+            "copyConnector_input": {
+                "type": "object",
+                "required": [
+                    "ConnectorId",
+                    "NewConnectorId"
+                ],
+                "properties": {
+                    "ConnectorId": {
+                        "type": "string",
+                        "description": "The Id of the connector to copy."
+                    },
+                    "NewConnectorId": {
+                        "type": "string",
+                        "description": "The Id of the new connector."
+                    }
+                }
+            },
+            "copyPort_input": {
+                "type": "object",
+                "required": [
+                    "PortId",
+                    "NewPortId"
+                ],
+                "properties": {
+                    "PortId": {
+                        "type": "string",
+                        "description": "The Id of the port to copy."
+                    },
+                    "NewPortId": {
+                        "type": "string",
+                        "description": "The Id of the new port."
+                    }
+                }
+            },
+            "createCert_input": {
+                "type": "object",
+                "required": [
+                    "Filename",
+                    "CommonName",
+                    "Serialnumber",
+                    "Password"
+                ],
+                "properties": {
+                    "Filename": {
+                        "type": "string",
+                        "description": "The file name."
+                    },
+                    "CommonName": {
+                        "type": "string",
+                        "description": "The common name."
+                    },
+                    "Serialnumber": {
+                        "type": "string",
+                        "description": "The serial number."
+                    },
+                    "Password": {
+                        "type": "string",
+                        "description": "The password."
+                    },
+                    "Country": {
+                        "type": "string",
+                        "description": "The country."
+                    },
+                    "Email": {
+                        "type": "string",
+                        "description": "The email."
+                    },
+                    "Expiration": {
+                        "type": "string",
+                        "description": "The expiration (in years).",
+                        "default": "1"
+                    },
+                    "KeySize": {
+                        "type": "string",
+                        "description": "The key size.",
+                        "default": "2048"
+                    },
+                    "PublicKeyType": {
+                        "type": "string",
+                        "description": "The public key type.",
+                        "default": "X.509"
+                    },
+                    "SignatureAlgorithm": {
+                        "type": "string",
+                        "description": "The signature algorithm.",
+                        "default": "SHA256"
+                    },
+                    "Locality": {
+                        "type": "string",
+                        "description": "The locality."
+                    },
+                    "Organization": {
+                        "type": "string",
+                        "description": "The organization."
+                    },
+                    "OrganizationalUnit": {
+                        "type": "string",
+                        "description": "The organizational unit."
+                    },
+                    "State": {
+                        "type": "string",
+                        "description": "The state."
+                    }
+                }
+            },
+            "createCert_output": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "Name": {
+                            "type": "string",
+                            "description": "The file name."
+                        },
+                        "Password": {
+                            "type": "string",
+                            "description": "The password."
+                        },
+                        "Pubname": {
+                            "type": "string",
+                            "description": "The public cert file name."
+                        }
+                    }
+                }
+            },
+            "deleteLogs_input": {
+                "type": "object",
+                "properties": {
+                    "TimeStamp": {
+                        "type": "string",
+                        "description": "When set, all logs older than this value will be deleted.  If this field is left empty, all logs will be deleted."
+                    }
+                }
+            },
+            "deleteTransactions_input": {
+                "type": "object",
+                "properties": {
+                    "ConnectorId": {
+                        "type": "string",
+                        "description": "The id of the connector."
+                    },
+                    "PortId": {
+                        "type": "string",
+                        "description": "The id of the port."
+                    },
+                    "Direction": {
+                        "type": "string",
+                        "description": "The direction of the file transaction."
+                    },
+                    "TimeStamp": {
+                        "type": "string",
+                        "description": "When set, all transaction logs older than this value will be deleted.  If this field is left empty, all logs will be deleted."
+                    }
+                }
+            },
+            "downloadFile_input": {
+                "type": "object",
+                "properties": {
+                    "ConnectorId": {
+                        "type": "string",
+                        "description": "The id of the connector. Required."
+                    },
+                    "PortId": {
+                        "type": "string",
+                        "description": "The id of the port."
+                    },
+                    "File": {
+                        "type": "string",
+                        "description": "The file to be downloaded. When file is not supplied, all files will be downloaded based on the connector's settings."
+                    },
+                    "RemotePath": {
+                        "type": "string",
+                        "description": "The path to overrides the Remote path settings in the connector(Only used for FTP, SFTP)"
+                    }
+                }
+            },
+            "downloadFile_output": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "MessageId": {
+                            "type": "string",
+                            "description": "The message id of the file."
+                        },
+                        "Subfolder": {
+                            "type": "string",
+                            "description": "The subfolder of the file."
+                        },
+                        "File": {
+                            "type": "string",
+                            "description": "The name of the file."
+                        },
+                        "FileSize": {
+                            "type": "string",
+                            "description": "The size of the file."
+                        },
+                        "TimeCreated": {
+                            "type": "string",
+                            "description": "The time the file was created."
+                        },
+                        "ErrorMessage": {
+                            "type": "string",
+                            "description": "When multiple files are transferred over the same connection, this will return the error message if an individual file transfer failed. If this is empty, the file transfer was successful."
+                        }
+                    }
+                }
+            },
+            "exchangeCert_input": {
+                "type": "object",
+                "required": [
+                    "Certificate",
+                    "ExchangeType"
+                ],
+                "properties": {
+                    "ConnectorId": {
+                        "type": "string",
+                        "description": "The connector id. Required."
+                    },
+                    "PortId": {
+                        "type": "string",
+                        "description": "The port id."
+                    },
+                    "Certificate": {
+                        "type": "string",
+                        "description": "The certificate to exchange."
+                    },
+                    "ExchangeType": {
+                        "type": "string",
+                        "description": "The exchange type. Validate values are AS2(Request, Response), OFTP(Deliver, Request, Replace)"
+                    },
+                    "CertificatePassword": {
+                        "type": "string",
+                        "description": "The password of certificate(AS2)."
+                    },
+                    "CertificateUsage": {
+                        "type": "string",
+                        "description": "The cryptographic function(s) for the certificate. Validate values are 'Encryption,Verification,ServerTLS,ClientTLS'(AS2)."
+                    },
+                    "ResponseURL": {
+                        "type": "string",
+                        "description": "The URL which the response should be sent(AS2)."
+                    }
+                }
+            },
+            "getTransactionLogs_input": {
+                "type": "object",
+                "required": [
+                    "MessageId",
+                    "Direction"
+                ],
+                "properties": {
+                    "ConnectorId": {
+                        "type": "string",
+                        "description": "The id of the connector. Required."
+                    },
+                    "PortId": {
+                        "type": "string",
+                        "description": "The id of the port."
+                    },
+                    "MessageId": {
+                        "type": "string",
+                        "description": "The message Id."
+                    },
+                    "Direction": {
+                        "type": "string",
+                        "description": "The direction of the transaction."
+                    },
+                    "Type": {
+                        "type": "string",
+                        "description": "The type of the log file."
+                    },
+                    "IncludeContent": {
+                        "type": "string",
+                        "description": "Whether to return the content of the log file.",
+                        "default": "False"
+                    }
+                }
+            },
+            "getTransactionLogs_output": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "TimeCreated": {
+                            "type": "string",
+                            "description": "The time the log file was created."
+                        },
+                        "Type": {
+                            "type": "string",
+                            "description": "The type of the log file."
+                        },
+                        "File": {
+                            "type": "string",
+                            "description": "The name of the log file."
+                        },
+                        "Path": {
+                            "type": "string",
+                            "description": "The path of the log file."
+                        },
+                        "Content": {
+                            "type": "string",
+                            "description": "The Base64 encoded content of the log file."
+                        }
+                    }
+                }
+            },
+            "importProfiles_input": {
+                "type": "object",
+                "properties": {
+                    "DataDirectory": {
+                        "type": "string",
+                        "description": "The data directory or a zipped file where the profiles are stored."
+                    },
+                    "Workspace": {
+                        "type": "string",
+                        "description": "The name of the workspace."
+                    },
+                    "InputName": {
+                        "type": "string",
+                        "description": "The name of the form input when uploading files from a form."
+                    },
+                    "DuplicateAction": {
+                        "type": "string",
+                        "description": "This setting determines how to handle profiles that already exist during an import.",
+                        "default": "Overwrite"
+                    },
+                    "IncludeDirectories": {
+                        "type": "string",
+                        "description": "Whether to retain directories on non-default locations.",
+                        "default": "False"
+                    }
+                }
+            },
+            "refreshTransactions_input": {
+                "type": "object",
+                "properties": {
+                    "ConnectorId": {
+                        "type": "string",
+                        "description": "The id of the connector. Required"
+                    },
+                    "PortId": {
+                        "type": "string",
+                        "description": "The id of the port."
+                    }
+                }
+            },
+            "refreshTransactions_output": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "Result": {
+                            "type": "string",
+                            "description": "The result of rebuilding the transactions cache."
+                        }
+                    }
+                }
+            },
+            "restartFile_input": {
+                "type": "object",
+                "required": [
+                    "Filename",
+                    "etag"
+                ],
+                "properties": {
+                    "ConnectorId": {
+                        "type": "string",
+                        "description": "The id of the partner/connector. Required."
+                    },
+                    "PortId": {
+                        "type": "string",
+                        "description": "The id of the partner/port."
+                    },
+                    "Filename": {
+                        "type": "string",
+                        "description": "The file name."
+                    },
+                    "etag": {
+                        "type": "string",
+                        "description": "The ETag."
+                    }
+                }
+            },
+            "sendFile_input": {
+                "type": "object",
+                "properties": {
+                    "ConnectorId": {
+                        "type": "string",
+                        "description": "The id of the connector. Required."
+                    },
+                    "PortId": {
+                        "type": "string",
+                        "description": "The id of the port."
+                    },
+                    "File": {
+                        "type": "string",
+                        "description": "The file name."
+                    },
+                    "Subfolder": {
+                        "type": "string",
+                        "description": "The subfolder of the file."
+                    },
+                    "Attachment#": {
+                        "type": "string",
+                        "description": "The attachment file."
+                    },
+                    "FormatResult": {
+                        "type": "string",
+                        "description": "Is format result."
+                    }
+                }
+            },
+            "sendFile_output": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "MessageId": {
+                            "type": "string",
+                            "description": "The message Id."
+                        },
+                        "File": {
+                            "type": "string",
+                            "description": "The file name."
+                        }
+                    }
+                }
+            },
+            "CDataError": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "$ref": "#/components/schemas/CDataInError"
+                    }
+                }
+            },
+            "CDataInError": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "securitySchemes": {
+            "authtoken_header": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "x-cdata-authtoken"
+            },
+            "authtoken_query": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "@authtoken"
+            },
+            "basic": {
+                "scheme": "basic",
+                "type": "http"
+            }
+        },
+        "links": {},
+        "callbacks": {}
+    },
+    "externalDocs": {
+        "url": "https://ft-docs.netlify.app",
+        "description": "# Documentation\n\n## [links](https://ft-docs.netlify.app)"
+    },
+    "security": []
+}

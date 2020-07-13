@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aciHighwayResponse>
+	<acctId>abcd</acctId>
+	<userId>abcd001</userId>
+	<messageId>0123456789</messageId>
+	<conveyance>
+		<conveyanceReferenceNumber>1ABC012345</conveyanceReferenceNumber>
+		<status>ACCEPTED</status>
+	</conveyance>
+</aciHighwayResponse>
